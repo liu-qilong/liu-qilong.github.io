@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
@@ -21,22 +22,22 @@ export default function Layout({ children }) {
                         <span class="group-hover:text-sky-700">{name}</span> liu
                     </div>
                     <Image priority src={imglink} className="rounded-full mx-auto" height={150} width={150}/>
-                    <div class="text-sm m-5">qilong-kirov.liu@connect.polyu.hk</div>
                 </div>
-                <div class="flex container px-10">
-                    <a class="mx-auto" href="/">
+                <div class="flex container pl-20 pr-20 pt-5">
+                    <Link class="mx-auto" href="/">
                         <span class="text-xl text-black">CV</span>
-                    </a>
+                    </Link>
                     {[
                         ['/img/github.png', 'https://github.com/TOB-KNPOB'],
                         ['/img/google.png', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
                         ['/img/twitter.png', 'https://twitter.com/liu_qi_long'],
                     ].map(([img, url]) => (
-                        <a class="mx-auto" href={url}>
+                        <Link class="mx-auto" href={url}>
                             <Image priority src={img} className="rounded-full" height={30} width={30}/>
-                        </a>
+                        </Link>
                     ))}
                 </div>
+                <Link class="text-sm" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
                 <div>
                     {[
                         ['Home', '/'],
@@ -45,7 +46,7 @@ export default function Layout({ children }) {
                         ['Blog', '/blog'],
                     ].map(([title, url]) => (
                         <div class="m-5">
-                            <a class="text-slate-700 text-lg hover:bg-slate-100" href={url}>{title}</a>
+                            <Link class="text-slate-800 text-lg" href={url}>{title}</Link>
                         </div>
                     ))}
                 </div>

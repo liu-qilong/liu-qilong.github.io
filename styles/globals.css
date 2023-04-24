@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 a {
-  @apply text-slate-500
+  @apply text-slate-500 hover:bg-slate-100
 }
 
 body {
-  @apply font-serif text-slate-700
+  @apply font-serif text-slate-800
 }
 
 /*
