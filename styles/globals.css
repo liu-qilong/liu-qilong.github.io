@@ -6,6 +6,10 @@ a {
   @apply text-slate-500
 }
 
+body {
+  @apply font-serif
+}
+
 /*
 :root {
   --foreground-rgb: 0, 0, 0;

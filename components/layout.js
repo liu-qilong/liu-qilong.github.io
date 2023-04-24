@@ -7,7 +7,7 @@ export default function Layout({ children }) {
 
     return (
         <div class="flex m-10 divide-x">
-            <div class="basis-1/3 font-serif text-center pl-20 pt-5">
+            <div class="basis-1/3 text-center pl-20 pt-5">
                 <div class="group"
                     onMouseEnter = {() => {
                         setName('kirov')
@@ -43,7 +43,6 @@ export default function Layout({ children }) {
                         ['Paper', '/paper'],
                         ['Project', '/project'],
                         ['Blog', '/blog'],
-                        ['Note', '/note'],
                     ].map(([title, url]) => (
                         <div class="m-5">
                             <a class="text-lg hover:bg-slate-100" href={url}>{title}</a>
