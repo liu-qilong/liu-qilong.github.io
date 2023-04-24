@@ -1,7 +1,6 @@
 ---
 title: "Convert LaTeX to Word"
 date: "2022-05-04"
-venue: "#LaTeX"
 ---
 
 Under the instruction of the webpage below, I successfully converted `report.tex` to `report.docx` with proper equations, figures, and references:

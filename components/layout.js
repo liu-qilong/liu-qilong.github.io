@@ -19,7 +19,7 @@ export default function Layout({ children }) {
                         setImgLink('/img/kirov.jpg')
                     }}>
                     <div class="group font-mono font-semibold text-3xl p-5">
-                        <span class="group-hover:text-sky-700">{name}</span> liu
+                        <span class="group-hover:text-rose-700">{name}</span> liu
                     </div>
                     <Image priority src={imglink} className="rounded-full mx-auto" height={150} width={150}/>
                 </div>

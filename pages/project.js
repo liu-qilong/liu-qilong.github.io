@@ -1,17 +1,17 @@
 import PostIndex from '../components/post-index'
 import { getSortedPostsData } from '../utils/post-data'
 
-export default function Post( {allpaper} ) {
+export default function Post( {allproject} ) {
     return (
-        <PostIndex type='paper' allpost={allpaper}/>
+        <PostIndex type='project' allpost={allproject}/>
     )
 }
 
 export async function getStaticProps() {
-    const allpaper = getSortedPostsData('contents/paper')
+    const allproject = getSortedPostsData('contents/project')
     return {
         props: {
-            allpaper,
+            allproject,
         }
     }
 }
