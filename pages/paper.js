@@ -26,9 +26,9 @@ export default function Paper( {allpaper} ) {
                         <a href={doi}>
                             <div class="rounded-lg mt-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-slate-100">
                                 <h3>{title}</h3>
-                                <p class='text-xs text-slate-500'>{author}</p>
-                                <p class='text-xs text-slate-500'>{venue}, {date}</p>
-                                <p class='text-xs text-slate-500 max-h-20 hover:max-h-full overflow-auto'>{abstract}</p>
+                                <p class='text-xs text-slate-700'>{author}</p>
+                                <p class='text-xs text-slate-700'>{venue}, {date}</p>
+                                <p class='text-xs text-slate-700 max-h-20 hover:max-h-full overflow-auto'>{abstract}</p>
                             </div>
                         </a>
                     </>

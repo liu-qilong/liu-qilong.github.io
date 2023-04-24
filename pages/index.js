@@ -11,7 +11,7 @@ export default function Home( {allpaper, allproject, allblog} ) {
             
             <br></br>
 
-            <RecentPaper posts={allpaper}></RecentPaper>
+            <RecentPaper posts={allpaper} maxnum={3}></RecentPaper>
 
         </Layout>
     )

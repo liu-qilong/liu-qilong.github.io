@@ -7,7 +7,7 @@ a {
 }
 
 body {
-  @apply font-serif
+  @apply font-serif text-slate-700
 }
 
 /*

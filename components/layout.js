@@ -45,7 +45,7 @@ export default function Layout({ children }) {
                         ['Blog', '/blog'],
                     ].map(([title, url]) => (
                         <div class="m-5">
-                            <a class="text-lg hover:bg-slate-100" href={url}>{title}</a>
+                            <a class="text-slate-700 text-lg hover:bg-slate-100" href={url}>{title}</a>
                         </div>
                     ))}
                 </div>
