@@ -13,7 +13,6 @@ export default function Home( {allpaper, allproject, allblog} ) {
             <RecentPost type='paper' posts={allpaper} maxnum={3}/>
             <RecentPost type='project' posts={allproject} maxnum={3}/>
             <RecentPost type='blog' posts={allblog} maxnum={3}/>
-
         </Layout>
     )
 }

@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import IconStack from '../components/icon-stack'
 import React, { useState } from 'react'
 
 export default function Layout({ children }) {
-    const [name, setName] = useState('qilong')
+    const [name, setName] = useState('QILONG ')
     const [imglink, setImgLink] = useState('/profile/kirov.jpg')
 
     return (
@@ -11,39 +12,33 @@ export default function Layout({ children }) {
             <div class="basis-1/3 text-center pl-20 pt-5">
                 <div class="group"
                     onMouseEnter = {() => {
-                        setName('kirov')
+                        setName('KIROV🪐')
                         setImgLink('/profile/knpob.png')
                     }} 
                     onMouseLeave = {() => {
-                        setName('qilong')
+                        setName('QILONG ')
                         setImgLink('/profile/kirov.jpg')
                     }}>
                     <div class="group font-mono font-semibold text-3xl p-5">
-                        <span class="group-hover:text-rose-700">{name}</span> liu
+                        <span class="group-hover:text-rose-700">{name}</span>LIU
                     </div>
                     <Image priority src={imglink} className="rounded-full mx-auto" height={150} width={150}/>
                 </div>
-                <div class="flex container pl-20 pr-20 pt-5">
-                    <Link class="mx-auto" href="/">
-                        <span class="text-xl text-black">CV</span>
-                    </Link>
-                    {[
-                        ['/icon/github.png', 'https://github.com/TOB-KNPOB'],
-                        ['/icon/google.png', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
-                        ['/icon/twitter.png', 'https://twitter.com/liu_qi_long'],
-                    ].map(([img, url]) => (
-                        <Link class="mx-auto" href={url}>
-                            <Image priority src={img} className="rounded-full" height={30} width={30}/>
-                        </Link>
-                    ))}
-                </div>
-                <Link class="text-sm" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
+                <IconStack divclass="flex container items-center pl-10 pr-10 pt-5" imgclass="mx-auto" size="30" icon_links={[
+                    ['google-scholar', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
+                    ['github', 'https://github.com/TOB-KNPOB'],
+                    ['medium', 'https://medium.com/@dafaddadaedddd'],
+                    ['twitter', 'https://twitter.com/liu_qi_long'],
+                    ['hugging-face', 'https://huggingface.co/TOB-KNPOB'],
+                ]}/>
+                <Link class="text-s" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
+                
                 <div>
                     {[
                         ['Home', '/'],
-                        ['Paper', '/paper'],
-                        ['Project', '/project'],
-                        ['Blog', '/blog'],
+                        ['Papers', '/paper'],
+                        ['Projects', '/project'],
+                        ['Blogs', '/blog'],
                     ].map(([title, url]) => (
                         <div class="m-5">
                             <Link class="text-slate-800 text-lg" href={url}>{title}</Link>

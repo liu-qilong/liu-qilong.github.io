@@ -32,7 +32,7 @@ export default function RecentPost({ type, posts, maxnum }) {
                     )
                 }
             })}
-            {(num > maxnum) ? (<div class="mt-2 italic">.... <Link href={"/" + type}>(see more)</Link></div>) : (<></>)}
+            {(num > maxnum) ? (<Link href={"/" + type}><h3 class="italic hover:bg-slate-100">... (see more)</h3></Link>) : (<></>)}
         </div>
     </div>
 )}
