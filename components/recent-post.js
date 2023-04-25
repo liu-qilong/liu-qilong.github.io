@@ -15,9 +15,9 @@ export default function RecentPost({ type, posts, maxnum }) {
     let BlockType = BlockDict[type]
 
     return (
-    <div class="rounded-lg p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3">
+    <div class="rounded-lg mb-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3">
         <Link href={"/" + type}>
-            <h3>Recent {type}s ({total})</h3>
+            <h3 class="hover:bg-slate-100">Recent {type}s ({total})</h3>
         </Link>
         <hr></hr>
         <div>

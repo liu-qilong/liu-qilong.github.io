@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 export default function Layout({ children }) {
     const [name, setName] = useState('qilong')
-    const [imglink, setImgLink] = useState('/img/kirov.jpg')
+    const [imglink, setImgLink] = useState('/profile/kirov.jpg')
 
     return (
         <div class="flex m-10 divide-x">
@@ -12,11 +12,11 @@ export default function Layout({ children }) {
                 <div class="group"
                     onMouseEnter = {() => {
                         setName('kirov')
-                        setImgLink('/img/knpob.png')
+                        setImgLink('/profile/knpob.png')
                     }} 
                     onMouseLeave = {() => {
                         setName('qilong')
-                        setImgLink('/img/kirov.jpg')
+                        setImgLink('/profile/kirov.jpg')
                     }}>
                     <div class="group font-mono font-semibold text-3xl p-5">
                         <span class="group-hover:text-rose-700">{name}</span> liu
@@ -28,9 +28,9 @@ export default function Layout({ children }) {
                         <span class="text-xl text-black">CV</span>
                     </Link>
                     {[
-                        ['/img/github.png', 'https://github.com/TOB-KNPOB'],
-                        ['/img/google.png', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
-                        ['/img/twitter.png', 'https://twitter.com/liu_qi_long'],
+                        ['/icon/github.png', 'https://github.com/TOB-KNPOB'],
+                        ['/icon/google.png', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
+                        ['/icon/twitter.png', 'https://twitter.com/liu_qi_long'],
                     ].map(([img, url]) => (
                         <Link class="mx-auto" href={url}>
                             <Image priority src={img} className="rounded-full" height={30} width={30}/>
