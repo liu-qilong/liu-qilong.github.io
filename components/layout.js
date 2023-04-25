@@ -8,8 +8,10 @@ export default function Layout({ children }) {
     const [imglink, setImgLink] = useState('/profile/kirov.jpg')
 
     return (
-        <div class="flex m-10 divide-x">
-            <div class="basis-1/3 text-center pl-20 pt-5">
+        <>
+            {/* sidebar */}
+            <div class="text-center pl-20 pt-5 fixed">
+                {/* name and image */}
                 <div class="group"
                     onMouseEnter = {() => {
                         setName('KIROV🪐')
@@ -24,6 +26,8 @@ export default function Layout({ children }) {
                     </div>
                     <Image priority src={imglink} className="rounded-full mx-auto" height={150} width={150}/>
                 </div>
+
+                {/* email & links */}
                 <IconStack divclass="flex container items-center pl-10 pr-10 pt-5" imgclass="mx-auto" size="30" icon_links={[
                     ['google-scholar', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
                     ['github', 'https://github.com/TOB-KNPOB'],
@@ -33,6 +37,7 @@ export default function Layout({ children }) {
                 ]}/>
                 <Link class="text-s" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
                 
+                {/* navigator */}
                 <div>
                     {[
                         ['Home', '/'],
@@ -46,9 +51,14 @@ export default function Layout({ children }) {
                     ))}
                 </div>
             </div>
-            <div class="basis-2/3 p-10 pl-20">
-                {children}
+            
+            {/* content */}
+            <div class="flex m-10 divide-x">
+                <div class="basis-1/3"></div>
+                <div class="basis-2/3 p-10 pl-20">
+                    {children}
+                </div>
             </div>
-        </div>
+        </>
     )
   }
