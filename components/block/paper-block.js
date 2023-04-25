@@ -11,7 +11,7 @@ export default function PaperBlock ({post}) {
                     <Image src={coverpath} height={120} width={120} class="max-w-md"/>
                 </div>
                 <div>
-                    <h3>{post["title"]}</h3>
+                    <div>{post["title"]}</div>
                     <div class='text-xs text-slate-700'>{post["author"]}</div>
                     <div class='text-xs text-slate-700'>{post["venue"]}, {post["date"]}</div>
                 </div>

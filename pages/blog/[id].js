@@ -10,7 +10,7 @@ export default function BlogPage({ postData }) {
                 <title>{postData.title}</title>
             </Head>
             <div class="max-w-xl">
-                <BlogBlock post={postData} titleclass="text-2xl text-slate-800 font-semibold" dateclass="text-slate-800"/>
+                <BlogBlock post={postData} titleclass="text-3xl font-mono font-semibold text-slate-800" dateclass="font-mono" imgsize="120"/>
                 <hr class="mt-5"></hr>
                 <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
             </div>

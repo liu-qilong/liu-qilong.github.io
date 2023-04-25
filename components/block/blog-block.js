@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import IconStack from '../icon-stack'
 
-export default function BlogBlock ({post, titleclass="", dateclass="text-xs text-slate-700"}) {
+export default function BlogBlock ({post, divclass="flex items-center space-x-4", titleclass="", dateclass="text-xs text-slate-700", imgsize=120}) {
     const coverpath = '/cover/blog/' + post["id"] + '.png'
 
     // post link
@@ -22,13 +22,13 @@ export default function BlogBlock ({post, titleclass="", dateclass="text-xs text
     console.log(post["link"])
 
     return (
-        <div class="flex items-center space-x-4">
+        <div class={divclass}>
             <Link href={post_link}>
-                <Image src={coverpath} height={120} width={120} class="max-w-md"/>
+                <Image src={coverpath} height={imgsize} width={imgsize} class="max-w-md"/>
             </Link>
             <div>
                 <Link href={post_link}>
-                    <h3 class={titleclass}>{post["title"]}</h3>
+                    <div class={titleclass}>{post["title"]}</div>
                     <div class={dateclass}>{post["date"]}</div>
                 </Link>
                 <IconStack icon_links={icon_links}/>

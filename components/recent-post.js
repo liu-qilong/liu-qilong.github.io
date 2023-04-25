@@ -17,7 +17,7 @@ export default function RecentPost({ type, posts, maxnum }) {
     return (
     <div class="rounded-lg mb-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3">
         <Link href={"/" + type}>
-            <h3 class="hover:bg-slate-100">Recent {type}s ({total})</h3>
+            <div class="hover:bg-slate-100">Recent {type}s ({total})</div>
         </Link>
         <hr></hr>
         <div>
@@ -32,7 +32,7 @@ export default function RecentPost({ type, posts, maxnum }) {
                     )
                 }
             })}
-            {(num > maxnum) ? (<Link href={"/" + type}><h3 class="italic hover:bg-slate-100">... (see more)</h3></Link>) : (<></>)}
+            {(num > maxnum) ? (<Link href={"/" + type}><div class="italic hover:bg-slate-100">... (read more)</div></Link>) : (<></>)}
         </div>
     </div>
 )}

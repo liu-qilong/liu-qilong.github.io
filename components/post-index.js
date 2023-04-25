@@ -16,7 +16,7 @@ export default function PostIndex( {type, allpost} ) {
 
     return (
         <Layout>
-            <h1 class="text-3xl first-letter:uppercase">{type}s ({total})</h1>
+            <div class="text-3xl first-letter:uppercase">{type}s ({total})</div>
             {allpost.map(
                 ( post ) => {
                     let post_year = post["date"].slice(0, 4)

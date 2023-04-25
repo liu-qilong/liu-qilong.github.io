@@ -2,20 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
-  @apply text-slate-500 hover:bg-slate-100
-}
 
 body {
   @apply font-serif text-slate-800
 }
 
 h2 {
-  @apply text-3xl mt-10 mb-5
+  @apply before:content-["#"] hover:bg-slate-100 text-slate-500 mt-10 mb-5 text-3xl border-b
+}
+
+h3 {
+  @apply before:content-["#"] hover:bg-slate-100 text-slate-500 mt-5 mb-5 text-2xl
+}
+
+h4 {
+  @apply hover:bg-slate-100 text-slate-500 mt-5 mb-5 text-xl
 }
 
 p {
-  @apply mt-5
+  @apply mt-5 text-justify
+}
+
+a {
+  @apply text-slate-500 hover:bg-slate-100
 }
 
 ul {
@@ -23,5 +32,5 @@ ul {
 }
 
 code {
-  @apply font-mono text-teal-500 bg-slate-100 overflow-auto
+  @apply font-mono text-teal-700 bg-slate-50 p-1 text-sm
 }

@@ -4,6 +4,7 @@ date: "2022-05-04"
 link:
     github: "https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes"
     twitter: "https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes"
+    medium: "https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes"
 ---
 
 Under the instruction of the webpage below, I successfully converted `report.tex` to `report.docx` with proper equations, figures, and references:
@@ -16,9 +17,11 @@ pandoc paper.tex -o word/paper.docx --reference-doc=word/template.docx --bibliog
 
 ## Default template styles
 
-For [[Obsidian#Obsidian 导出 Word 文档]], to specify the styles^[Compared with the template for converting reports, the numbering of headings and the indents of text are canceled.], I followed the instruction of the web pages below:
+To specify the styles^[1], I followed the instruction of the web pages below:
 - According to [Unable to create a custom reference.docx using pandoc - Stackoverflow](https://stackoverflow.com/questions/58642039/unable-to-create-a-custom-reference-docx-using-pandoc), the personal-specified template file `reference.docx` should be revised based on a pandoc default output file.
 - According to `--data-dir=DIRECTORY` entry of [Manual - Pandoc](https://pandoc.org/MANUAL.html), placing the `reference.docx` to `$HOME/.local/share/pandoc` then the template shall overwrite the default settings.
+
+[^1]: Compared with the template for converting reports, the numbering of headings and the indents of text are canceled.
 
 ## Dealing with Inconsistency
 

@@ -25,7 +25,7 @@ export default function ProjectBlock ({post}) {
                 </Link>
                 <div>
                     <Link href={post_link}>
-                        <h3>{post["title"]}</h3>
+                        <div>{post["title"]}</div>
                         <div class='text-xs text-slate-700'>{post["date"]}</div>
                     </Link>
                     <IconStack icon_links={icon_links}/>
