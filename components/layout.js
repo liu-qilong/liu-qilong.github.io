@@ -11,6 +11,7 @@ export default function Layout({ children }) {
         <>
             {/* sidebar */}
             <div class="text-center pl-20 pt-5 fixed">
+                
                 {/* name and image */}
                 <div class="group"
                     onMouseEnter = {() => {

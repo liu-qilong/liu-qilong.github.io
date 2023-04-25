@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import PaperBlock from './paper-block'
-import ProjectBlock from '../components/project-block'
-import BlogBlock from '../components/blog-block'
+import PaperBlock from './block/paper-block'
+import ProjectBlock from './block/project-block'
+import BlogBlock from './block/blog-block'
 
 export default function RecentPost({ type, posts, maxnum }) {
     let num = 0 // idx of a post

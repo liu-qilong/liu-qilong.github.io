@@ -5,7 +5,7 @@ import { remark } from 'remark'
 import html from 'remark-html'
 
 
-export function getSortedPostsData( relativePath ) {
+export function getSortedPostsData ( relativePath ) {
     const postsDirectory = path.join(process.cwd(), relativePath)
     let fileNames = fs.readdirSync(postsDirectory)
 
@@ -37,7 +37,8 @@ export function getSortedPostsData( relativePath ) {
     })
 }
 
-export function getAllPostIds() {
+export function getAllPostIds ( relativePath ) {
+    const postsDirectory = path.join(process.cwd(), relativePath)
     const fileNames = fs.readdirSync(postsDirectory)
         return fileNames.map(fileName => {
             return {
@@ -48,7 +49,8 @@ export function getAllPostIds() {
     })
 }
 
-export async function getPostData(id) {
+export async function getPostData ( id, relativePath ) {
+    const postsDirectory = path.join(process.cwd(), relativePath)
     const fullPath = path.join(postsDirectory, `${id}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
@@ -65,6 +67,6 @@ export async function getPostData(id) {
     return {
         id,
         contentHtml,
-        ...matterResult.data
+        ...matterResult.data,
     }
 }

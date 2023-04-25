@@ -10,28 +10,18 @@ body {
   @apply font-serif text-slate-800
 }
 
-/*
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h2 {
+  @apply text-3xl mt-10 mb-5
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+p {
+  @apply mt-5
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ul {
+  @apply marker:text-slate-500 mt-5 list-disc pl-5 space-y-3
 }
-*/
+
+code {
+  @apply font-mono text-teal-500 bg-slate-100 overflow-auto
+}

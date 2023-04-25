@@ -1,7 +1,7 @@
 import Layout from '../components/layout'
-import PaperBlock from '../components/paper-block'
-import ProjectBlock from '../components/project-block'
-import BlogBlock from '../components/blog-block'
+import PaperBlock from './block/paper-block'
+import ProjectBlock from './block/project-block'
+import BlogBlock from './block/blog-block'
 
 export default function PostIndex( {type, allpost} ) {
     let year = "0000" // year

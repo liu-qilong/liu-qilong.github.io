@@ -12,8 +12,8 @@ export default function PaperBlock ({post}) {
                 </div>
                 <div>
                     <h3>{post["title"]}</h3>
-                    <p class='text-xs text-slate-700'>{post["author"]}</p>
-                    <p class='text-xs text-slate-700'>{post["venue"]}, {post["date"]}</p>
+                    <div class='text-xs text-slate-700'>{post["author"]}</div>
+                    <div class='text-xs text-slate-700'>{post["venue"]}, {post["date"]}</div>
                 </div>
             </div>
         </Link>

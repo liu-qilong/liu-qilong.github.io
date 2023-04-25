@@ -1,9 +1,15 @@
+import Head from 'next/head'
 import PostIndex from '../components/post-index'
 import { getSortedPostsData } from '../utils/post-data'
 
 export default function Post( {allpaper} ) {
     return (
-        <PostIndex type='paper' allpost={allpaper}/>
+        <>
+            <Head>
+                <title>Papers</title>
+                <PostIndex type='paper' allpost={allpaper}/>
+            </Head>
+        </>
     )
 }
 

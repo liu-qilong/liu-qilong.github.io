@@ -1,6 +1,9 @@
 ---
 title: "Convert LaTeX to Word"
 date: "2022-05-04"
+link:
+    github: "https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes"
+    twitter: "https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes"
 ---
 
 Under the instruction of the webpage below, I successfully converted `report.tex` to `report.docx` with proper equations, figures, and references:
