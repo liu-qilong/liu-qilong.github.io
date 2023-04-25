@@ -4,6 +4,13 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
+import {read} from 'to-vfile'
+import {unified} from 'unified'
+import remarkParse from 'remark-parse'
+import remarkGfm from 'remark-gfm'
+import remarkRehype from 'remark-rehype'
+import rehypeStringify from 'rehype-stringify'
+
 
 export function getSortedPostsData ( relativePath ) {
     const postsDirectory = path.join(process.cwd(), relativePath)
@@ -57,16 +64,20 @@ export async function getPostData ( id, relativePath ) {
     // use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
 
-    // use remark to convert markdown into HTML string
-    const processedContent = await remark()
-        .use(html)
+    // use remark-gfm to convert markdown into html string
+    const file = await unified()
+        .use(remarkParse)
+        .use(remarkGfm)
+        .use(remarkRehype)
+        .use(rehypeStringify)
         .process(matterResult.content)
-    const contentHtml = processedContent.toString()
+
+    const content = String(file)
 
     // combine the data with the id and contentHtml
     return {
         id,
-        contentHtml,
+        content,
         ...matterResult.data,
     }
 }

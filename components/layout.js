@@ -8,10 +8,9 @@ export default function Layout({ children }) {
     const [imglink, setImgLink] = useState('/profile/kirov.jpg')
 
     return (
-        <>
+        <div class="flex">
             {/* sidebar */}
-            <div class="text-center pl-20 pt-5 fixed">
-                
+            <div class="basis-1/3 h-screen sticky top-0 text-center pr-20 pl-20 pt-20 shadow-xl">
                 {/* name and image */}
                 <div class="group"
                     onMouseEnter = {() => {
@@ -22,14 +21,14 @@ export default function Layout({ children }) {
                         setName('QILONG ')
                         setImgLink('/profile/kirov.jpg')
                     }}>
-                    <div class="group font-mono font-semibold text-3xl p-5">
+                    <div class="group font-mono text-slate-700 font-semibold text-2xl">
                         <span class="group-hover:text-rose-700">{name}</span>LIU
                     </div>
-                    <Image priority src={imglink} className="rounded-full mx-auto" height={150} width={150}/>
+                    <Image priority src={imglink} className="rounded-full mx-auto m-5" height={150} width={150}/>
                 </div>
 
                 {/* email & links */}
-                <IconStack divclass="flex container items-center pl-10 pr-10 pt-5" imgclass="mx-auto" size="30" icon_links={[
+                <IconStack divclass="flex container items-center pl-10 pr-10" imgclass="mx-auto" size="30" icon_links={[
                     ['google-scholar', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
                     ['github', 'https://github.com/TOB-KNPOB'],
                     ['medium', 'https://medium.com/@dafaddadaedddd'],
@@ -37,14 +36,14 @@ export default function Layout({ children }) {
                     ['hugging-face', 'https://huggingface.co/TOB-KNPOB'],
                 ]}/>
                 <Link class="text-s" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
-                
+
                 {/* navigator */}
                 <div>
                     {[
-                        ['Home', '/'],
-                        ['Papers', '/paper'],
-                        ['Projects', '/project'],
-                        ['Blogs', '/blog'],
+                        ['Home ⛺️', '/'],
+                        ['Papers 📜', '/paper'],
+                        ['Projects 🏗️', '/project'],
+                        ['Blogs 📖', '/blog'],
                     ].map(([title, url]) => (
                         <div class="m-5">
                             <Link class="text-slate-800 text-lg" href={url}>{title}</Link>
@@ -54,12 +53,9 @@ export default function Layout({ children }) {
             </div>
             
             {/* content */}
-            <div class="flex m-10 divide-x">
-                <div class="basis-1/3"></div>
-                <div class="basis-2/3 p-10 pl-20">
-                    {children}
-                </div>
+            <div class="basis-2/3 pr-20 pl-20">
+                {children}
             </div>
-        </>
+        </div>
     )
   }

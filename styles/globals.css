@@ -31,6 +31,10 @@ ul {
   @apply marker:text-slate-500 mt-5 list-disc pl-5 space-y-3
 }
 
+pre {
+  @apply rounded-lg mt-2 ml-2 mr-2 ring-1 ring-slate-900/5 bg-slate-50 overflow-auto
+}
+
 code {
-  @apply font-mono text-teal-700 bg-slate-50 p-1 text-sm
+  @apply max-w-xl font-mono text-teal-700 bg-slate-50 p-1 text-sm
 }

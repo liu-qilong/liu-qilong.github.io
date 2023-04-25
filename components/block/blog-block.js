@@ -6,7 +6,7 @@ export default function BlogBlock ({post, divclass="flex items-center space-x-4"
     const coverpath = '/cover/blog/' + post["id"] + '.png'
 
     // post link
-    let post_link = "blog/" + post["id"]
+    let post_link = "/blog/" + post["id"]
 
     // generate icon links list for icon stack
     let icon_links = []
@@ -17,9 +17,6 @@ export default function BlogBlock ({post, divclass="flex items-center space-x-4"
             return [ key, post['link'][key]]
         })
     }
-
-    console.log(post)
-    console.log(post["link"])
 
     return (
         <div class={divclass}>

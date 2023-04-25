@@ -9,24 +9,14 @@ export default function BlogPage({ postData }) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <div class="max-w-xl">
-                <BlogBlock post={postData} titleclass="text-3xl font-mono font-semibold text-slate-800" dateclass="font-mono" imgsize="120"/>
+            <div class="mt-10 mb-5">
+                <BlogBlock post={postData} titleclass="text-3xl font-medium text-slate-700" dateclass="font-mono" imgsize="170"/>
                 <hr class="mt-5"></hr>
-                <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+                <div dangerouslySetInnerHTML={{ __html: postData.content }}/>
             </div>
         </Layout>
-    );
-  }
-
-/* 
-            <div class="shadow rounded-xl p-10">
-                <h1 >{postData.title}</h1>
-                <div >
-                    </div>
-                    <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-                </div>
-
-*/
+    )
+}
 
 export async function getStaticPaths() {
   const paths = getAllPostIds('contents/blog')
