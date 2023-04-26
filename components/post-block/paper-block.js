@@ -6,20 +6,20 @@ export default function PaperBlock ({post, show_abstract=false, divclass="flex f
 
     return (
         <Link href={post['doi']}>
-            <div class={divclass}>
+            <div className={divclass}>
                 <div>
-                    <Image src={coverpath} height={imgsize} width={imgsize} class="mx-auto"/>
+                    <Image src={coverpath} height={imgsize} width={imgsize} className="mx-auto" alt=""/>
                 </div>
-                <div class="md:ml-3">
-                    <div class={titleclass}>{post["title"]}</div>
-                    <div class={dateclass}>{post["author"]}</div>
-                    <div class={dateclass}>{post["venue"]}, {post["date"]}</div>
+                <div className="md:ml-3">
+                    <div className={titleclass}>{post["title"]}</div>
+                    <div className={dateclass}>{post["author"]}</div>
+                    <div className={dateclass}>{post["venue"]}, {post["date"]}</div>
                 </div>
             </div>
             { show_abstract ? (
                 <>
-                <hr class="mt-2 mb-2"></hr>
-                <p class="text-xs md:text-sm text-slate-700 line-clamp-4 overflow-auto group-hover:line-clamp-none">{post["abstract"]}</p>
+                <hr className="mt-2 mb-2"></hr>
+                <p className="text-xs md:text-sm text-slate-700 line-clamp-4 overflow-auto group-hover:line-clamp-none">{post["abstract"]}</p>
                 </>
             ) : (
                 <></>

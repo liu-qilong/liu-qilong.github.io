@@ -11,7 +11,7 @@ export default function ProjectPage({ postData }) {
             </Head>
             <div>
                 <ProjectBlock post={postData} titleclass="text-2xl md:text-3xl font-medium text-slate-700" dateclass="font-mono text-sm" imgsize="150"/>
-                <hr class="mt-5"></hr>
+                <hr className="mt-5"></hr>
                 <div dangerouslySetInnerHTML={{ __html: postData.content }}/>
             </div>
         </Layout>

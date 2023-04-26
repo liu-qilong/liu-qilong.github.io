@@ -29,11 +29,11 @@ export default function PostIndex( {type, allpost} ) {
                     return (
                     <>
                         {is_year_heading ? (
-                            <h1 class="text-center mt-10 font-mono text-rose-600">{">>" + year + "<<"}</h1>
+                            <h1 className="text-center mt-10 font-mono text-rose-600">{">>" + year + "<<"}</h1>
                         ) : (
                             <></>)
                         }
-                        <div class="group rounded-lg mt-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-slate-100">
+                        <div className="group rounded-lg mt-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-slate-100">
                             {(type == "paper") ? (
                                 <BlockType post={post} show_abstract={true}/>
                             ) : (

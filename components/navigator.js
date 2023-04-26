@@ -10,7 +10,7 @@ export default function SideBar({ children }) {
     return (
         <>
             {/* name and image */}
-            <div class="group"
+            <div className="group"
                 onMouseEnter = {() => {
                     setName('KIROV🪐')
                     setImgLink('/profile/knpob.png')
@@ -19,10 +19,10 @@ export default function SideBar({ children }) {
                     setName('QILONG ')
                     setImgLink('/profile/kirov.jpg')
                 }}>
-                <div class="group font-mono text-slate-700 font-semibold text-2xl">
-                    <span class="group-hover:text-rose-700">{name}</span>LIU
+                <div className="group font-mono text-slate-700 font-semibold text-2xl">
+                    <span className="group-hover:text-rose-700">{name}</span>LIU
                 </div>
-                <Image priority src={imglink} className="rounded-full mx-auto m-5" height={150} width={150}/>
+                <Image priority src={imglink} className="rounded-full mx-auto m-5" height={150} width={150} alt=""/>
             </div>
 
             {/* email & links */}
@@ -33,7 +33,7 @@ export default function SideBar({ children }) {
                 ['twitter', 'https://twitter.com/liu_qi_long'],
                 ['hugging-face', 'https://huggingface.co/TOB-KNPOB'],
             ]}/>
-            <Link class="text-s" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
+            <Link className="text-s" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
 
             {/* navigator */}
             <div>
@@ -43,8 +43,8 @@ export default function SideBar({ children }) {
                     ['Projects 🏗️', '/project'],
                     ['Blogs 📖', '/blog'],
                 ].map(([title, url]) => (
-                    <div class="m-5">
-                        <Link class="text-slate-800 text-lg" href={url}>{title}</Link>
+                    <div className="m-5">
+                        <Link className="text-slate-800 text-lg" href={url}>{title}</Link>
                     </div>
                 ))}
             </div>
