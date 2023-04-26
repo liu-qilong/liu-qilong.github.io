@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../../components/layout'
-import BlogBlock from '../../components/block/blog-block'
+import BlogBlock from '../../components/post-block/blog-block'
 import { getAllPostIds, getPostData } from '../../utils/post-data'
 
 export default function BlogPage({ postData }) {
@@ -10,7 +10,7 @@ export default function BlogPage({ postData }) {
                 <title>{postData.title}</title>
             </Head>
             <div>
-                <BlogBlock post={postData} titleclass="text-3xl font-medium text-slate-700" dateclass="font-mono" imgsize="150"/>
+                <BlogBlock post={postData} titleclass="text-2xl md:text-3xl font-medium text-slate-700" dateclass="font-mono text-sm" imgsize="150"/>
                 <hr class="mt-5"></hr>
                 <div dangerouslySetInnerHTML={{ __html: postData.content }}/>
             </div>

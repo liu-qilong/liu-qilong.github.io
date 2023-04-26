@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import IconStack from '../icon-stack'
 
-export default function ProjectBlock ({post}) {
+export default function ProjectBlock ({post, divclass="flex flex-col md:flex-row items-center", titleclass="text-sm md:text-base mb-1", dateclass="text-xs text-slate-700", imgsize=120}) {
     const coverpath = '/cover/project/' + post["id"] + '.png'
 
     // post link
@@ -19,14 +19,14 @@ export default function ProjectBlock ({post}) {
     }
 
     return (
-            <div class="flex items-center space-x-4">
+            <div class={divclass}>
                 <Link href={post_link}>
                     <Image src={coverpath} height={120} width={120} class="max-w-md"/>
                 </Link>
-                <div>
+                <div class="md:ml-2">
                     <Link href={post_link}>
-                        <div>{post["title"]}</div>
-                        <div class='text-xs text-slate-700'>{post["date"]}</div>
+                        <div class={titleclass}>{post["title"]}</div>
+                        <div class={dateclass}>{post["date"]}</div>
                     </Link>
                     <IconStack icon_links={icon_links}/>
                 </div>

@@ -4,19 +4,19 @@
 
 
 body {
-  @apply font-serif text-slate-800
+  @apply font-serif text-slate-800 hyphens-auto
 }
 
 h2 {
-  @apply before:content-["#"] hover:bg-slate-100 text-slate-500 mt-10 mb-5 text-3xl border-b
+  @apply before:content-["#"] hover:bg-slate-100 text-slate-500 mt-10 mb-5 border-b text-2xl md:text-3xl
 }
 
 h3 {
-  @apply before:content-["#"] hover:bg-slate-100 text-slate-500 mt-5 mb-5 text-2xl
+  @apply before:content-["#"] hover:bg-slate-100 text-slate-500 mt-5 mb-5 text-xl md:text-2xl
 }
 
 h4 {
-  @apply hover:bg-slate-100 text-slate-500 mt-5 mb-5 text-xl
+  @apply hover:bg-slate-100 text-slate-500 mt-5 mb-5 text-lg md:text-xl
 }
 
 p {

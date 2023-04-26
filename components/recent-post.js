@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import PaperBlock from './block/paper-block'
-import ProjectBlock from './block/project-block'
-import BlogBlock from './block/blog-block'
+import PaperBlock from './post-block/paper-block'
+import ProjectBlock from './post-block/project-block'
+import BlogBlock from './post-block/blog-block'
 
 export default function RecentPost({ type, posts, maxnum }) {
     let num = 0 // idx of a post
@@ -15,11 +15,11 @@ export default function RecentPost({ type, posts, maxnum }) {
     let BlockType = BlockDict[type]
 
     return (
-    <div class="rounded-lg mb-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3">
+    <div class="rounded-lg mb-6 p-6 ring-1 ring-slate-900/5 shadow-lg">
         <Link href={"/" + type}>
             <div class="hover:bg-slate-100">Recent {type}s ({total})</div>
         </Link>
-        <hr></hr>
+        <hr class="mt-3 mb-2"></hr>
         <div>
             {posts.map( (post) => {
                 num = num + 1
@@ -32,7 +32,15 @@ export default function RecentPost({ type, posts, maxnum }) {
                     )
                 }
             })}
-            {(num > maxnum) ? (<Link href={"/" + type}><div class="italic hover:bg-slate-100">... (read more)</div></Link>) : (<></>)}
+            {(num > maxnum) ? (
+                <>
+                <hr class="mt-2 mb-2"></hr>
+                <Link href={"/" + type}>
+                    <div class="text-sm italic hover:bg-slate-100">... (read more)
+                    </div>
+                </Link>
+                </>
+            ) : (<></>)}
         </div>
     </div>
 )}

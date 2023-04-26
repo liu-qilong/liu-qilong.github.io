@@ -1,59 +1,16 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import IconStack from '../components/icon-stack'
-import React, { useState } from 'react'
+import Navigator from './navigator'
 
 export default function Layout({ children }) {
-    const [name, setName] = useState('QILONG ')
-    const [imglink, setImgLink] = useState('/profile/kirov.jpg')
-
     return (
-        <div class="flex">
-            {/* sidebar */}
-            <div class="basis-1/3 h-screen sticky top-0 text-center pr-20 pl-20 pt-20 shadow-xl">
-                {/* name and image */}
-                <div class="group"
-                    onMouseEnter = {() => {
-                        setName('KIROV🪐')
-                        setImgLink('/profile/knpob.png')
-                    }} 
-                    onMouseLeave = {() => {
-                        setName('QILONG ')
-                        setImgLink('/profile/kirov.jpg')
-                    }}>
-                    <div class="group font-mono text-slate-700 font-semibold text-2xl">
-                        <span class="group-hover:text-rose-700">{name}</span>LIU
-                    </div>
-                    <Image priority src={imglink} className="rounded-full mx-auto m-5" height={150} width={150}/>
-                </div>
-
-                {/* email & links */}
-                <IconStack divclass="flex container items-center pl-10 pr-10" imgclass="mx-auto" size="30" icon_links={[
-                    ['google-scholar', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
-                    ['github', 'https://github.com/TOB-KNPOB'],
-                    ['medium', 'https://medium.com/@dafaddadaedddd'],
-                    ['twitter', 'https://twitter.com/liu_qi_long'],
-                    ['hugging-face', 'https://huggingface.co/TOB-KNPOB'],
-                ]}/>
-                <Link class="text-s" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
-
-                {/* navigator */}
-                <div>
-                    {[
-                        ['Home ⛺️', '/'],
-                        ['Papers 📜', '/paper'],
-                        ['Projects 🏗️', '/project'],
-                        ['Blogs 📖', '/blog'],
-                    ].map(([title, url]) => (
-                        <div class="m-5">
-                            <Link class="text-slate-800 text-lg" href={url}>{title}</Link>
-                        </div>
-                    ))}
-                </div>
+        <div class="flex flex-col md:flex-row">
+            {/* navigator */}
+            <div class="text-center pt-5 md:pt-20 md:pr-20 md:pl-20 border-b md:shadow-lg md:border-0
+                md:basis-1/3 md:h-screen md:sticky md:top-0">
+                <Navigator/>
             </div>
-            
+
             {/* content */}
-            <div class="basis-2/3 pr-20 pl-20 pt-10 mb-10">
+            <div class="w-screen md:basis-2/3 p-10 pt-0 md:pt-10">
                 {children}
             </div>
         </div>
