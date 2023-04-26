@@ -17,30 +17,29 @@ export default function PostIndex( {type, allpost} ) {
     return (
         <Layout>
             <h2>{type.slice(0, 1).toUpperCase() + type.slice(1, )}s ({total})</h2>
-            {allpost.map(
-                ( post ) => {
-                    let post_year = post["date"].slice(0, 4)
-                    let is_year_heading = (post_year !== year)
+            {allpost.map( ( post ) => {
+                let post_year = post["date"].slice(0, 4)
+                let is_year_heading = (post_year !== year)
 
-                    if (is_year_heading) {
-                        year = post_year
+                if (is_year_heading) {
+                    year = post_year
+                }
+
+                return (
+                <>
+                    {is_year_heading ? (
+                        <h1 className="text-center mt-10 font-mono text-rose-600" key={year}>{">>" + year + "<<"}</h1>
+                    ) : (
+                        <></>)
                     }
-
-                    return (
-                    <>
-                        {is_year_heading ? (
-                            <h1 className="text-center mt-10 font-mono text-rose-600">{">>" + year + "<<"}</h1>
+                    <div className="group rounded-lg mt-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-slate-100">
+                        {(type == "paper") ? (
+                            <BlockType post={post} show_abstract={true} key={post["id"]}/>
                         ) : (
-                            <></>)
-                        }
-                        <div className="group rounded-lg mt-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-slate-100">
-                            {(type == "paper") ? (
-                                <BlockType post={post} show_abstract={true}/>
-                            ) : (
-                                <BlockType post={post}/>
-                            )}
-                        </div>
-                    </>
+                            <BlockType post={post} key={post["id"]}/>
+                        )}
+                    </div>
+                </>
             )})}
         </Layout>
     )

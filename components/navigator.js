@@ -44,7 +44,7 @@ export default function SideBar({ children }) {
                     ['Blogs 📖', '/blog'],
                 ].map(([title, url]) => (
                     <div className="m-5">
-                        <Link className="text-slate-800 text-lg" href={url}>{title}</Link>
+                        <Link className="text-slate-800 text-lg" href={url} key={title + url}>{title}</Link>
                     </div>
                 ))}
             </div>
