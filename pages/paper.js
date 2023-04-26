@@ -5,10 +5,10 @@ import { getSortedPostsData } from '../utils/post-data'
 export default function Post( {allpaper} ) {
     return (
         <>
-            <Head>
-                <title>Papers</title>
-                <PostIndex type='paper' allpost={allpaper}/>
-            </Head>
+        <Head>
+            <title>Papers</title>
+        </Head>
+        <PostIndex type='paper' allpost={allpaper}/>
         </>
     )
 }

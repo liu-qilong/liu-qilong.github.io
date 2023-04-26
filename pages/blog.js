@@ -7,9 +7,9 @@ export default function Post( {allblog} ) {
         <>
         <Head>
             <title>Blogs</title>
-            <PostIndex type='blog' allpost={allblog}/>
         </Head>
-    </>
+        <PostIndex type='blog' allpost={allblog}/>
+        </>
     )
 }
 

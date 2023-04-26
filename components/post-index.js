@@ -16,7 +16,7 @@ export default function PostIndex( {type, allpost} ) {
 
     return (
         <Layout>
-            <div class="text-3xl first-letter:uppercase">{type}s ({total})</div>
+            <h2>{type.slice(0, 1).toUpperCase() + type.slice(1, )}s ({total})</h2>
             {allpost.map(
                 ( post ) => {
                     let post_year = post["date"].slice(0, 4)
@@ -34,14 +34,10 @@ export default function PostIndex( {type, allpost} ) {
                             <></>)
                         }
                         <div class="group rounded-lg mt-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-slate-100">
-                            <BlockType post={post}/>
                             {(type == "paper") ? (
-                                <>
-                                    <hr></hr>
-                                    <p class="text-sm max-h-20 overflow-auto group-hover:max-h-full">{post["abstract"]}</p>
-                                </>
+                                <BlockType post={post} show_abstract={true}/>
                             ) : (
-                                <></>
+                                <BlockType post={post}/>
                             )}
                         </div>
                     </>

@@ -27,14 +27,51 @@ a {
   @apply text-slate-500 hover:bg-slate-100
 }
 
+blockquote {
+  @apply italic p-3 mt-3 mb-3 bg-slate-50 border-l-4 border-teal-500
+}
+
+blockquote p {
+  @apply mt-0 before:content-['"'] before:font-bold before:font-sans before:text-teal-600 before:text-3xl before:pr-1
+}
+
+/* list */
 ul {
   @apply marker:text-slate-500 mt-5 list-disc pl-5 space-y-3
 }
 
-pre {
-  @apply rounded-lg mt-2 ml-2 mr-2 ring-1 ring-slate-900/5 bg-slate-50 overflow-auto
+ol {
+  @apply marker:text-slate-500 mt-5 list-decimal pl-5 space-y-3
 }
 
+/* code block */
+pre {
+  @apply rounded mt-2 p-2 ring-1 ring-slate-900/5 bg-slate-50
+}
+
+
 code {
-  @apply max-w-xl font-mono text-teal-700 bg-slate-50 p-1 text-sm
+  @apply font-mono text-teal-700 bg-slate-50 p-1 text-sm whitespace-pre-wrap overflow-auto
+}
+
+/* table */
+table {
+  @apply font-mono rounded mt-3 mb-3 ring-1 ring-slate-900/5 bg-slate-50 w-full
+}
+
+thead {
+  @apply text-teal-600 border-b
+}
+
+tbody {
+  @apply divide-y
+}
+
+td, th {
+  @apply p-1 text-xs
+}
+
+/* footnote heading */
+.sr-only {
+  @apply before:content-['*']
 }

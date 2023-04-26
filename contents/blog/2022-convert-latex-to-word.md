@@ -10,8 +10,9 @@ link:
 Under the instruction of the webpage below, I successfully converted `report.tex` to `report.docx` with proper equations, figures, and references:
 
 | test | test |
-| --- | --- |
-| test | a |
+| :---: | --- |
+| test | test |
+| a | a |
 
 > [How to Convert from Latex to MS Word with ‘Pandoc’ - Zhelin Chen](https://medium.com/@zhelinchen91/how-to-convert-from-latex-to-ms-word-with-pandoc-f2045a762293)
 

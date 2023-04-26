@@ -6,17 +6,20 @@ import { getSortedPostsData } from '../utils/post-data'
 
 export default function Home( {allpaper, allproject, allblog} ) {
     return (
+        <>
+        <Head>
+            <title>Home</title>
+        </Head>
         <Layout>
-            <Head>
-                <title>Home</title>
-            </Head>
             <h2>Hello 👋</h2>
             <p>Welcome to my blog site! I am an MPhil student at <Link href="https://www.polyu.edu.hk/en/">The Hong Kong Polytechnic University</Link>. I am thrilled with exploring new ideas 💡 and hopefully my effort can contribute to our community 🌍</p>
+
             <br></br>
             <RecentPost type='paper' posts={allpaper} maxnum={3}/>
             <RecentPost type='project' posts={allproject} maxnum={3}/>
             <RecentPost type='blog' posts={allblog} maxnum={3}/>
         </Layout>
+        </>
     )
 }
 

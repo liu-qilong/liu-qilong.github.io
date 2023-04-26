@@ -53,7 +53,7 @@ export default function Layout({ children }) {
             </div>
             
             {/* content */}
-            <div class="basis-2/3 pr-20 pl-20">
+            <div class="basis-2/3 pr-20 pl-20 pt-10 mb-10">
                 {children}
             </div>
         </div>

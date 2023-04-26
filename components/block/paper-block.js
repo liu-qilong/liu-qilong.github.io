@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function PaperBlock ({post}) {
+export default function PaperBlock ({post, show_abstract=true}) {
     const coverpath = '/cover/paper/' + post["id"] + '.png'
 
     return (
@@ -16,6 +16,14 @@ export default function PaperBlock ({post}) {
                     <div class='text-xs text-slate-700'>{post["venue"]}, {post["date"]}</div>
                 </div>
             </div>
+            { show_abstract ? (
+                        <>
+                            <hr></hr>
+                            <p class="text-sm line-clamp-4 overflow-auto group-hover:line-clamp-none">{post["abstract"]}</p>
+                        </>
+                    ) : (
+                        <></>
+                    )}
         </Link>
     )
 }
