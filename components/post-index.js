@@ -26,9 +26,9 @@ export default function PostIndex( {type, allpost} ) {
                 }
 
                 return (
-                <>
+                <div key={type + year}>
                     {is_year_heading ? (
-                        <h1 className="text-center mt-10 font-mono text-rose-600" key={year}>{">>" + year + "<<"}</h1>
+                        <h1 className="text-center mt-10 font-mono text-rose-600">{">>" + year + "<<"}</h1>
                     ) : (
                         <></>)
                     }
@@ -39,7 +39,7 @@ export default function PostIndex( {type, allpost} ) {
                             <BlockType post={post} key={post["id"]}/>
                         )}
                     </div>
-                </>
+                </div>
             )})}
         </Layout>
     )
