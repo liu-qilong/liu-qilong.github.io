@@ -33,7 +33,7 @@ export default function SideBar({ children }) {
                 ['twitter', 'https://twitter.com/liu_qi_long'],
                 ['hugging-face', 'https://huggingface.co/TOB-KNPOB'],
             ]}/>
-            <Link className="text-s" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
+            <Link className="text-s hyphens-none" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
 
             {/* navigator */}
             <div>
