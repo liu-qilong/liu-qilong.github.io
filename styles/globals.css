@@ -51,7 +51,7 @@ pre {
 
 
 code {
-  @apply font-mono text-teal-700 bg-slate-50 p-1 text-sm whitespace-pre-wrap overflow-auto
+  @apply font-mono text-teal-700 bg-slate-50 p-1 text-sm whitespace-pre-wrap overflow-auto hyphens-none
 }
 
 /* table */

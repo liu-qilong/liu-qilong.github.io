@@ -26,7 +26,7 @@ export default function SideBar({ children }) {
             </div>
 
             {/* email & links */}
-            <IconStack divclass="flex container items-center pl-10 pr-10" imgclass="mx-auto" size="30" icon_links={[
+            <IconStack divclass="flex mx-auto w-fit" imgclass="p-1" size="27" icon_links={[
                 ['google-scholar', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
                 ['github', 'https://github.com/TOB-KNPOB'],
                 ['medium', 'https://medium.com/@dafaddadaedddd'],

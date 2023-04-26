@@ -5,8 +5,6 @@ link:
     github: "https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes"
 ---
 
-Hi👋
-
 Here are some beamer templates which are secondary creations of [SINTEF Presentation](https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx) template. Thanks [Federico Zenith](federico.zenith@sintef.no) for creating such tasted and well-designed works. To use it in my and my friends' schools/organizations, I rewrote and added some icons and features to adapt to specific surroundings✨.
 
 All templates have been submitted to [Gallery - Overleaf](https://cs.overleaf.com/gallery), please check them here👇
@@ -24,15 +22,15 @@ Below shows some examples:
 
 ## Title Pages for Schools/Organizations
 - The Hong Kong Polytechnic University
-![PolyU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/PolyU.png)
+![PolyU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/PolyU.png?raw=true)
 - Southwest University
-![SWU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SWU.png)
+![SWU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SWU.png?raw=true)
 - Shenzhen University
-![SZU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SZU.png)
+![SZU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SZU.png?raw=true)
 - Shenzhen Academic of Environmental Science
-![SAES](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SAES.png)
+![SAES](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/SAES.png?raw=true)
 - Harbin Institute of Technology
-![HIT](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/HIT.png)
+![HIT](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/HIT.png?raw=true)
   > Thanks [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 
 ## Page Elements
@@ -40,15 +38,15 @@ Below shows some examples:
 - Table of Contents
 
   At the beginning of each section, the table of contents will be shown with the current chapter highlighted.
-![toc](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/table%20of%20contents.png)
+![toc](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/table%20of%20contents.png?raw=true)
 - Sub-section page
-![ssec](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/subsection.png)
+![ssec](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/subsection.png?raw=true)
 - Math equation
-![math](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/math.png)
+![math](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/math.png?raw=true)
 - Code block
-![code](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/code.png)
+![code](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/code.png?raw=true)
 - End page
-![end](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/end.png)
+![end](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/end.png?raw=true)
 
 ## Make Your Own Theme?
 
