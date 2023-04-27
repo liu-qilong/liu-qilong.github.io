@@ -19,17 +19,17 @@ export default function ProjectBlock ({post, divclass="flex flex-col md:flex-row
     }
 
     return (
-            <div className={divclass}>
+        <div className={divclass}>
+            <Link href={post_link}>
+                <Image src={coverpath} height={imgsize} width={imgsize} className="max-w-md" alt=""/>
+            </Link>
+            <div className="md:ml-2">
                 <Link href={post_link}>
-                    <Image src={coverpath} height={imgsize} width={imgsize} className="max-w-md" alt=""/>
+                    <div className={titleclass}>{post["title"]}</div>
+                    <div className={dateclass}>{post["date"]}</div>
                 </Link>
-                <div className="md:ml-2">
-                    <Link href={post_link}>
-                        <div className={titleclass}>{post["title"]}</div>
-                        <div className={dateclass}>{post["date"]}</div>
-                    </Link>
-                    <IconStack icon_links={icon_links}/>
-                </div>
+                <IconStack icon_links={icon_links}/>
             </div>
+        </div>
     )
 }

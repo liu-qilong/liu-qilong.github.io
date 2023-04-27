@@ -14,6 +14,34 @@ export default function RecentPost({ type, posts, maxnum }) {
     }
     let BlockType = BlockDict[type]
 
+    // generate recent post body
+    const recent_post_body = posts.map( (post) => {
+        num = num + 1
+
+        if (num <= maxnum) {
+            return (
+                <div className="hover:bg-slate-100 mt-2" key={post["id"]}>
+                    <BlockType post={post}/>
+                </div>
+            )
+        }
+    })
+
+    // generate read more
+    let readmore = (<></>)
+    
+    if (num > maxnum) {
+        readmore = (
+        <>
+        <hr className="mt-2 mb-2"></hr>
+        <Link href={"/" + type}>
+            <div className="text-sm italic hover:bg-slate-100">... (read more)
+            </div>
+        </Link>
+        </>
+        )
+    }
+
     return (
     <div className="rounded-lg mb-6 p-6 ring-1 ring-slate-900/5 shadow-lg">
         <Link href={"/" + type}>
@@ -21,26 +49,8 @@ export default function RecentPost({ type, posts, maxnum }) {
         </Link>
         <hr className="mt-3 mb-2"></hr>
         <div>
-            {posts.map( (post) => {
-                num = num + 1
-
-                if (num <= maxnum) {
-                    return (
-                        <div className="hover:bg-slate-100 mt-2" key={post["id"]}>
-                            <BlockType post={post}/>
-                        </div>
-                    )
-                }
-            })}
-            {(num > maxnum) ? (
-                <>
-                <hr className="mt-2 mb-2"></hr>
-                <Link href={"/" + type}>
-                    <div className="text-sm italic hover:bg-slate-100">... (read more)
-                    </div>
-                </Link>
-                </>
-            ) : (<></>)}
+            {recent_post_body}
+            {readmore}
         </div>
     </div>
 )}
