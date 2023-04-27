@@ -3,6 +3,7 @@ title: "Jabref2Obsidian"
 date: "2023-03-05"
 link:
     github: "https://github.com/TOB-KNPOB/Jabref2Obsidian"
+    read-the-docs: "https://jabref2obsidian.readthedocs.io/en/latest/?badge=latest"
 ---
 
 [![Documentation Status](https://readthedocs.org/projects/jabref2obsidian/badge/?version=latest)](https://jabref2obsidian.readthedocs.io/en/latest/?badge=latest)

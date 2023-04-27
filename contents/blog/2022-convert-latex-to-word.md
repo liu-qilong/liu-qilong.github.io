@@ -1,42 +1,54 @@
 ---
 title: "Convert LaTeX to Word"
 date: "2022-05-04"
+update: "2023-04-27"
+link:
+    medium: "https://medium.com/@tob-knpob/convert-latex-to-word-94f863f4dbdc"
 ---
 
-Following the instruction of the webpage below, I successfully converted `paper.tex` to `paper.docx`:
+LaTeX is a great tool for academic writing. However, not all collaborators may be familiar with it, and at times, you may need to convert your document into a Word file for reviewing and editing purposes. In my opinion, the best tool for this task is [Pandoc](https://pandoc.org) - an open-source command-line tool for free.
+
+Following the tutorial below, I installed `pandoc` and successfully converted `paper.tex` to `paper.docx`:
 
 > [How to Convert from Latex to MS Word with ‘Pandoc’ - Zhelin Chen](https://medium.com/@zhelinchen91/how-to-convert-from-latex-to-ms-word-with-pandoc-f2045a762293)
+
+In this blog, I will share a simple command snippet that converts LaTeX to Word file. Additionally, I will also discuss some aspects that were not fully covered in the aforementioned tutorial.
+
+## Conversion command
+
+After runing this command, a Word file will be generated in the `./word/` folder:
 
 ```
 pandoc paper.tex -o word/paper.docx --reference-doc=word/template.docx --bibliography=bibliography.bib --citeproc
 ```
 
-## Default template styles
+Noted that `./word/template.docx ` is a Word file serving as the referencing template and `./bibliography.bib` is the LaTeX bibliography file.
 
-To specify the styles[^1], I followed the instruction of the web pages below:
+## Style the document
 
-- According to [Unable to create a custom reference.docx using pandoc - Stackoverflow](https://stackoverflow.com/questions/58642039/unable-to-create-a-custom-reference-docx-using-pandoc), the personal-specified template file `reference.docx` should be revised based on a pandoc default output file.
-- According to `--data-dir=DIRECTORY` entry of [Manual - Pandoc](https://pandoc.org/MANUAL.html), placing the `reference.docx` to `$HOME/.local/share/pandoc` then the template shall overwrite the default settings.
+You may have noticed the `--reference-doc` variable here. It accepts a Word file as the template so that you can specify the styles of the generated file. You can prepared a Word file as template following these steps:
 
-[^1]: Compared with the template for converting reports, the numbering of headings and the indents of text are canceled.
+- Run the convert command without `--reference-doc`:
+	```
+	pandoc paper.tex -o word/template.docx --bibliography=bibliography.bib --citeproc
+	```
+- Fine-tune the styles of the generated `./word/template.docx` file [^1]. Changing the styles of a Word document is itself a sophisticated topic. You can read the following tutorial for more detail:
+	> [Customize or create new styles - Microsoft](https://support.microsoft.com/en-us/office/customize-or-create-new-styles-d38d6e47-f6fc-48eb-a607-1eb120dec563)
+- Now you have a Word file that can serve as the reference template. Rerun the command and your generated Word file should look just the way you want:
+	```
+	pandoc paper.tex -o word/paper.docx --reference-doc=word/template.docx --bibliography=bibliography.bib --citeproc
+	```
 
-## Dealing with Inconsistency
+[^1]: According to [Unable to create a custom reference.docx using pandoc - Stackoverflow](https://stackoverflow.com/questions/58642039/unable-to-create-a-custom-reference-docx-using-pandoc), the personal-specified template file `reference.docx` should be revised based on a pandoc default output file.
 
-But there will be some inconsistency between LaTex and the converted Word document.
+_P.S. If you'd like to reset the default template [^2], placing the `reference.docx` to `$HOME/.local/share/pandoc` then the template shall overwrite the default settings._
 
-- Figures Caption & Numbering
-	Find all the `\begin{figure}` and add correct numbering and captions in Word correspondently.
-- Equation Numbering
-	Find all the `\begin{equation}` and add correct numbering in Word correspondently.
-- Auto Reference
-	Find all the `\autoref` and add correct reference texts in Word correspondently.
-- Name (Year) Citation
-	Find all the `\citeauthor` `\citeyear` and remove all duplicate year texts in Word correspondently.
-- Reference "Chapter"
-	It may be better to add an unnumbered "Reference" Chapter at the beginning of the title of the reference list.
+[^2]: Please refer to `--data-dir=DIRECTORY` entry of [Manual - Pandoc](https://pandoc.org/MANUAL.html)
 
 ## Exclude all images
 
-Pandoc failed to follow the specific resizing instructions in LaTeX, resulting in large images that occupy an entire page each. For editing purposes, it may be more reader friendly to remove all images. Although Pandoc does not provide a "remove all images" option, a simple workaround can solve this problem: 
+Pandoc usually fails to follow the images resizing instructions in LaTeX, resulting in large images occupying entire pages. For editing purposes, it may be more reader friendly to remove all images [^3]. Although Pandoc does not provide a "remove all images" option, a simple workaround can solve this problem: 
 
 > Rename the figure folder so that the images cannot be found and Pandoc will leave it blank.
+
+[^3]: In my case, the generated Word file is only used for editing and proofreading by my supervisor and teammates.
