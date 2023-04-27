@@ -15,7 +15,7 @@ With tutorials like [Beamer - Overleaf](https://www.overleaf.com/learn/latex/Bea
 
 However, LaTeX only generates PDF files, which are usually static. Excluding videos and GIFs completely from your presentation? How pitiful. I searched the internet for a while and eventually found a simple workflow to embed GIFs in LaTeX beamer [^1].
 
-[^1]: This workflow is inspired by: [Getting GIF and/or moving images into a LaTeX presentation - StackExchange](https://tex.stackexchange.com/questions/240243/getting-gif-and-or-moving-images-into-a-latex-presentation)
+[^1]: This workflow was inspired by: [Getting GIF and/or moving images into a LaTeX presentation - StackExchange](https://tex.stackexchange.com/questions/240243/getting-gif-and-or-moving-images-into-a-latex-presentation)
 
 ## Convert `gif` to `png` series
 
@@ -53,7 +53,7 @@ _P.S. Sometimes format conversion, batch cropping, and resizing of videos/images
 
 ## Recommended PDF reader
 
-The generated PDF file can be displayed in [Acrobat Reader](https://www.adobe.com/acrobat/pdf-reader.html) or [Foxit Reader](https://www.foxit.com) but when in full-screen slideshow mode the previous one gets blurred and the latter one has a white margin.
+The generated PDF file can be displayed in [Acrobat Reader](https://www.adobe.com/acrobat/pdf-reader.html) or [Foxit Reader](https://www.foxit.com). However, when in full-screen slideshow mode (on MacBook 💻 ), the previous one gets blurred and the latter one has a white margin.
 
 Eventually, I found that the best way to display slideshow was:
 - Open the generated `.pdf` with with [Acrobat Reader](https://www.adobe.com/acrobat/pdf-reader.html).
