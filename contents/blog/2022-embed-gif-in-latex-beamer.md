@@ -8,7 +8,7 @@ link:
 
 As an research postgraduate student, I frequently make "academic-looking" slides for meetings, which comprise a lot of references, tables, charts, and sometimes math equations. LaTeX is excellent for typesetting these elements, so using LaTeX to make slides sounds like a good idea.
 
-With tutorials like [Beamer - Overleaf](https://www.overleaf.com/learn/latex/Beamer), I got started with this approach and feel more and more comfortable. I even made a series of templates for me and my friends (for more detail: [Beamer-LaTeX-Themes](/project/2022-beamer-latex)). Here are some example pages:
+With tutorials like [Beamer - Overleaf](https://www.overleaf.com/learn/latex/Beamer), I got started with this approach and feel more and more comfortable. I even made a series of templates for me and my friends (for more details: [Beamer-LaTeX-Themes](/project/2022-beamer-latex)). Here are some example pages:
 
 ![PolyU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/PolyU.png?raw=true)
 ![math](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/math.png?raw=true)
