@@ -4,6 +4,16 @@ import BlogBlock from '../../components/post-block/blog-block'
 import { getAllPostIds, getPostData } from '../../utils/post-data'
 
 export default function BlogPage({ postData }) {
+    let update = (<>nothing</>)
+
+    if (postData.update != null) {
+        update = (
+            <div className="italic mt-5 text-right">
+                Lastly updated: <span>{postData["update"]}</span>
+            </div>
+        )
+    }
+
     return (
         <Layout>
             <Head>
@@ -13,6 +23,7 @@ export default function BlogPage({ postData }) {
                 <BlogBlock post={postData} titleclass="text-2xl md:text-3xl font-medium text-slate-700" dateclass="font-mono text-sm" imgsize="150"/>
                 <hr className="mt-5"></hr>
                 <div dangerouslySetInnerHTML={{ __html: postData.content }}/>
+                {update}
             </div>
         </Layout>
     )

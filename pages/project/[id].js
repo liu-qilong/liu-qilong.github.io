@@ -4,6 +4,16 @@ import ProjectBlock from '../../components/post-block/project-block'
 import { getAllPostIds, getPostData } from '../../utils/post-data'
 
 export default function ProjectPage({ postData }) {
+    let update = (<>nothing</>)
+
+    if (postData.update != null) {
+        update = (
+            <div className="italic mt-5 text-right">
+                Lastly updated: <span>{postData["update"]}</span>
+            </div>
+        )
+    }
+
     return (
         <Layout>
             <Head>
@@ -14,6 +24,7 @@ export default function ProjectPage({ postData }) {
                 <hr className="mt-5"></hr>
                 <div dangerouslySetInnerHTML={{ __html: postData.content }}/>
             </div>
+            {update}
         </Layout>
     )
 }
