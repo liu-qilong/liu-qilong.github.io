@@ -15,6 +15,10 @@ body {
   .content {
     max-width: 66%;
   }
+
+  .navigator {
+    max-width: 33%
+  }
 }
 
 h2 {
