@@ -74,7 +74,6 @@ pre {
 code {
   @apply font-mono text-teal-700 bg-slate-50 p-1 text-sm
 }
-/* whitespace-pre-wrap  hyphens-none */
 
 /* table */
 table {

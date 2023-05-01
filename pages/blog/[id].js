@@ -6,7 +6,7 @@ import { getAllPostIds, getPostData } from '../../utils/post-data'
 export default function BlogPage({ postData }) {
     const update = (postData.update != null) ? (
         <div className="italic mt-5 text-right">
-            Lastly updated: <span>{postData["update"]}</span>
+            Lastly updated: <span>{postData.update}</span>
         </div>
     ) : (
         <></>

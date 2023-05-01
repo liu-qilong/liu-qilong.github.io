@@ -16,7 +16,7 @@ export default function PostIndex( {type, allpost} ) {
 
     // generate index page body
     const index_body = allpost.map( ( post ) => {
-        let post_year = post["date"].slice(0, 4)
+        let post_year = post.date.slice(0, 4)
         let year_heading = (<></>)
 
         if (post_year !== year) {
@@ -28,9 +28,9 @@ export default function PostIndex( {type, allpost} ) {
         
         // generate post block
         const post_block = (type == "paper") ? (
-            <BlockType post={post} show_abstract={true} key={post["id"]}/>
+            <BlockType post={post} show_abstract={true} key={post.id}/>
         ) : (
-            <BlockType post={post} key={post["id"]}/>
+            <BlockType post={post} key={post.id}/>
         )
 
         return (

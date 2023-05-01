@@ -20,7 +20,7 @@ export default function RecentPost({ type, posts, maxnum }) {
 
         if (num <= maxnum) {
             return (
-                <div className="hover:bg-slate-100 mt-2" key={post["id"]}>
+                <div className="hover:bg-slate-100 mt-2" key={post.id}>
                     <BlockType post={post}/>
                 </div>
             )
