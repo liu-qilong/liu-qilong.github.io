@@ -7,6 +7,16 @@ body {
   @apply font-serif text-slate-800 hyphens-auto
 }
 
+.content {
+  box-shadow: inset 1px 0px 20px 0px rgb(0 0 0 / 0.05);
+}
+
+@media (min-width: 768px) {
+  .content {
+    max-width: 66%;
+  }
+}
+
 h2 {
   @apply before:content-["#"] hover:bg-slate-100 text-slate-500 mt-10 mb-5 border-b text-2xl md:text-3xl
 }
@@ -58,12 +68,13 @@ ol {
 
 /* code block */
 pre {
-  @apply rounded mt-2 p-2 ring-1 ring-slate-900/5 bg-slate-50
+  @apply rounded mt-2 p-2 ring-1 ring-slate-900/5 bg-slate-50 overflow-scroll
 }
 
 code {
-  @apply font-mono text-teal-700 bg-slate-50 p-1 text-sm whitespace-pre-wrap overflow-auto hyphens-none
+  @apply font-mono text-teal-700 bg-slate-50 p-1 text-sm
 }
+/* whitespace-pre-wrap  hyphens-none */
 
 /* table */
 table {

@@ -47,7 +47,7 @@ _P.S. Before removing an environment, deactivate the environment in all shells f
 
 ## Batch installation with `requirements.txt`
 
-You can list all dependencies of your project in a `requirements.txt` file. It's very convenient for setting up your project in a another machine - for example, you bought a new laptop/desktop, or a friend want to run your scripts in his computer.
+You can list all dependencies of your project in a `requirements.txt` file. It's very convenient for setting up your project in another machine - for example, you bought a new laptop/desktop, or a friend want to run your scripts in his computer.
 
 Prepare a `requirements.txt`, like this one:
 

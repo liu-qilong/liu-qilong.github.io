@@ -12,7 +12,7 @@ If you are not familiar with writing docstrings or Sphinx documentation, I highl
 
 > [A “How to” Guide for Sphinx + ReadTheDocs - sglvladi](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/)
 
-My workflow is adapted from this tutorial with some personalization. Here is an example:
+My workflow was adapted from this tutorial with some personalization. Here is an example:
 
 ![example](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*6aMCqs93yP1FzGm7Dr-8Mw.png)
 
@@ -155,7 +155,9 @@ _P.S. If the documentation contains Chinese symbols, the second `make` command w
 Before set up a build on [Read The Docs](http://readthedocs.org), `requirements.txt` is needed to be properly set:
 
 - The path to `requirements.txt` is needed to be specified via `RTD Project Page - Admin - Advanced Settings - Requirements file`. The path should be relative to the repository's root folder.
-- Inbuilt packages of Python and Sphinx are not needed to be included in `requirements.txt`. In my case:
+- Inbuilt packages of Python and Sphinx are not needed to be included in `requirements.txt`.
+
+In my case, the `:
 
 ```
 # python packages
