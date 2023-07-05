@@ -26,12 +26,13 @@ export default function SideBar({ children }) {
             </div>
 
             {/* email & links */}
-            <IconStack divclass="flex mx-auto w-fit" imgclass="p-1" size="27" icon_links={[
+            <IconStack divclass="flex mx-auto w-fit" imgclass="p-1" size="25" icon_links={[
                 ['google-scholar', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
                 ['github', 'https://github.com/TOB-KNPOB'],
                 ['medium', 'https://medium.com/@tob-knpob'],
                 ['twitter', 'https://twitter.com/liu_qi_long'],
                 ['hugging-face', 'https://huggingface.co/TOB-KNPOB'],
+                ['cv', 'https://github.com/TOB-KNPOB/CV/blob/main/cv.pdf'],
             ]}/>
             <Link className="text-s hyphens-none" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
 
