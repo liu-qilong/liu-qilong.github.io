@@ -1,7 +1,7 @@
 ---
-title: "Embed GIF in LaTeX Beamer"
+title: "Embed GIF and MP4 in LaTeX Beamer"
 date: "2022-06-20"
-update: "2022-06-28"
+update: "2023-07-16"
 link:
     medium: "https://medium.com/@tob-knpob/embed-gif-in-latex-beamer-ed5ced8c041"
 ---
@@ -17,21 +17,19 @@ However, LaTeX only generates PDF files, which are usually static. Excluding vid
 
 [^1]: This workflow was inspired by: [Getting GIF and/or moving images into a LaTeX presentation - StackExchange](https://tex.stackexchange.com/questions/240243/getting-gif-and-or-moving-images-into-a-latex-presentation)
 
-## Convert `gif` to `png` series
+## Convert `gif`/`mp4` to `png` series
 
-Firstly, use the command-line tool to convert `.gif` to a series of `.png`:
-
+Firstly, use the command-line tool to convert `.gif`/`.mp4` to a series of `.png`:
 ```
 magick convert -coalesce <>.gif <>.png
+magick convert -coalesce <>.mp4 <>.png
 ```
 
-_P.S. If the folder only have one GIF and the desired output image name is `fig-<>.png`:_
+_P.S. If the folder only have one gif/mp4 and the desired output image name is `fig-<>.png`:_
 ```
 magick convert -coalesce *.gif fig.png
+magick convert -coalesce *.mp4 fig.png
 ```
-
-_P.S. Sometimes we need to convert video to `gif` at the first place:_
-> [ffmpeg + ImageMagick: convert video to GIF by using Terminal.app in macOS - Sergey Nikishkin](https://acronis.design/ffmpeg-imagemagick-convert-video-to-gif-using-the-terminal-app-in-macos-657948adf900)
 
 ## Embedded them to the beamer
 
