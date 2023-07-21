@@ -31,6 +31,13 @@ magick convert -coalesce *.gif fig.png
 magick convert -coalesce *.mp4 fig.png
 ```
 
+_P.S. If you want to index the figures with 3 (or more) digits, such as `fig001.png`, you can revised the command as:_
+```
+magick convert -coalesce *.gif fig%3d.png
+```
+
+_P.S. When converting other files to `.gif`, if you want it to loop for infinity times, add option `-loop 0`._
+
 ## Embedded them to the beamer
 
 And then add the series of `.png` as dynamic images in beamer using the `animate` package:
