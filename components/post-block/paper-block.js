@@ -6,7 +6,7 @@ export default function PaperBlock ({post, show_abstract=false, show_doi=false, 
     
     const abstract = (show_abstract) ? (
         <>
-        <hr className="mt-2 mb-2"></hr>
+        <hr className="mt-2 mb-2 text-slate-700"></hr>
         <p className={abstract_class}>{post.abstract}</p>
         </>
     ) : (
@@ -15,7 +15,7 @@ export default function PaperBlock ({post, show_abstract=false, show_doi=false, 
 
     const doi = (show_doi) ? (
         <>
-        <hr className="mt-2 mb-2"></hr>
+        <hr className="mt-2 mb-2 text-slate-700"></hr>
         <p className={abstract_class}>DOI: {post.doi}</p>
         </>
     ) : (
