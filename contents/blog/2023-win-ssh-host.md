@@ -202,6 +202,7 @@ ssh <user name>@<domain> -p <port>
 The TCP tunnel setup via [[#Launch TCP tunnel]] will be expired when the terminal is closed. To set the tunnel to be a background service and automatically launch with reboots, we need to edit `cpolar`'s configuration file.
 
 > [4.2 默认配置文件路径 - cpolar 极点云](https://www.cpolar.com/docs?channel=0&invite=4VfC#configuration-file)
+
 > [3.3 将隧道配置为后台服务 - cpolar 极点云](https://www.cpolar.com/docs?channel=0&invite=4VfC#configure-as-background-service)
 
 Open the configuration file:
