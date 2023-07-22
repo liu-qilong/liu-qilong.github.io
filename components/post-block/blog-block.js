@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import IconStack from '../icon-stack'
 
-export default function BlogBlock ({post, divclass="flex flex-col md:flex-row items-center", titleclass="text-sm md:text-base mb-1", dateclass="text-xs text-slate-700", imgsize=100}) {
+export default function BlogBlock ({post, divclass="flex flex-col md:flex-row items-center", titleclass="text-sm md:text-base mb-1", dateclass="text-xs text-slate-700", imgsize=120}) {
     const coverpath = '/cover/blog/' + post.id + '.png'
 
     // post link
