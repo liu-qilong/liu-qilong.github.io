@@ -24,9 +24,11 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 
 ### Powershell autocomplete
 
-Follow the description in this post:
-
 > [Fish-like Autosuggestion in Powershell - DEV Community](https://dev.to/animo/fish-like-autosuggestion-in-powershell-21ec)
+
+```
+Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+```
 
 ## Microsoft C++ build tools
 
