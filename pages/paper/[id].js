@@ -9,6 +9,10 @@ export default function PaperPage({ postData }) {
         <Layout>
             <Head>
                 <title>{postData.title}</title>
+                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:site" content="@liu_qi_long"/>
+                <meta property="twitter:title" content={postData.title}/>
+                <meta property="twitter:image" content={`https://qilong-liu.vercel.app/cover/paper/${postData.id}.png`}/>
             </Head>
             <div>
                 <div className="group rounded-lg mt-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-slate-100">
