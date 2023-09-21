@@ -16,10 +16,10 @@ export default function BlogPage({ postData }) {
         <Layout>
             <Head>
                 <title>{postData.title}</title>
-                <meta property="og:title" content={postData.title}/>
-                <meta property="og:image" content={`https://qilong-liu.vercel.app/cover/blog/${postData.id}.png`}/>
                 <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:site" content="@liu_qi_long"/>
+                <meta property="twitter:title" content={postData.title}/>
+                <meta property="twitter:image" content={`https://qilong-liu.vercel.app/cover/blog/${postData.id}.png`}/>
             </Head>
             <div>
                 <BlogBlock post={postData} titleclass="text-2xl md:text-3xl font-medium text-slate-700" dateclass="font-mono text-sm" imgsize="150"/>
