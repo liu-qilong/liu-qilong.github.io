@@ -26,10 +26,6 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 
 > [Fish-like Autosuggestion in Powershell - DEV Community](https://dev.to/animo/fish-like-autosuggestion-in-powershell-21ec)
 
-```
-Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
-```
-
 ## Microsoft C++ build tools
 
 And then, as a preparation step, install [Microsoft C++ Build Tools - Visual Studio](https://visualstudio.microsoft.com/zh-hant/visual-cpp-build-tools/) and add the _C++ build tools_ so that some useful build tools like `cmake` is ready for use.

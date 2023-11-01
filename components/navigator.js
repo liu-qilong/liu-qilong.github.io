@@ -31,6 +31,7 @@ export default function SideBar({ children }) {
                 ['github', 'https://github.com/TOB-KNPOB'],
                 ['medium', 'https://medium.com/@tob-knpob'],
                 ['twitter', 'https://twitter.com/liu_qi_long'],
+                ['instagram', 'https://www.instagram.com/liu.qilong.kirov'],
                 ['hugging-face', 'https://huggingface.co/TOB-KNPOB'],
                 ['cv', 'https://github.com/TOB-KNPOB/CV/blob/main/cv.pdf?raw=true'],
             ]}/>
