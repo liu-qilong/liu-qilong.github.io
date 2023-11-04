@@ -16,7 +16,7 @@ export default function ProjectPage({ postData }) {
         <Layout>
             <Head>
                 <title>{postData.title}</title>
-                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:card" content="summary"/>
                 <meta property="twitter:site" content="@liu_qi_long"/>
                 <meta property="twitter:title" content={postData.title}/>
                 <meta property="twitter:image" content={`https://qilong-liu.vercel.app/cover/project/${postData.id}.png`}/>
