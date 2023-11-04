@@ -34,12 +34,37 @@ _P.S. Without these build tools, some packages will not be able to install via `
 
 ## Git
 
+### Install
+
 > [Git - Downloading Package](https://git-scm.com/download/win)
 
 Install `git` using `winget` is very convenient:
 
 ```
 winget install --id Git.Git -e --source winget
+```
+
+### Configuration
+
+Let's configure its default user name and user email. Noted that when you push commit to GitHub, the email will be used to identify your GitHub account:
+
+```
+git config --global user.name <name>
+git config --global user.email <email>
+```
+
+### SSH key for GitHub
+
+To authorize your operation on GitHub, you will also need to generate a ssh key:
+
+```
+ssh-keygen -t rsa -C "<email>"
+```
+
+And then you need to add it to your account: Settings > SSH and GPG keys > Add SSH Key. Fill the _title_ as you like and paste the _key_ with the content of the generated `id_rsa.pub` (NOT `id_rsa`!!). The content of `id_rsa.pub` can be easily accessed from command line:
+
+```
+Get-Content ~/.ssh/id_rsa.pub
 ```
 
 ## Python and Conda
