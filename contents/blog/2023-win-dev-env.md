@@ -114,6 +114,7 @@ Verify installation:
 
 ```
 nvcc -V
+nvidia-smi
 ```
 
 ### Create a virtual environment and install PyTorch
@@ -129,7 +130,7 @@ Verify installation:
 ```
 python
 >>> import torch
->>> print(torch.rand(5, 3))
+>>> torch.rand(5, 3)
 >>> torch.cuda.is_available()
 ```
 

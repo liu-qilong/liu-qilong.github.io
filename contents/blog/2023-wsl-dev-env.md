@@ -6,7 +6,7 @@ link:
     medium: "https://medium.com/@tob-knpob/a-complete-guide-to-setup-wsl-windows-subsystem-for-linux-4547e88b6cdb"
 ---
 
- WSL (Windows Subsystem for Linux) has various great advantages against dual-boot (installing Linux and Windows on the same computer), among them the most significant is that you can literally running both systems at the same time without the need to stop every software that's running and reboot to another system. Procedure to set up a WSL is roughly the same as setting up a real Linux OS, therefore this guide can also be used as a reference to Linux setup. The specifications of WSL setup procedure are mainly in _Install WSL_, _CUDA and PyTorch_ and _Remote development with SSH_ as described below.
+ WSL (Windows Subsystem for Linux) has various great advantages against dual-boot (installing Linux and Windows on the same computer), among them the most significant is that you can literally running both systems at the same time without the need to stop every software that's running and reboot to another system. Procedure to set up a WSL is roughly the same as setting up a real Linux OS, therefore this guide can also be used as a reference to Linux setup. The specifications of WSL setup procedure are mainly in _Install WSL_, _CUDA and PyTorch_, _VTK with PyVista, and _Remote development with SSH_ as described below.
 
 ## Install WSL
 
@@ -20,7 +20,11 @@ wsl --install
 
 After restart the computer, the terminal will prompt you to set the user name and password for the WSL. Then you can then enter the linux subsystem by enter `wsl` in PowerShell or create a `Ubuntu (WSL)` shell in the terminal app.
 
-_P.S. Ubuntu is installed by default. You can also choose other distributions._
+_P.S. Ubuntu is installed by default. You can also choose other distributions. In my case I choose Ubuntu 18.04 for VTK with PyVista:_
+
+```
+wsl --install -d Ubuntu-18.04
+```
 
 ## Fish shell
 
@@ -75,7 +79,9 @@ _P.S. `~/.bashrc` will be executed whenever a new `bash` shell is launched. Plea
 
 ### Powerline font
 
-To show `bobthefish` theme properly, we need to install [Powerline fonts](https://github.com/powerline/fonts). I personally prefer `Liberation Mono for Powerline`, which is the default monospace font used in VS Code with Powerline style special symbols. In every places you'd like to use to terminal, e.g. VS Code's integrated terminal, set the font accordingly.
+To show `bobthefish` theme properly, we need to install [Powerline fonts](https://github.com/powerline/fonts). I personally prefer [Liberation Mono for Powerline](https://github.com/powerline/fonts/blob/master/LiberationMono/Literation%20Mono%20Powerline.ttf), which is the default monospace font used in VS Code with Powerline style special symbols. In every places you'd like to use to terminal, e.g. VS Code's integrated terminal, set the font accordingly.
+
+Take Windows Terminal app as an example: Settings > Profiles > Defaults > Appearance > Text > Font face. By the way I also prefer to set the color scheme as One Half Dark and set the background opacity as 80% with acrylic material enabled.
 
 ## Git
 
@@ -142,6 +148,7 @@ sudo apt-get -y install cuda
 Add `cuda` to path. Add the the following lines to `~/.bashrc`:
 
 ```
+# cuda path
 export PATH="/usr/local/cuda-11.8/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH"
 ```
@@ -152,7 +159,10 @@ Verification:
 
 ```
 nvcc -V
+nvidia-smi
 ```
+
+_P.S. The `nvidia-smi` command seems works properly on Ubuntu 18.04 WSL but not on Ubuntu 22.04 WSL._
 
 ### Create a virtual environment and install PyTorch
 
@@ -167,16 +177,92 @@ Verify installation:
 ```
 python
 >>> import torch
->>> print(torch.rand(5, 3))
+>>> torch.rand(5, 3)
 >>> torch.cuda.is_available()
 ```
+
+## VTK with PyVista
+
+In my use case,  VTK (visualization toolkit) and `pyvista` (a 3D visualization package) is frequently used. However, since WSL doesn't carries GUI by default, setting up `pyvista` is a little bit tricky. If you don't use `pyvista`, please feel free to skip this section.
+
+> [Installation — PyVista 0.42.3 documentation](https://docs.pyvista.org/version/stable/getting-started/installation.html#running-on-ci-services)
+
+Install necessary utils:
+
+```
+sudo apt update
+sudo apt install python-qt4 libgl1-mesa-glx
+sudo apt-get install xvfb
+```
+
+_P.S. Since Ubuntu 22.04 no longer supports Qt4, you'd better choose Ubuntu 18.04 if you need this package._
+
+Create a virtual environment for it and installed the necessary packages:
+
+```
+conda create --name vtk_env python=3.9
+conda activate vtk_env
+conda install nodejs
+pip install jupyter pyvista trame
+```
+
+### With JupyterLab
+
+Before starting using PyVista, in terminal:
+
+```
+export DISPLAY=:99.0
+export PYVISTA_OFF_SCREEN=true
+Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+sleep 3
+```
+
+This will launch a [X11 server](https://en.wikipedia.org/wiki/X_Window_System) for displaying the rendered scene as well as setup some necessary environmental variables. Then we can launch the Jupyter Lab server as usual:
+
+```
+jupyter lab --NotebookApp.token='' --no-browser --port=8888
+```
+
+_P.S. If you connect to the WSL wish `ssh`, `jupyter-server-proxy` is needed to be setup:_
+
+> [Trame Jupyter Backend for PyVista — PyVista 0.42.3 documentation](https://docs.pyvista.org/version/stable/user-guide/jupyter/trame.html)
+
+```
+!pip install jupyter-server-proxy
+
+import pyvista as pv
+
+pv.set_jupyter_backend('client')
+pv.global_theme.trame.server_proxy_enabled = True
+pv.global_theme.trame.server_proxy_prefix = '/proxy/'
+```
+
+### With VS Code
+
+In terminal, launch the X11 server for displaying the rendered scenes:
+
+```
+Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+```
+
+And at the begging of each Notebook, setup the necessary environmental variables:
+
+```
+import os
+import pyvista as pv
+
+pv.set_jupyter_backend('static')
+os.environ['DISPLAY'] = ':99.0'
+os.environ['PYVISTA_OFF_SCREEM'] = 'true'
+```
+
+_P.S. I haven't yet figure out how to enable iterative plotting in VS Code environment. Therefore, I select the `static` backend._
 
 ## Node.js and NVM
 
 > [Installation of Node.js on Linux - GeeksforGeeks](https://www.geeksforgeeks.org/installation-of-node-js-on-linux/)
 
 ```
-sudo apt install node
 sudo apt install npm
 ```
 
@@ -197,6 +283,7 @@ Though the SSH client is installed by default, the SSH server is needed to be ex
 
 ```
 sudo apt-get install openssh-server
+sudo dpkg-reconfigure openssh-server
 ```
 
 ### Port number
@@ -215,7 +302,13 @@ And then change the port number, say `2222`.
 Port 2222
 ```
 
-Restart `ssh` server:
+You may also want to enable the password login:
+
+```
+PasswordAuthentication yes
+```
+
+After altering the configuration, restart `ssh` server:
 
 ```
 sudo systemctl restart ssh
