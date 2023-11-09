@@ -85,13 +85,42 @@ Take Windows Terminal app as an example: Settings > Profiles > Defaults > Appear
 
 ## Git
 
+`git` is pre-installed in WSL as well as most UNIC-like OSs, but it may be a legacy version. I prefer to update it first:
+
+```
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get upgrade git
+```
+
+> [18.04 - sudo add-apt-repository hangs - Ask Ubuntu](https://askubuntu.com/questions/1123177/sudo-add-apt-repository-hangs)
+
+_P.S. If the first command hangs, `sudo nano /etc/gai.conf` and uncomment the row of `precedence ::ffff:0:0/96  100`._
+
 ### Configuration
 
-`git` is pre-installed in WSL as well as most UNIC-like OSs. Let's configure its default user name and user email. Noted that when you push commit to GitHub, the email will be used to identify your GitHub account:
+Let's configure its default user name and user email. Noted that when you push commit to GitHub, the email will be used to identify your GitHub account:
 
 ```
 git config --global user.name <name>
 git config --global user.email <email>
+git config --global init.defaultBranch main
+```
+
+### Ignore Jupyter Notebook outputs
+
+> [How to commit jupyter notebooks without output to git while keeping the notebooks outputs intact locally · GitHub](https://gist.github.com/33eyes/431e3d432f73371509d176d0dfb95b6e)
+
+If you use Jupyter Notebook with Git, perhaps you'd be happy to keep the outputs of the code cells to be omitted for version tracking. In this case, first add a filter named `strip-notebook-output` globally to `git`:
+
+```
+git config --global filter.strip-notebook-output.clean 'jupyter nbconvert --ClearOutputPreprocessor.enabled=True --to=notebook --stdin --stdout --log-level=ERROR'
+```
+
+And then in each folder with Jupyter Notebook, run this to create a `.gitattributes` file to enable this filter on all Jupyter Notebooks:
+
+```
+echo "*.ipynb filter=strip-notebook-output" > .gitattributes
 ```
 
 ### SSH key for GitHub
@@ -122,6 +151,8 @@ _P.S. If you enter `fish` shell from `bash` shell, the previous commands only au
 ```
 conda init fish
 ```
+
+_P.S. At this stage, you may need to check `~/.bashrc` and make sure the line of `fish` is at the end._
 
 ## CUDA and PyTorch
 
