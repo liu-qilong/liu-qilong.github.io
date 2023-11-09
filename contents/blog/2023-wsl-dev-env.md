@@ -345,6 +345,48 @@ After altering the configuration, restart `ssh` server:
 sudo systemctl restart ssh
 ```
 
+### Key authentication
+
+> [How To Configure SSH Key-Based Authentication on a Linux Server | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
+
+Having to enter password for each `ssh` login  is not very convenient. We can make our life a little bit easier by setting up key authentication. First generate a key:
+
+```
+ssh-keygen
+```
+
+It will prompt you to input the `<key path>` and the pass phrase. Then you need to add your key to your local `ssh` client:
+
+```
+ssh-add <key path>
+```
+
+Noted that you will need to add it again when you reboot your local machine. You may add this command to `~/.bashrc` for convenience.
+
+Then send the key to the remote server:
+
+```
+ssh-copy-id -i <key path> -p 2222 <address>
+```
+
+Noted the the `-p` argument is the port number of the remote server you set before. Moreover, the `addr` is the IP address of the remote server which can be check by `ifconfig`.
+
+Before you can log in to the remote server without entering the password, you will need to enable key authentication first:
+
+```
+sudo nano /etc/ssh/sshd_config
+```
+
+And then change uncomment the row of `KeyAuthentication yes`. For security considerations, it's preferable to disable password authentication if you have already setup key authentication. Change the row of `PasswordAuthentication yes` to `PasswordAuthentication no`.
+
+And then:
+
+```
+sudo systemctl restart sshd
+```
+
+If everything is setup well, you will no longer need to enter the password the next time you `ssh` into the remote machine.
+
 ### NAT traversal with `cpolar`
 
 > [cpolar下载与安装 - cpolar 极点云](https://www.cpolar.com/blog/cpolar-download-and-install)
