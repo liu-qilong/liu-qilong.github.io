@@ -8,7 +8,7 @@ link:
 
 Recently, I tried to set up a Windows machine for development, focusing on Python, machine learning (PyTorch with CUDA), and web development (Node.js with NPM). Following is the summarization of some critical steps and relevant materials.
 
-Later, I further set it up as a `ssh` server that can be accessed by my laptop over the internet. If you are interested, please check [this post](/blog/2023-win-ssh-host).
+Later, I further set it up as a `ssh` server that can be accessed by my laptop over the internet. If you are interested, please check [this post](/blog/win-ssh-host).
 
 ## PowerShell
 

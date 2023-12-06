@@ -1,7 +1,7 @@
 ---
 title: "A complete guide to setup WSL (Windows Subsystem for Linux)"
 date: "2023-11-02"
-update: "2023-11-04"
+update: "2023-12-06"
 link:
     medium: "https://medium.com/@tob-knpob/a-complete-guide-to-setup-wsl-windows-subsystem-for-linux-4547e88b6cdb"
 ---
@@ -433,4 +433,90 @@ And then restart `cpolar`. The tunnel will be automatically setup:
 
 ```
 sudo systemctl restart cpolar
+```
+
+### Port forward
+
+NAT traversal exposes your WSL via an external server. It's very convenient but the speed will be limited - especially when transferring large files. In the scenario that your host and your local machine is under the same network, say using your laptop to access the WSL running on your lab's workstation or server, you may want to access your WSL directly with its IP address:
+
+```
+ssh <user>@<ip> -p <port num>
+```
+
+Then you are in trouble: your Windows machine's IP address is different from the WSL running on it; and the IP address of the WSL can't be access from outside the Windows machine :o
+
+> [How to SSH into WSL2 on Windows 10 from an external machine - Scott Hanselman's Blog](https://www.hanselman.com/blog/how-to-ssh-into-wsl2-on-windows-10-from-an-external-machine)
+
+Port forwarding is gonna to save you out of this dilemma. In Windows Terminal (Admin), first expose a port of the Windows machine for `ssh` access.
+
+```
+netsh advfirewall firewall add rule name=”Open Port <port num> for WSL” dir=in action=allow protocol=TCP localport=<port num>
+```
+
+And then launch a port proxy to forward this port to the WSL internally:
+
+```
+netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=<port num> connectaddress=<ip of wsl> connectport=<port num>
+```
+
+Noted that you can check the IP of your WSL via `ifconfig` command - _note that it may be changed whenever you reboot the WSL as well as the host Windows machine. If this happens, you need to add a new port proxy and remove the outdated one_ Some useful commands to manage all port proxy in you Windows machine:
+
+- Show all port proxies:
+```
+netsh interface portproxy show v4tov4
+```
+-  Remove all port proxies
+```
+netsh int portproxy reset all
+```
+
+Another tings to be noticed is that we set the port proxy to listen to address `0.0.0.0`. You need to set the `ListenAddress` property in your WSL's `/etc/ssh/sshd_config` to this address accordingly.
+
+Then, if you are all set, you should be able to `ssh` to your WSL from another computer:
+
+```
+ssh <user>@<ip of windows> -p <port num>
+```
+
+Noted here you are suppose to use the IP address of your Windows machine. It can be checked by `ipconfig` command. Be careful: there may be different IPv4 addresses being shown, including the virtual address of the WSL. Be careful to choose the appropriate one.
+
+### `tmux`
+
+When using `ssh` for remote development, all running process will be terminated once you disconnect from the host. This is frustrating when you have something that could take hours or days to complete (e.g. training neural network) or your network is not stable. In that case, you need `tmux`.
+
+Enable mouse in `tmux`:
+
+```
+touch ~/.tmux.conf
+echo "set -g mouse on" >> ~/.tmux.conf
+```
+
+First start a `tmux` session:
+
+```
+tmux
+```
+
+It will launch a terminal like the ordinary one. However, when you disconnect to the host, the process running in that terminal will continue to run. Then when you reconnect to the host, you can enter that `tmux` session by:
+
+```
+tmux attach
+```
+
+Sometimes you may start various `tmux` sessions by running `tmux` command for multiply times. To view the status of them all:
+
+```
+tmux ls
+```
+
+Enter a specific session:
+
+```
+tmux attach -t <name>
+```
+
+Kill a specific session:
+
+```
+tmux kill-session -t <name>
 ```
