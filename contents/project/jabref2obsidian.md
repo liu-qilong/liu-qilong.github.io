@@ -2,7 +2,7 @@
 title: "Jabref2Obsidian"
 date: "2023-03-05"
 link:
-    github: "https://github.com/TOB-KNPOB/Jabref2Obsidian"
+    github: "https://github.com/liu-qilong/Jabref2Obsidian"
     read-the-docs: "https://jabref2obsidian.readthedocs.io/en/latest/?badge=latest"
 ---
 
@@ -27,13 +27,13 @@ The output of `jabref2obsidian` is a set of Markdown files that are organized in
 
 - `Notes`: This folder contains a Markdown file for each entry in your JabRef repository. Each file contains information about the entry such as its title, author, and citation key.
 
-![note page](https://github.com/TOB-KNPOB/Jabref2Obsidian/blob/main/docs/source/figures/note_page.png?raw=true)
+![note page](https://github.com/liu-qilong/Jabref2Obsidian/blob/main/docs/source/figures/note_page.png?raw=true)
 _Fig. Example note page._
 
 - `Groups`: This folder contains a Markdown file for each group in your JabRef repository. The file for each group contains a list of entries that belong to that group.
 File Structure
 
-![group page](https://github.com/TOB-KNPOB/Jabref2Obsidian/blob/main/docs/source/figures/group_page.png?raw=true)
+![group page](https://github.com/liu-qilong/Jabref2Obsidian/blob/main/docs/source/figures/group_page.png?raw=true)
 _Fig. Example group page._
 
 The file structure of the output folder is organized as follows:

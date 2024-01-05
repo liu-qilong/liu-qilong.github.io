@@ -32,7 +32,7 @@ export default function SideBar({ children }) {
                 ['medium', 'https://medium.com/@tob-knpob'],
                 ['twitter', 'https://twitter.com/liu_qi_long'],
                 ['instagram', 'https://www.instagram.com/liu.qilong.kirov'],
-                ['cv', 'https://github.com/TOB-KNPOB/CV/blob/main/cv.pdf?raw=true'],
+                ['cv', 'https://github.com/liu-qilong/CV/blob/main/cv.pdf?raw=true'],
             ]}/>
             <Link className="text-s hyphens-none" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
 

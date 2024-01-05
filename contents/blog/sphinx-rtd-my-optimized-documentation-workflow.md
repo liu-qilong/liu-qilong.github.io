@@ -102,8 +102,8 @@ By default, all classes in a module are presented in the same page. However, it 
 
 You can find the template files you need here:
 
-- [custom-class-template.rst](https://github.com/TOB-KNPOB/pedarProbe/blob/main/docs/source/_templates/custom-class-template.rst)
-- [custom-module-template.rst](https://github.com/TOB-KNPOB/pedarProbe/blob/main/docs/source/_templates/custom-module-template.rst)
+- [custom-class-template.rst](https://github.com/liu-qilong/pedarProbe/blob/main/docs/source/_templates/custom-class-template.rst)
+- [custom-module-template.rst](https://github.com/liu-qilong/pedarProbe/blob/main/docs/source/_templates/custom-module-template.rst)
 
 Place them in the `docs/source/_templates/` folder.
 

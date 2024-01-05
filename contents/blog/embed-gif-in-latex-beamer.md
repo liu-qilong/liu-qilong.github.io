@@ -10,8 +10,8 @@ As an research postgraduate student, I frequently make "academic-looking" slides
 
 With tutorials like [Beamer - Overleaf](https://www.overleaf.com/learn/latex/Beamer), I got started with this approach and feel more and more comfortable. I even made a series of templates for me and my friends (for more details: [Beamer-LaTeX-Themes](/project/beamer-latex)). Here are some example pages:
 
-![PolyU](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/PolyU.png?raw=true)
-![math](https://github.com/TOB-KNPOB/Beamer-LaTeX-Themes/blob/main/gallery/math.png?raw=true)
+![PolyU](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/PolyU.png?raw=true)
+![math](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/math.png?raw=true)
 
 However, LaTeX only generates PDF files, which are usually static. Excluding videos and GIFs completely from your presentation? How pitiful. I searched the internet for a while and eventually found a simple workflow to embed GIFs in LaTeX beamer [^1].
 
