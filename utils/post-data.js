@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import {unified} from 'unified'
+import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
 import remarkRehype from 'remark-rehype'
@@ -22,10 +22,15 @@ export function getSortedPostsData ( relativePath ) {
 
         // use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents)
+        console.log(matterResult.content)
 
         // combine the data with the id
         return {
             id,
+            text: String(matterResult.content)
+                .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // remove links
+                .replace(/!\[([^\]]+)\]\([^)]+\)/g, '$1') // remove images
+                .replace(/[^A-Za-z0-9 ,.]/g, ' '), // remove special characters
             ...matterResult.data
         }
     })
@@ -46,7 +51,7 @@ export function getAllPostIds ( relativePath ) {
         return fileNames.map(fileName => {
             return {
                 params: {
-                id: fileName.replace(/\.md$/, '')
+                    id: fileName.replace(/\.md$/, '')
                 }
             }
     })

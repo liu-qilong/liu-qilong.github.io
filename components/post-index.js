@@ -28,11 +28,7 @@ export default function PostIndex( {type, allpost} ) {
             }
             
             // generate post block
-            const post_block = (type == "paper") ? (
-                <BlockType post={post} show_abstract={true} key={post.id}/>
-            ) : (
-                <BlockType post={post} key={post.id}/>
-            )
+            let post_block = <BlockType post={post} show_abstract={true} key={post.id}/>
 
             return (
                 <div key={type + year}>
