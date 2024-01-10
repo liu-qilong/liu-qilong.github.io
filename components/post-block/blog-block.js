@@ -41,7 +41,9 @@ export default function BlogBlock ({post, show_abstract=false, divclass="flex fl
                     <IconStack icon_links={icon_links}/>
                 </div>
             </div>
-            {abstract}
+            <Link href={post_link}>
+                {abstract}
+            </Link>
         </div>
     )
 }
