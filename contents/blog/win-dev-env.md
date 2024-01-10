@@ -3,7 +3,7 @@ title: "Setup Windows development environment"
 date: "2023-06-08"
 update: "2023-06-11"
 link:
-    medium: "https://medium.com/@tob-knpob/setup-windows-development-environment-db5b4cf3dfec"
+    medium: "https://medium.com/@liu-qilong/setup-windows-development-environment-db5b4cf3dfec"
 ---
 
 Recently, I tried to set up a Windows machine for development, focusing on Python, machine learning (PyTorch with CUDA), and web development (Node.js with NPM). Following is the summarization of some critical steps and relevant materials.

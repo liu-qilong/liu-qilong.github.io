@@ -3,7 +3,7 @@ title: "Sphinx + ReadTheDocs: My optimized documentation workflow"
 date: "2022-11-18"
 update: "2023-04-27"
 link:
-    medium: "https://medium.com/@tob-knpob/sphinx-readthedocs-my-optimized-documentation-workflow-169308270e99"
+    medium: "https://medium.com/@liu-qilong/sphinx-readthedocs-my-optimized-documentation-workflow-169308270e99"
 ---
 
 [Sphinx](https://www.sphinx-doc.org/en/master/) is an excellent tool for documenting Python projects. It can generate comprehensive documentation from [docstrings](https://en.wikipedia.org/wiki/Docstring#:~:text=In%20programming%2C%20a%20docstring%20is,a%20specific%20segment%20of%20code.) in the code, which means that the comments you write for your code also serve as its documentation.
@@ -85,7 +85,7 @@ html_logo = 'logo_tob.png'
 
 html_context = {
 	"display_github": True,
-	"github_user": "TOB-KNPOB",
+	"github_user": "liu-qilong",
 	"github_repo": "Jabref2Obsdian",
 	"github_version": "main",
 	"conf_py_path": "/docs/",

@@ -27,12 +27,13 @@ export default function SideBar({ children }) {
 
             {/* email & links */}
             <IconStack divclass="flex mx-auto w-fit" imgclass="p-1" size="25" icon_links={[
+                ['cv', 'https://github.com/liu-qilong/CV/blob/main/cv.pdf?raw=true'],
                 ['google-scholar', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
-                ['github', 'https://github.com/TOB-KNPOB'],
-                ['medium', 'https://medium.com/@tob-knpob'],
+                ['github', 'https://github.com/liu-qilong'],
+                ['hugging-face', 'https://huggingface.co/liu-qilong'],
                 ['twitter', 'https://twitter.com/liu_qi_long'],
                 ['instagram', 'https://www.instagram.com/liu.qilong.kirov'],
-                ['cv', 'https://github.com/liu-qilong/CV/blob/main/cv.pdf?raw=true'],
+                ['medium', 'https://medium.com/@liu-qilong'],
             ]}/>
             <Link className="text-s hyphens-none" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
 

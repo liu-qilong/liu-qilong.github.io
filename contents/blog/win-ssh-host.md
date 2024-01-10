@@ -3,7 +3,7 @@ title: "Setup Windows machine as SSH host"
 date: "2023-06-08"
 update: "2023-06-11"
 link:
-    medium: "https://medium.com/@tob-knpob/setup-windows-machine-as-ssh-host-75627200fb46"
+    medium: "https://medium.com/@liu-qilong/setup-windows-machine-as-ssh-host-75627200fb46"
 ---
 
 In [the previous blog post](/blog/win-dev-env), I set up the development environment on a Windows machine. I further set it up as a `ssh` server that can be access by my laptop over the internet. Following is the summarization of some critical steps and relevant materials.
