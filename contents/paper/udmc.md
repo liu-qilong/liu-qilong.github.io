@@ -1,9 +1,9 @@
 ---
 title: "Ultra-dense Motion Capture: An exploratory full-automatic approach for dense tracking of breast motion in 4D"
 author: "Qi-long Liu, Kit-lun Yick, Yue Sun, Joanne Yip"
-venue: "Under review"
-date: "2023-U"
-doi: "under review"
+venue: "PLOS ONE"
+date: "2024-02-26"
+doi: "10.1371/journal.pone.0299040"
 page: "http://liu-qilong.github.io/udmc/"
-abstract: "Under review"
+abstract: "Understanding the dynamic deformation pattern and biomechanical properties of breasts is crucial in various fields, including designing ergonomic bras and customized prostheses, as well as in clinical practice. Previous studies have recorded and analyzed the dynamic behaviors of the breast surface using 4D scanning, which provides a sequence of 3D meshes during movement with high spatial and temporal resolutions. However, these studies are limited by the lack of robust and automated data processing methods which result in limited data coverage or error-prone analysis results. To address this issue, we identify revealing inter-frame dense correspondence as the core challenge towards conducting reliable and consistent analysis of the 4D scanning data. We proposed a fully-automatic approach named Ulta-dense Motion Capture (UdMC) using Thin-plate Spline (TPS) to augment the sparse landmarks recorded via motion capture (MoCap) as initial dense correspondence and then rectified it with a sophisticated post-alignment scheme. Two downstream tasks are demonstrated to validate its applicability: virtual landmark tracking and deformation intensity analysis. For evaluation, a dynamic 4D human breast anthropometric dataset DynaBreastLite was constructed. The results show that our approach can robustly capture the dynamic deformation characteristics of the breast surfaces, significantly outperforms baselines adapted from previous works in terms of accuracy, consistency, and efficiency. For 10 fps dataset, average error of 0.25 cm on control-landmarks and 0.33 cm on non-control (arbitrary) landmarks were achieved, with 17-70 times faster computation time. Evaluation was also carried out on 60 fps and 120 fps datasets, with consistent and large performance gaining being observed. The proposed method may contribute to advancing research in breast anthropometry, biomechanics, and ergonomics by enabling more accurate tracking of the breast surface deformation patterns and dynamic characteristics."
 ---
