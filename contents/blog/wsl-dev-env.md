@@ -85,7 +85,7 @@ Take Windows Terminal app as an example: Settings > Profiles > Defaults > Appear
 
 ## Git
 
-`git` is pre-installed in WSL as well as most UNIC-like OSs, but it may be a legacy version. I prefer to update it first:
+`git` is pre-installed in WSL as well as most UNIX-like OSs, but it may be a legacy version. I prefer to update it first:
 
 ```
 sudo add-apt-repository ppa:git-core/ppa
