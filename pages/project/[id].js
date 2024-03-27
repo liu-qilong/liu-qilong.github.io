@@ -3,10 +3,10 @@ import Layout from '../../components/layout'
 import ProjectBlock from '../../components/post-block/project-block'
 import { getAllPostIds, getPostData } from '../../utils/post-data'
 
-export default function ProjectPage({ postData }) {
-    const update = (postData.update != null) ? (
+export default function ProjectPage({ post }) {
+    const update = (post.update != null) ? (
         <div className="italic mt-5 text-right">
-            Lastly updated: <span>{postData["update"]}</span>
+            Lastly updated: <span>{post["update"]}</span>
         </div>
     ) : (
         <></>
@@ -15,16 +15,16 @@ export default function ProjectPage({ postData }) {
     return (
         <Layout>
             <Head>
-                <title>{postData.title}</title>
+                <title>{post.title}</title>
                 <meta property="twitter:card" content="summary"/>
                 <meta property="twitter:site" content="@liu_qi_long"/>
-                <meta property="twitter:title" content={postData.title}/>
-                <meta property="twitter:image" content={`https://qilong-liu.vercel.app/cover/project/${postData.id}.png`}/>
+                <meta property="twitter:title" content={post.title}/>
+                <meta property="twitter:image" content={`https://qilong-liu.vercel.app${post.coverpath}`}/>
             </Head>
             <div>
-                <ProjectBlock post={postData} titleclass="text-2xl md:text-3xl font-medium text-slate-700" dateclass="font-mono text-sm" imgsize="150"/>
+                <ProjectBlock post={post} titleclass="text-2xl md:text-3xl font-medium text-slate-700" dateclass="font-mono text-sm" imgsize="150"/>
                 <hr className="mt-5"></hr>
-                <div dangerouslySetInnerHTML={{ __html: postData.content }}/>
+                <div dangerouslySetInnerHTML={{ __html: post.content }}/>
             </div>
             {update}
         </Layout>
@@ -40,8 +40,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id, 'contents/project')
+    const post = await getPostData(params.id, 'contents/project')
     return {
-        props: { postData }
+        props: { post }
   }
 }
