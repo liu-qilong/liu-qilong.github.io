@@ -6,31 +6,41 @@ import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import remarkRehype from 'remark-rehype'
-import rehypeRaw from 'rehype-raw'
 import rehypeKatex from 'rehype-katex'
-import rehypeMathjax from 'rehype-mathjax'
 import rehypeStringify from 'rehype-stringify'
 
 
 export function getSortedPostsData ( relativePath ) {
-    const postsDirectory = path.join(process.cwd(), relativePath)
-    let fileNames = fs.readdirSync(postsDirectory)
+    const post_folder = path.join(process.cwd(), relativePath)
+    let file_names = fs.readdirSync(post_folder)
 
-    const allPostsData = fileNames.map(fileName => {
+    const all_posts = file_names.map(file_name => {
         // remove ".md" from file name to get id
-        const id = fileName.replace(/\.md$/, '')
+        const id = file_name.replace(/\.md$/, '')
 
         // read markdown file as string
-        const fullPath = path.join(postsDirectory, fileName)
-        const fileContents = fs.readFileSync(fullPath, 'utf8')
+        const full_path = path.join(post_folder, file_name)
+        const file_content = fs.readFileSync(full_path, 'utf8')
 
         // use gray-matter to parse the post metadata section
-        const matterResult = matter(fileContents)
+        const matterResult = matter(file_content)
         console.log(matterResult.content)
+
+        // get cover image path
+        let coverpath = ''
+        let cover_folder = relativePath.replace('contents/', 'public/cover/')
+
+        for (let format of ['.png', '.jpg', '.jpeg', '.gif']) {
+            if (fs.existsSync(path.join(process.cwd(), cover_folder, `${id}${format}`))) {
+                coverpath = path.join(cover_folder.replace('public/', '/'), `${id}${format}`)
+                break
+            }
+        }
 
         // combine the data with the id
         return {
             id,
+            coverpath,
             text: String(matterResult.content)
                 .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // remove links
                 .replace(/!\[([^\]]+)\]\([^)]+\)/g, '$1') // remove images
@@ -40,7 +50,7 @@ export function getSortedPostsData ( relativePath ) {
     })
 
     // sort posts by date
-    return allPostsData.sort((a, b) => {
+    return all_posts.sort((a, b) => {
         if (a.date < b.date) {
             return 1
         } else {
@@ -50,26 +60,27 @@ export function getSortedPostsData ( relativePath ) {
 }
 
 export function getAllPostIds ( relativePath ) {
-    const postsDirectory = path.join(process.cwd(), relativePath)
-    const fileNames = fs.readdirSync(postsDirectory)
-        return fileNames.map(fileName => {
+    const post_folder = path.join(process.cwd(), relativePath)
+    const file_names = fs.readdirSync(post_folder)
+        return file_names.map(file_name => {
             return {
                 params: {
-                    id: fileName.replace(/\.md$/, '')
+                    id: file_name.replace(/\.md$/, '')
                 }
             }
     })
 }
 
-export async function getPostData ( id, relativePath ) {
-    const postsDirectory = path.join(process.cwd(), relativePath)
-    const fullPath = path.join(postsDirectory, `${id}.md`)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
+export async function getPostData ( id, relativePath) {
+    // read post content
+    const file_content = fs.readFileSync(
+        path.join(process.cwd(), relativePath, `${id}.md`),
+        'utf8',
+        )
 
     // use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents)
+    const matterResult = matter(file_content)
 
-    // use remark-gfm to convert markdown into html string
     const file = await unified()
         .use(remarkParse)  // parse markdown
         .use(remarkGfm)  // parse GitHub Flavored Markdown
@@ -81,10 +92,22 @@ export async function getPostData ( id, relativePath ) {
 
     const content = String(file)
 
+    // get cover image path
+    let coverpath = ''
+    let cover_folder = relativePath.replace('contents/', 'public/cover/')
+
+    for (let format of ['.png', '.jpg', '.jpeg', '.gif']) {
+        if (fs.existsSync(path.join(process.cwd(), cover_folder, `${id}${format}`))) {
+            coverpath = path.join(cover_folder.replace('public/', '/'), `${id}${format}`)
+            break
+        }
+    }
+
     // combine the data with the id and contentHtml
     return {
         id,
         content,
+        coverpath,
         ...matterResult.data,
     }
 }
