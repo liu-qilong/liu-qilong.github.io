@@ -4,7 +4,11 @@ import matter from 'gray-matter'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
 import remarkRehype from 'remark-rehype'
+import rehypeRaw from 'rehype-raw'
+import rehypeKatex from 'rehype-katex'
+import rehypeMathjax from 'rehype-mathjax'
 import rehypeStringify from 'rehype-stringify'
 
 
@@ -67,10 +71,12 @@ export async function getPostData ( id, relativePath ) {
 
     // use remark-gfm to convert markdown into html string
     const file = await unified()
-        .use(remarkParse)
-        .use(remarkGfm)
-        .use(remarkRehype)
-        .use(rehypeStringify)
+        .use(remarkParse)  // parse markdown
+        .use(remarkGfm)  // parse GitHub Flavored Markdown
+        .use(remarkMath)  // parse LaTeX equations
+        .use(remarkRehype)  // convert markdown to HTML
+        .use(rehypeKatex)  // convert LaTeX to HTML
+        .use(rehypeStringify)  // convert HTML to string
         .process(matterResult.content)
 
     const content = String(file)
