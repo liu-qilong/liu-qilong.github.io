@@ -1,6 +1,6 @@
 ---
 title: "Sports bra pressure: effect on core body temperature and comfort sensation"
-author: "Qi-long Liu, Kit-lun Yick, Kam-ching Chan, Sin-tung Wong, Sun-pui Ng"
+author: "Qi-long Liu👋, Kit-lun Yick, Kam-ching Chan, Sin-tung Wong, Sun-pui Ng"
 venue: "Applied Human Factors and Ergonomics (AHFE) 2022 International Conference"
 date: "2022"
 doi: "https://doi.org/10.54941/ahfe1001991"

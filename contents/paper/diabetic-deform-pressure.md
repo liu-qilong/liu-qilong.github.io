@@ -1,6 +1,6 @@
 ---
 title: "Analysis of Diabetic Foot Deformation and Plantar Pressure Distribution of Women at Different Walking Speeds"
-author: "Li-ying Zhang, Qi-long Liu, Kit-lun Yick, Joanne Yip, Sun-pui Ng"
+author: "Li-ying Zhang, Qi-long Liu👋, Kit-lun Yick, Joanne Yip, Sun-pui Ng"
 venue: "International Journal of Environmental Research and Public Health"
 date: "2023-02-19"
 doi: "https://www.mdpi.com/1660-4601/20/4/3688#"

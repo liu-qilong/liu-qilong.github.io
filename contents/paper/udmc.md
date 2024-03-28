@@ -1,6 +1,6 @@
 ---
 title: "Ultra-dense Motion Capture: An exploratory full-automatic approach for dense tracking of breast motion in 4D"
-author: "Qi-long Liu, Kit-lun Yick, Yue Sun, Joanne Yip"
+author: "Qi-long Liu👋, Kit-lun Yick, Yue Sun, Joanne Yip"
 venue: "PLOS ONE"
 date: "2024-02-26"
 doi: "10.1371/journal.pone.0299040"
