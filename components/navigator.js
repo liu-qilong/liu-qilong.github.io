@@ -27,7 +27,7 @@ export default function SideBar({ children }) {
 
             {/* email & links */}
             <IconStack divclass="flex mx-auto w-fit" imgclass="p-1" size="25" icon_links={[
-                ['cv', 'https://liu-qilong.github.io/CV/'],
+                ['cv', 'https://liu-qilong.github.io/CV/static/cv.pdf'],
                 ['google-scholar', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
                 ['github', 'https://github.com/liu-qilong'],
                 ['hugging-face', 'https://huggingface.co/liu-qilong'],
