@@ -2,6 +2,7 @@ import Link from 'next/link'
 import PaperBlock from './post-block/paper-block'
 import ProjectBlock from './post-block/project-block'
 import BlogBlock from './post-block/blog-block'
+import NoteBlock from './post-block/note-block'
 
 export default function RecentPost({ type, posts, maxnum }) {
     let num = 0 // idx of a post
@@ -11,6 +12,7 @@ export default function RecentPost({ type, posts, maxnum }) {
         "paper": PaperBlock,
         "project": ProjectBlock,
         "blog": BlogBlock,
+        "note": NoteBlock,
     }
     let BlockType = BlockDict[type]
 

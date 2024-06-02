@@ -2,6 +2,7 @@ import Layout from '../components/layout'
 import PaperBlock from './post-block/paper-block'
 import ProjectBlock from './post-block/project-block'
 import BlogBlock from './post-block/blog-block'
+import NoteBlock from './post-block/note-block'
 
 export default function PostIndex( {type, allpost} ) {
     let year = "0000" // year
@@ -11,6 +12,7 @@ export default function PostIndex( {type, allpost} ) {
         "paper": PaperBlock,
         "project": ProjectBlock,
         "blog": BlogBlock,
+        "note": NoteBlock,
     }
     let BlockType = BlockDict[type]
 

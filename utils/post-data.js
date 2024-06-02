@@ -24,7 +24,6 @@ export function getSortedPostsData ( relativePath ) {
 
         // use gray-matter to parse the post metadata section
         const matterResult = matter(file_content)
-        console.log(matterResult.content)
 
         // get cover image path
         let coverpath = ''

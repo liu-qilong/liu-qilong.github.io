@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import RecentPost from '../components/recent-post'
 import { getSortedPostsData } from '../utils/post-data'
 
-export default function Home( {allpaper, allproject, allblog} ) {
+export default function Home( {allpaper, allproject, allblog, allnote} ) {
     return (
         <>
         <Head>
@@ -18,6 +18,7 @@ export default function Home( {allpaper, allproject, allblog} ) {
             <RecentPost type='paper' posts={allpaper} maxnum={3}/>
             <RecentPost type='project' posts={allproject} maxnum={3}/>
             <RecentPost type='blog' posts={allblog} maxnum={3}/>
+            <RecentPost type='note' posts={allnote} maxnum={3}/>
         </Layout>
         </>
     )
@@ -27,11 +28,14 @@ export async function getStaticProps() {
     const allpaper = getSortedPostsData('contents/paper')
     const allproject = getSortedPostsData('contents/project')
     const allblog = getSortedPostsData('contents/blog')
+    const allnote = getSortedPostsData('contents/note')
+
     return {
         props: {
             allpaper,
             allproject,
             allblog,
+            allnote,
         }
     }
 }
