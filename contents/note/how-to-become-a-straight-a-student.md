@@ -11,6 +11,9 @@ link:
 ## Part I: Study Basics
 
 - [x] Step 1: Manage Your Time in Five Minutes a Day
+
+See: [Cal Newport's time management system > Two-column todo list](/blog/cal-newport-time-management).
+
 - [x] Step 2: Declare War on Procrastination
 - [x] Step 3: Choose When, Where, and How Long
 
