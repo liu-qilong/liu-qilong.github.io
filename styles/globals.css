@@ -100,3 +100,30 @@ td, th {
 .sr-only {
   @apply before:content-['*']
 }
+
+/* bullet points with vertical lines */
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  position:relative; /* so that pseudo-elements are positioned relatively to their "li"s*/
+}
+
+ul li:before {
+  content: '+';
+  position: absolute;
+  left: -15px;
+  top: 0px;
+  color: rgb(103, 115, 137);
+}
+
+ul li:after {
+  content:"";
+  position: absolute;
+  width: 1px;
+  left: -10px;
+  top: 17pt;
+  height: calc(100% - 5pt);
+  border-left: 1px solid lightgray;
+}

@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
+import remarkBreaks from 'remark-breaks'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import remarkRehype from 'remark-rehype'
@@ -82,6 +83,7 @@ export async function getPostData ( id, relativePath) {
 
     const file = await unified()
         .use(remarkParse)  // parse markdown
+        .use(remarkBreaks)
         .use(remarkGfm)  // parse GitHub Flavored Markdown
         .use(remarkMath)  // parse LaTeX equations
         .use(remarkRehype)  // convert markdown to HTML
