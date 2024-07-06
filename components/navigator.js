@@ -31,9 +31,9 @@ export default function SideBar({ children }) {
                 ['google-scholar', 'https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en'],
                 ['github', 'https://github.com/liu-qilong'],
                 ['hugging-face', 'https://huggingface.co/liu-qilong'],
-                ['twitter', 'https://twitter.com/liu_qi_long'],
-                ['instagram', 'https://www.instagram.com/liu.qilong.kirov'],
                 ['medium', 'https://medium.com/@liu-qilong'],
+                ['x', 'https://twitter.com/liu_qi_long'],
+                ['xiaohongshu', 'https://www.instagram.com/liu.qilong.kirov'],
             ]}/>
             <Link className="text-s hyphens-none" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
 

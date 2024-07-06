@@ -3,6 +3,7 @@ title: "Clean Code Handbook: LeetCode 50 Common Interview Questions | LeetCode"
 date: "2024-07-05"
 update: 
 link:
+  xiaohongshu: "https://www.xiaohongshu.com/explore/668787600000000003027317"
 ---
 
 ## Data structure
