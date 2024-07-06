@@ -113,7 +113,7 @@ ul li {
 ul li:before {
   content: '+';
   position: absolute;
-  left: -15px;
+  left: -14px;
   top: 0px;
   color: rgb(103, 115, 137);
 }
