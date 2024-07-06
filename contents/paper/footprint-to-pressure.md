@@ -1,9 +1,9 @@
 ---
 title: "Prediction of Dynamic Plantar Pressure from Insole Intervention for Diabetic Patients Based on Patch-based Multilayer Perceptron with Localization Embedding"
 author: "Li-ying Zhang, Ze-qi Ma, Kit-lun Yick, Pui-ling Li, Joanne Yip, Sun-pui Ng, and Qi-long Liu👋"
-venue: "IEEE Access (Under Review)"
-date: "2024-U"
+venue: "IEEE Access (Accpeted)"
+date: "2024-A"
 doi: ""
 page: ""
-abstract: "Under review."
+abstract: "Assessing plantar pressure is crucial for fabricating diabetic insoles and preventing diabetic foot ulcers (DFUs), which are caused by increased plantar pressure. However, the commonly used methods for assessing plantar pressure distribution involve professional sensor-based equipment and expertise, which are costly and time-consuming. Given the qualitative association between ink footprint images and plantar pressure, this study proposes using the footprint images to predict the quantitative values of dynamic plantar pressure in barefoot and 4 different insole conditions (including Nora Lunalastik EVA, Nora Lunalight A fresh, Pe-Lite, and PORON Medical 4708) based on a multilayer perceptron (MLP) neural network model. To provide more precise insole material recommendations for specific foot regions for better plantar pressure distribution, the plantar of the foot is divided into 5 regions: the toes, metatarsal heads, medial midfoot, lateral midfoot, and heel. Patch-based MLP with localization embedding is introduced to learn the correspondence between ink density and plantar pressure information. Ground-truth data collected from 52 diabetes patients is constructed as a dataset named diabetes-footprint-to-pressure and used to train and validate the model. The mean absolute error (MAE) of the models for the barefoot and 4 insole conditions is 5.51% (33.06 kPa), 3.99% (23.94 kPa), 4.85% (29.10 kPa), 4.25% (25.50 kPa), and 3.57% (21.42 kPa) of the sensing range, respectively. Compared to traditional methods for plantar pressure assessment, this approach streamlines the process of acquiring the overall and regional dynamic plantar pressure with barefoot and 4 different insole materials. Clinicians can quickly provide recommendations on the type of insole material for individual patients."
 ---
