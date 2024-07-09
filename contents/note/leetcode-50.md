@@ -64,7 +64,7 @@ link:
         - [#26 Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/)
             Feedback the accumulative depth down from the leaf-nodes.
         - [#28. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/description/)
-            Feedback the accumulative depth down from the leaf-nodes and judge if the depth of the left and right trees differs no more than 1.
+            Feedback the accumulative depth down from the leaf-nodes and judge if the depths of the left and right trees differ no more than 1.
     - _Divide-and-conquer_
         - [#29 Convert Sorted Array to Balanced Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/)*
 
