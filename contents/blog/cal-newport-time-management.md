@@ -20,7 +20,7 @@ Cal Newport advocates his time management system in his [books]((https://calnewp
 
 > [How to Become A Straight-A Student]()
 
-Every day has two column: _tasks_ and ideas.
+Every day has two column: _tasks_ and _ideas_.
 
 - When some random ideas come to you, don't distract from what you are doing at the moment - just drop them to the _ideas_ column.
 - At the beginning of each day, transfer the _ideas_ to the _tasks_ column of the day you'd like to address it.

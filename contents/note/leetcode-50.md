@@ -56,15 +56,15 @@ link:
 ### Binary tree
 - _Recursion_
     All nodes of a binary tree share similar structure, which makes recursion a particularly suitable choice for solving tree-related problems.
-    One thing to be noted is that recursion costs stack space, which should be considered when calculating the time complexity.
+    One thing to be noted is that recursion costs stack space, which should be considered when calculating the space complexity.
     - _Information feedforward_
         - [#25 Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/description/)
             Validate that any nodes are greater/less than all nodes of their left/right trees costs $O(n^2)$ runtime with the brute force approach. With recursion, the max & min bound information can be feedforward down to each node for verification, improving runtime to $O(n)$.
     - _Information feedback_
         - [#26 Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/)
-            Feedback the accumulative depth down from the left-nodes.
+            Feedback the accumulative depth down from the leaf-nodes.
         - [#28. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/description/)
-            Feedback the accumulative depth down from the left-nodes and judge if the depth of the left and right trees differs no more than 1.
+            Feedback the accumulative depth down from the leaf-nodes and judge if the depth of the left and right trees differs no more than 1.
     - _Divide-and-conquer_
         - [#29 Convert Sorted Array to Balanced Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/)*
 
