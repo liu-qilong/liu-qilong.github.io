@@ -4,6 +4,7 @@ date: "2024-04-21"
 update: 
 link:
     amazon: "https://www.amazon.com/gp/product/0767922719/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=stuhac-20&creative=9325&linkCode=as2&creativeASIN=0767922719&linkId=98a11bfd8d18be630bd45d2525467c3c"
+    xiaohongshu: "https://www.xiaohongshu.com/explore/669dff70000000000a004d0e"
 ---
 
 > [How to Become a Straight-A Student - Cal Newport](https://www.amazon.com/dp/0767922719?ref_=cm_sw_r_cp_ud_dp_VQPMW14BAYW14TAZN5N0)

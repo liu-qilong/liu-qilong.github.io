@@ -4,6 +4,7 @@ date: "2024-07-17"
 update: 
 link:
     amazon: "https://www.amazon.com/dp/1455586692"
+    xiaohongshu: "https://www.xiaohongshu.com/explore/669e0a7d000000000500499e"
 ---
 
 ## Part I: The Idea
