@@ -118,7 +118,7 @@ ul li:before {
   color: rgb(103, 115, 137);
 }
 
-ul li:after {
+ul li:not(:last-child):after {
   content:"";
   position: absolute;
   width: 1px;
