@@ -1,11 +1,11 @@
 ---
-title: "Beamer-LaTeX-Themes"
+title: "college-beamer"
 date: "2022-05-22"
 link:
     github: "https://github.com/liu-qilong/Beamer-LaTeX-Themes"
 ---
 
-Here are some beamer templates which are secondary creations of [SINTEF Presentation](https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx) template. Thanks [Federico Zenith](federico.zenith@sintef.no) for creating such tasted and well-designed works. To use it in my and my friends' schools/organizations, I rewrote and added some icons and features to adapt to specific surroundings✨.
+Hi👋 Here are some beamer templates which are secondary creations of [SINTEF Presentation](https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx) template. Thanks [Federico Zenith](federico.zenith@sintef.no) for creating such well-designed works. To use it in my and my friends' schools/institutes, I rewrote and added some icons and features to adapt to specific surroundings✨.
 
 All templates have been submitted to [Gallery - Overleaf](https://cs.overleaf.com/gallery), please check them here👇
 
@@ -13,42 +13,65 @@ All templates have been submitted to [Gallery - Overleaf](https://cs.overleaf.co
 - [西南大学 SWU Beamer 模板 - Overleaf](https://www.overleaf.com/latex/templates/xi-nan-da-xue-swu-beamer-mo-ban-zhu-ti/bgprxfbyhqsb)
 - [深圳大学 SZU Beamer 模板 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-da-xue-szu-beamer-mo-ban/bjwzmkpsgygf)
 - [深圳环境科学院 SAES Beamer 模版 - Overleaf](https://www.overleaf.com/latex/templates/shen-zhen-huan-jing-ke-xue-yuan-saes-beamer-zhu-ti/gqfgpdwcrcpt)
-- 哈尔滨工业大学 Beamer 模版
-  > Thanks [LeeWlving](https://github.com/LeeWlving) for contributing this template!
+- [哈尔滨工业大学 Beamer 模版](https://www.overleaf.com/latex/templates/harbin-institute-of-technology-hit-beamer-presentation-theme/prwxqwfdzkqj)
+  > Thank [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 
 > Noted that if you'd like to include Chinese text, please use XeLaTeX for typesetting.
 
 Below shows some examples:
 
-## Title Pages for Schools/Organizations
+## Title pages for colleges/institutes
+
 - The Hong Kong Polytechnic University
-![PolyU](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/PolyU.png?raw=true)
+![PolyU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/PolyU.png?raw=true)
 - Southwest University
-![SWU](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/SWU.png?raw=true)
+![SWU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SWU.png?raw=true)
 - Shenzhen University
-![SZU](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/SZU.png?raw=true)
+![SZU](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SZU.png?raw=true)
 - Shenzhen Academic of Environmental Science
-![SAES](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/SAES.png?raw=true)
+![SAES](https://github.com/liu-qilong/college-beamer/blob/main/gallery/SAES.png?raw=true)
 - Harbin Institute of Technology
-![HIT](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/HIT.png?raw=true)
+![HIT](https://github.com/liu-qilong/college-beamer/blob/main/gallery/HIT.png?raw=true)
   > Thanks [LeeWlving](https://github.com/LeeWlving) for contributing this template!
 
-## Page Elements
+### Switch college/institute
+
+Switching between different college/institute is quite easy, just add college/institute name (all lower case) to the `collegeBeamer` package. For example, to switch to the PolyU theme, add `polyu` to the package:
+
+```
+\usepackage[polyu,en]{collegeBeamer}
+```
+
+### Switch language
+
+To switch the language, just change the language option in the `collegeBeamer` package. For example, to switch to the Chinese language, add `zh` to the package:
+
+```
+\usepackage[szu,zh]{collegeBeamer}
+```
+
+> When select `zh`, please add the `xeCJK`package to the preamble and use XeLaTeX as the typesetting engine.
+
+```
+\usepackage{xeCJK}
+```
+
+## Page elements
 
 - Table of Contents
 
   At the beginning of each section, the table of contents will be shown with the current chapter highlighted.
-![toc](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/table%20of%20contents.png?raw=true)
+![toc](https://github.com/liu-qilong/college-beamer/blob/main/gallery/table%20of%20contents.png?raw=true)
 - Sub-section page
-![ssec](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/subsection.png?raw=true)
+![ssec](https://github.com/liu-qilong/college-beamer/blob/main/gallery/subsection.png?raw=true)
 - Math equation
-![math](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/math.png?raw=true)
+![math](https://github.com/liu-qilong/college-beamer/blob/main/gallery/math.png?raw=true)
 - Code block
-![code](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/code.png?raw=true)
+![code](https://github.com/liu-qilong/college-beamer/blob/main/gallery/code.png?raw=true)
 - End page
-![end](https://github.com/liu-qilong/Beamer-LaTeX-Themes/blob/main/gallery/end.png?raw=true)
+![end](https://github.com/liu-qilong/college-beamer/blob/main/gallery/end.png?raw=true)
 
-## Make Your Own Theme?
+## Add your own college?
 
 Would like to make your own theme on top of these themes? It's quite easy, only a few steps are needed:
 
@@ -58,30 +81,27 @@ To get the files, you can fork & clone the repository to your computer.
 
 Alternatively, you can open the templates' Overleaf webpages and click `Open as Template`.
 
-### Step 2: Replace icon pictures
+### Step 2: Place logos and background
 
-The `images/` folder stores the icon pictures. The `SINTEF_Logo_Sentrert_RGB.jpg` is the icon picture shown on the title page & normal pages. And the `SINTEF_Logo_Sentrert_Negativ_RGB.jpg` is the icon picture shown on the contents pages & end page, both on the left-top corner.
+Create a subfolder under `src/` named as your college. Place `color-logo.png?raw=true` (logo image with background color), `trans-logo.png?raw=true` (logo image with transparent background), and `background.png?raw=true` (background image on the cover page) into it.
 
-You can replace them with your own icons, noted that the pictures' file names should be the same as the original ones, otherwise the theme doesn't know how to find your icons.
+### Step 3: Add college/institute option
 
-For those who open the template on Overleaf, please click the `Upload` button on the top-left corner to upload your icon pictures, and replace the original icon files in the `images/` folder.
+Starting from the 37-th line of `collegebeamer.sty`, all college/institute options are defined. Add your college/institute name in the same format, e.g.:
 
-### Step 3: Replace background picture
-
-The `images/` folder also stores the background picture, which is `background.png`. You can fell free to replace it in the same way as Step 2.
-
-### Step 4: Change the main colour
-
-To optimize the visual appearance, it's recommended to change the main colour, which will be used as the colour of titles and backgrounds. The 7-th line of `sintefcolor.sty` file defines the main colour:
 ```
-\definecolor{sintefblue}{RGB}{148,0,64}
+\DeclareOption{polyu}{
+\renewcommand{\maincolorRGB}{128, 57, 61}  % the theme's main color in RGB
+\renewcommand{\colorlogoPath}{src/PolyU/color-logo.png?raw=true}  % path to the logo image with background color
+\renewcommand{\translogoPath}{src/PolyU/trans-logo.png?raw=true}  % path to the logo image with transparent background
+\renewcommand{\backgroundPath}{src/PolyU/background.png?raw=true}  % path to the background image
+}
 ```
-Assuming that the RGB value of the new main colour is `(254, 191, 75)`, just rewrite the last 3 values in the code as:
-```
-\definecolor{sintefblue}{RGB}{254, 191, 75}
-```
+
+Noted that the theme's main color will be used in the front-ground of titles and backgorund colors of the sectional page.
+
 Now you have your brand new template 👏🎉
 
-## Issues & Suggestions
+## Issues & suggestions
 
 If you have any revision suggestions, please create an issue in this repository. Thanks indeed🤝
