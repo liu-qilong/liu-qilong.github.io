@@ -83,7 +83,7 @@ Alternatively, you can open the templates' Overleaf webpages and click `Open as 
 
 ### Step 2: Place logos and background
 
-Create a subfolder under `src/` named as your college. Place `color-logo.png?raw=true` (logo image with background color), `trans-logo.png?raw=true` (logo image with transparent background), and `background.png?raw=true` (background image on the cover page) into it.
+Create a subfolder under `src/` named as your college. Place `color-logo.png` (logo image with background color), `trans-logo.png` (logo image with transparent background), and `background.png` (background image on the cover page) into it.
 
 ### Step 3: Add college/institute option
 
@@ -91,10 +91,10 @@ Starting from the 37-th line of `collegebeamer.sty`, all college/institute optio
 
 ```
 \DeclareOption{polyu}{
-\renewcommand{\maincolorRGB}{128, 57, 61}  % the theme's main color in RGB
-\renewcommand{\colorlogoPath}{src/PolyU/color-logo.png?raw=true}  % path to the logo image with background color
-\renewcommand{\translogoPath}{src/PolyU/trans-logo.png?raw=true}  % path to the logo image with transparent background
-\renewcommand{\backgroundPath}{src/PolyU/background.png?raw=true}  % path to the background image
+  \renewcommand{\maincolorRGB}{128, 57, 61}  % the theme's main color in RGB
+  \renewcommand{\colorlogoPath}{src/PolyU/color-logo.png?raw=true}  % path to the logo image with background color
+  \renewcommand{\translogoPath}{src/PolyU/trans-logo.png?raw=true}  % path to the logo image with transparent background
+  \renewcommand{\backgroundPath}{src/PolyU/background.png?raw=true}  % path to the background image
 }
 ```
 
