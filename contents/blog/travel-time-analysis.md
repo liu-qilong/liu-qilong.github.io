@@ -4,6 +4,7 @@ date: "2024-10-10"
 update: 
 link:
     github: "https://github.com/liu-qilong/scripts/blob/main/notebook/travel-time-analysis/analysis.ipynb"
+    link: "https://www.icloud.com/shortcuts/818e538f2b2c45b6804d73515557a54e"
     xiaohongshu: "https://www.xiaohongshu.com/explore/67079f43000000002c02e597"
 ---
 

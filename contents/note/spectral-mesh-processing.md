@@ -3,6 +3,7 @@ title: "Spectral Mesh Processing | Bruno Lévy & Hao Zhang"
 date: "2024-08-27"
 update: 
 link:
+    link: "https://dl.acm.org/doi/10.1145/1837101.1837109"
 ---
 
 > [Spectral mesh processing | ACM SIGGRAPH 2010 Courses](https://dl.acm.org/doi/10.1145/1837101.1837109)

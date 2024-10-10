@@ -3,6 +3,7 @@ title: "Computing and Processing Correspondences with Functional Maps | Maks Ovs
 date: "2024-09-27"
 update: 
 link:
+    link: "https://dl.acm.org/doi/10.1145/3084873.3084877"
 ---
 
 > [Computing and processing correspondences with functional maps | ACM SIGGRAPH 2017 Courses](https://dl.acm.org/doi/10.1145/3084873.3084877)
