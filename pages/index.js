@@ -16,9 +16,9 @@ export default function Home( {allpaper, allproject, allblog, allnote} ) {
 
             <br></br>
             <RecentPost type='paper' posts={allpaper} maxnum={3}/>
-            <RecentPost type='project' posts={allproject} maxnum={3}/>
             <RecentPost type='blog' posts={allblog} maxnum={3}/>
             <RecentPost type='note' posts={allnote} maxnum={3}/>
+            <RecentPost type='project' posts={allproject} maxnum={3}/>
         </Layout>
         </>
     )
