@@ -4,8 +4,8 @@ date: "2024-05-09"
 update: 
 link:
     amazon: "https://www.amazon.com/gp/product/1455509124/"
-    link: "https://www.amazon.com/gp/product/1455509124/"
     xiaohongshu: "https://www.xiaohongshu.com/explore/669e0695000000000d00eaed"
+    link: "https://www.amazon.com/gp/product/1455509124/"
 ---
 
 > [So Good They Can't Ignore You - Cal Newport](https://www.amazon.com/gp/product/1455509124/)

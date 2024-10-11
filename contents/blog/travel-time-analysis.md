@@ -1,7 +1,7 @@
 ---
 title: "Travel time analysis with Apple Shortcut"
 date: "2024-10-10"
-update: 
+update: "2024-10-11"
 link:
     github: "https://github.com/liu-qilong/scripts/blob/main/notebook/travel-time-analysis/analysis.ipynb"
     link: "https://www.icloud.com/shortcuts/818e538f2b2c45b6804d73515557a54e"
@@ -88,9 +88,9 @@ During my holiday, I traveled between Shenzhen (SZ), Shanguan (SG), and Shunde (
 ![img](/img/travel-time-sz-sd.png)
 ![img](/img/travel-time-sd-sg.png)
 
-- From 1 Oct to 3 Oct, the first 2 days of the holidays, the traffic heading north (SZ -> SG, SZ -> SD, SD -> SG) is heavier than the traffic heading south. On 1 Oct, the travel time could be overwhelmingly long.
-- Starting from 4 Oct, the traffic heading south surpasses the traffic heading north. The traffic pressure of the northbound traffic is gradually relieved, but the traffic pressure of the southbound traffic becomes heavier.
-- Nevertheless, after 4 Oct, the southbound traffic pressure shows a more even-out pattern, while the northbound traffic pressure fluctuates drastically during the first 2 days of the holiday.
+- From 1 Oct to 3 Oct, the first 2 days of the holidays, the traffic heading north (SZ -> SG, SZ -> SD, SD -> SG) was heavier than the traffic heading south. On 1 Oct, the travel time could be overwhelmingly long.
+- Starting from 4 Oct, the traffic heading south surpassed the traffic heading north. The traffic pressure of the northbound traffic was gradually relieved, but the traffic pressure of the southbound traffic became heavier.
+- Nevertheless, after 4 Oct, the southbound traffic pressure showed a more even-out pattern, while the northbound traffic pressure fluctuated drastically during the first 2 days of the holiday. _(Recall that I took 10 hours to travel from SZ to SG on 1 Oct...)_
 
 Based on these observations:
 
@@ -104,9 +104,9 @@ Based on these observations:
 ![img](/img/travel-time-by-hour-sz-sd.png)
 ![img](/img/travel-time-by-hour-sd-sg.png)
 
-- The traffic pressure of both northbound and southbound traffic increases from 6:00.
-- Northbound traffic peaks at around 13:00, while southbound traffic peaks at around 16:00 or later.
-- Both northbound and southbound traffic pressure decreases at around 12:00, probably due to lunchtime.
+- The traffic pressure of both northbound and southbound traffic increased from 6:00.
+- Northbound traffic peaked at around 13:00, while southbound traffic peaked at around 16:00 or later.
+- Both northbound and southbound traffic pressure decreased at around 12:00, probably due to lunchtime.
 
 Based on these observations:
 
