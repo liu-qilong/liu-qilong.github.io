@@ -2,6 +2,7 @@
 title: "How to set the padding of convolution to make the stride acting as a scale factor"
 date: "2024-03-13"
 update: ""
+link:
 ---
 
 > Cover image source: [A guide to convolution arithmetic for deep learning - Vincent Dumoulin, Francesco Visin - ArXiv](https://arxiv.org/abs/1603.07285)
