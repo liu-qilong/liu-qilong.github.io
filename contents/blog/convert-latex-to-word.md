@@ -4,6 +4,7 @@ date: "2022-05-04"
 update: "2023-04-27"
 link:
     medium: "https://medium.com/@liu-qilong/convert-latex-to-word-94f863f4dbdc"
+    x: "https://x.com/liu_qi_long/status/1846451169734152382"
 ---
 
 LaTeX is a great tool for academic writing. However, not all collaborators may be familiar with it, and at times, you may need to convert your document into a Word file for reviewing and editing purposes. In my opinion, the best tool for this task is [Pandoc](https://pandoc.org) - an open-source command-line tool for free.

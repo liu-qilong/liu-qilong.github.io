@@ -4,6 +4,7 @@ date: "2022-06-20"
 update: "2023-07-16"
 link:
     medium: "https://medium.com/@liu-qilong/embed-gif-in-latex-beamer-ed5ced8c041"
+    x: "https://x.com/liu_qi_long/status/1846450947062738965"
 ---
 
 As an research postgraduate student, I frequently make "academic-looking" slides for meetings, which comprise a lot of references, tables, charts, and sometimes math equations. LaTeX is excellent for typesetting these elements, so using LaTeX to make slides sounds like a good idea.

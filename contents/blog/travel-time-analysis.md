@@ -6,6 +6,7 @@ link:
     github: "https://github.com/liu-qilong/scripts/blob/main/notebook/travel-time-analysis/analysis.ipynb"
     link: "https://www.icloud.com/shortcuts/818e538f2b2c45b6804d73515557a54e"
     medium: "https://medium.com/@liu-qilong/travel-time-analysis-with-apple-shortcut-bb49a596f2b0"
+    x: "https://x.com/liu_qi_long/status/1846447008141529131"
     xiaohongshu: "https://www.xiaohongshu.com/explore/67079f43000000002c02e597"
 ---
 
