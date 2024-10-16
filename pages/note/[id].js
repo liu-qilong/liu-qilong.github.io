@@ -15,7 +15,7 @@ export default function NotePage({ post }) {
     )
 
     // tweet id and comment
-    const tweet_id = (post.link.x != null) ? (
+    const tweet_id = (post.link && post.link.x != null) ? (
         post.link.x.split('/').pop()
     ) : (
         null
