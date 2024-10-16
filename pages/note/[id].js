@@ -21,7 +21,7 @@ export default function NotePage({ post }) {
         null
     )
 
-    const comment = (post.link.x != null) ? (
+    const comment = (post.link && post.link.x != null) ? (
         <div>
             <hr className="mt-10 mb-5"/>
             <div className="italic">Do you have any ideas or comments? Please join the discussion on <a href={post.link.x}>X</a>👇</div>
