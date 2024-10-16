@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Tweet } from 'react-tweet'
 import Layout from '../../components/layout'
 import BlogBlock from '../../components/post-block/blog-block'
 import { getAllPostIds, getPostData } from '../../utils/post-data'
