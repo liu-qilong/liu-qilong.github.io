@@ -4,6 +4,7 @@ date: "2024-08-27"
 update: 
 link:
     link: "https://dl.acm.org/doi/10.1145/1837101.1837109"
+    x: "https://x.com/liu_qi_long/status/1846825230276481294"
 ---
 
 > [Spectral mesh processing | ACM SIGGRAPH 2010 Courses](https://dl.acm.org/doi/10.1145/1837101.1837109)

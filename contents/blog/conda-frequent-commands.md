@@ -3,6 +3,7 @@ title: "Conda: Frequent commands"
 date: "2023-03-08"
 update: "2023-04-27"
 link:
+    x: "https://x.com/liu_qi_long/status/1846821855820415479"
 ---
 
 When working on a Python project, it's considered good practice to create a virtual environment. In this case, every project is running in a separate environment, with their own dependencies. This can save you tons of headache - if you install all your projects' dependencies in one place, things may quickly crash with each other.

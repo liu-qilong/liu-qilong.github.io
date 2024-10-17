@@ -3,6 +3,7 @@ title: "How to set the padding of convolution to make the stride acting as a sca
 date: "2024-03-13"
 update: ""
 link:
+    x: "https://x.com/liu_qi_long/status/1846821014564667636"
 ---
 
 > Cover image source: [A guide to convolution arithmetic for deep learning - Vincent Dumoulin, Francesco Visin - ArXiv](https://arxiv.org/abs/1603.07285)

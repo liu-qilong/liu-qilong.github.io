@@ -4,8 +4,9 @@ date: "2024-06-02"
 update: 
 link:
     amazon: "https://www.amazon.com/dp/3030343715?ref_=cm_sw_r_cp_ud_dp_YBKQW67V2K5A0SSHJHDC"
-    xiaohongshu: "https://www.xiaohongshu.com/explore/6687858e0000000003026108"
     link: "https://szeliski.org/Book/"
+    xiaohongshu: "https://www.xiaohongshu.com/explore/6687858e0000000003026108"
+    x: "https://x.com/liu_qi_long/status/1846823958970355764"
 ---
 
 > Free official electronic version: [Computer Vision: Algorithms and Applications, 2nd ed.](https://szeliski.org/Book/)

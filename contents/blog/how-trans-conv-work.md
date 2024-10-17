@@ -3,6 +3,7 @@ title: "Why transposed convolution can be used to reconstruct activating feature
 date: "2024-03-13"
 update: "2024-03-14"
 link:
+    x: "https://x.com/liu_qi_long/status/1846821235948400889"
 ---
 
 > Cover image source: [A guide to convolution arithmetic for deep learning - Vincent Dumoulin, Francesco Visin - ArXiv](https://arxiv.org/abs/1603.07285)

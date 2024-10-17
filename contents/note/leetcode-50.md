@@ -4,6 +4,7 @@ date: "2024-07-05"
 update: 
 link:
   xiaohongshu: "https://www.xiaohongshu.com/explore/668787600000000003027317"
+  x: "https://x.com/liu_qi_long/status/1846824674992558301"
 ---
 
 ## Data structure
