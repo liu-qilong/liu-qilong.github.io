@@ -27,15 +27,7 @@ export function getSortedPostsData ( relativePath ) {
         const matterResult = matter(file_content)
 
         // get cover image path
-        let coverpath = ''
-        let cover_folder = relativePath.replace('contents/', 'cover/')
-
-        for (let format of ['.png', '.jpg', '.jpeg', '.gif']) {
-            if (fs.existsSync(path.join(process.cwd(), cover_folder, `${id}${format}`))) {
-                coverpath = path.join(cover_folder.replace('', '/'), `${id}${format}`)
-                break
-            }
-        }
+        let coverpath = get_cover(relativePath, id)
 
         // combine the data with the id
         return {
@@ -94,15 +86,7 @@ export async function getPostData ( id, relativePath) {
     const content = String(file)
 
     // get cover image path
-    let coverpath = ''
-    let cover_folder = relativePath.replace('contents/', 'cover/')
-
-    for (let format of ['.png', '.jpg', '.jpeg', '.gif']) {
-        if (fs.existsSync(path.join(process.cwd(), cover_folder, `${id}${format}`))) {
-            coverpath = path.join(cover_folder.replace('', '/'), `${id}${format}`)
-            break
-        }
-    }
+    let coverpath = get_cover(relativePath, id)
 
     // combine the data with the id and contentHtml
     return {
@@ -111,4 +95,18 @@ export async function getPostData ( id, relativePath) {
         coverpath,
         ...matterResult.data,
     }
+}
+
+function get_cover( relativePath, id ) {
+    let coverpath = ''
+    let cover_folder = relativePath.replace('contents/', 'public/cover/')
+
+    for (let format of ['.png', '.jpg', '.jpeg', '.gif']) {
+        if (fs.existsSync(path.join(process.cwd(), cover_folder, `${id}${format}`))) {
+            coverpath = path.join(cover_folder.replace('public/', 'https://liu-qilong.github.io/'), `${id}${format}`)
+            break
+        }
+    }
+
+    return coverpath
 }
