@@ -109,8 +109,5 @@ function get_cover( relativePath, id ) {
             break
         }
     }
-    console.log('!!!!!!!!!!!!!!!!!')
-    console.log(coverpath)
-    console.log('!!!!!!!!!!!!!!!!!')
     return coverpath
 }

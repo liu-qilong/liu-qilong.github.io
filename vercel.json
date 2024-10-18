@@ -1,0 +1,9 @@
+{
+    "redirects": [
+      {
+        "source": "/(.*)",
+        "destination": "https://liu-qilong.github.io/$1",
+        "permanent": true
+      }
+    ]
+  }
