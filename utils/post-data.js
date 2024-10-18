@@ -99,14 +99,18 @@ export async function getPostData ( id, relativePath) {
 
 function get_cover( relativePath, id ) {
     let coverpath = ''
+    let photo_base_path = ''
     let cover_folder = relativePath.replace('contents/', 'public/cover/')
 
     for (let format of ['.png', '.jpg', '.jpeg', '.gif']) {
         if (fs.existsSync(path.join(process.cwd(), cover_folder, `${id}${format}`))) {
-            coverpath = path.join(cover_folder.replace('public/', 'https://liu-qilong.github.io/'), `${id}${format}`)
+            photo_base_path = cover_folder.replace('public/', 'https://liu-qilong.github.io/')
+            coverpath = `${photo_base_path}/${id}${format}`
             break
         }
     }
-
+    console.log('!!!!!!!!!!!!!!!!!')
+    console.log(coverpath)
+    console.log('!!!!!!!!!!!!!!!!!')
     return coverpath
 }
