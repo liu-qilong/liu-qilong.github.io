@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 export default function SideBar({ children }) {
     const [name, setName] = useState('QILONG ')
-    const [imglink, setImgLink] = useState('/public/profile/kirov.jpg')
+    const [imglink, setImgLink] = useState('/profile/kirov.jpg')
 
     return (
         <>
@@ -13,11 +13,11 @@ export default function SideBar({ children }) {
             <div className="group"
                 onMouseEnter = {() => {
                     setName('KIROV🪐')
-                    setImgLink('/public/profile/knpob.png')
+                    setImgLink('/profile/knpob.png')
                 }} 
                 onMouseLeave = {() => {
                     setName('QILONG ')
-                    setImgLink('/public/profile/kirov.jpg')
+                    setImgLink('/profile/kirov.jpg')
                 }}>
                 <div className="group font-mono text-slate-700 font-semibold text-2xl">
                     <span className="group-hover:text-rose-700">{name}</span>LIU
@@ -33,7 +33,7 @@ export default function SideBar({ children }) {
                 ['hugging-face', 'https://huggingface.co/liu-qilong'],
                 ['medium', 'https://medium.com/@liu-qilong'],
                 ['x', 'https://twitter.com/liu_qi_long'],
-                ['xiaohongshu', 'https://www.xiaohongshu.com/user/public/profile/5c5f9656000000001a0254a3'],
+                ['xiaohongshu', 'https://www.xiaohongshu.com/user/profile/5c5f9656000000001a0254a3'],
             ]}/>
             <Link className="text-s hyphens-none" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
 

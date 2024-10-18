@@ -28,11 +28,11 @@ export function getSortedPostsData ( relativePath ) {
 
         // get cover image path
         let coverpath = ''
-        let cover_folder = relativePath.replace('contents/', 'public/cover/')
+        let cover_folder = relativePath.replace('contents/', 'cover/')
 
         for (let format of ['.png', '.jpg', '.jpeg', '.gif']) {
             if (fs.existsSync(path.join(process.cwd(), cover_folder, `${id}${format}`))) {
-                coverpath = path.join(cover_folder.replace('public/', '/'), `${id}${format}`)
+                coverpath = path.join(cover_folder.replace('', '/'), `${id}${format}`)
                 break
             }
         }
@@ -95,11 +95,11 @@ export async function getPostData ( id, relativePath) {
 
     // get cover image path
     let coverpath = ''
-    let cover_folder = relativePath.replace('contents/', 'public/cover/')
+    let cover_folder = relativePath.replace('contents/', 'cover/')
 
     for (let format of ['.png', '.jpg', '.jpeg', '.gif']) {
         if (fs.existsSync(path.join(process.cwd(), cover_folder, `${id}${format}`))) {
-            coverpath = path.join(cover_folder.replace('public/', '/'), `${id}${format}`)
+            coverpath = path.join(cover_folder.replace('', '/'), `${id}${format}`)
             break
         }
     }

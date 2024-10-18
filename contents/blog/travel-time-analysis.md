@@ -36,19 +36,19 @@ Alright, let's get started with the travel time logging workflow.
 
 You can get the shortcut I created from [here](https://www.icloud.com/shortcuts/818e538f2b2c45b6804d73515557a54e). The shortcut consists of 2 major parts:
 
-![img](/public/img/travel-time-shortcut.jpeg)
+![img](/img/travel-time-shortcut.jpeg)
 
 - Travel time calculation
 
 The actions look like this:
 
-![img](/public/img/travel-time-cal.jpeg)
+![img](/img/travel-time-cal.jpeg)
 
 - Saving travel time to file
 
 I write the collected travel time between different cities to a [Apple Notes](https://www.icloud.com/notes/) note as well as a  `.csv` file:
 
-![img](/public/img/travel-time-save.jpeg)
+![img](/img/travel-time-save.jpeg)
 
 ### Step 2: Trigger the shortcut automatically
 
@@ -86,9 +86,9 @@ During my holiday, I traveled between Shenzhen (SZ), Shanguan (SG), and Shunde (
 
 ### Traffic pressure during the holiday
 
-![img](/public/img/travel-time-sz-sg.png)
-![img](/public/img/travel-time-sz-sd.png)
-![img](/public/img/travel-time-sd-sg.png)
+![img](/img/travel-time-sz-sg.png)
+![img](/img/travel-time-sz-sd.png)
+![img](/img/travel-time-sd-sg.png)
 
 - From 1 Oct to 3 Oct, the first 2 days of the holidays, the traffic heading north (SZ -> SG, SZ -> SD, SD -> SG) was heavier than the traffic heading south. On 1 Oct, the travel time could be overwhelmingly long.
 - Starting from 4 Oct, the traffic heading south surpassed the traffic heading north. The traffic pressure of the northbound traffic was gradually relieved, but the traffic pressure of the southbound traffic became heavier.
@@ -102,9 +102,9 @@ Based on these observations:
 
 ### Traffic pressure during the day
 
-![img](/public/img/travel-time-by-hour-sz-sg.png)
-![img](/public/img/travel-time-by-hour-sz-sd.png)
-![img](/public/img/travel-time-by-hour-sd-sg.png)
+![img](/img/travel-time-by-hour-sz-sg.png)
+![img](/img/travel-time-by-hour-sz-sd.png)
+![img](/img/travel-time-by-hour-sd-sg.png)
 
 - The traffic pressure of both northbound and southbound traffic increased from 6:00.
 - Northbound traffic peaked at around 13:00, while southbound traffic peaked at around 16:00 or later.
