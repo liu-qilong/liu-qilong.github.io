@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/qilong-liu",
+  basePath: "/qilong-liu/public",
   images: {
     unoptimized: true,
   },
