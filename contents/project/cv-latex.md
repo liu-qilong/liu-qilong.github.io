@@ -35,16 +35,16 @@ You can add links bar under your name by adding:
 ```
 \addlink
     {https://scholar.google.com/citations?user=N2-7ArsAAAAJ&hl=en}
-    {Google Scholar \includegraphics[height=0.3cm]{icon/google-scholar.png}}
+    {Google Scholar \includegraphics[height=0.3cm]{public/icon/google-scholar.png}}
 \addlink
     {https://orcid.org/0000-0001-7843-1925}
-    {ORCID \includegraphics[height=0.3cm]{icon/orcid.png}}
+    {ORCID \includegraphics[height=0.3cm]{public/icon/orcid.png}}
 \addlink
     {https://github.com/liu-qilong}
-    {GitHub \includegraphics[height=0.3cm]{icon/github.png}}
+    {GitHub \includegraphics[height=0.3cm]{public/icon/github.png}}
 \addlink
     {https://qilong-liu.vercel.app}
-    {Homepage \includegraphics[height=0.3cm]{icon/blog.png}}
+    {Homepage \includegraphics[height=0.3cm]{public/icon/blog.png}}
 % ...
 ```
 
