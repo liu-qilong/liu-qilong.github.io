@@ -1,8 +1,9 @@
 ---
 title: "mesh4d"
 date: "2022-07-23"
+description: "Toolkit for 4D (3D + T) data visualisation, operation, and dynamic estimation"
 link:
-    github: "https://github.com/liu-qilong/FEcluster"
+    github: "https://github.com/liu-qilong/mesh4d"
 ---
 
 # `mesh4d`

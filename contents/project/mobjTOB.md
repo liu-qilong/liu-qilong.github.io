@@ -1,6 +1,7 @@
 ---
 title: "mobjTOB"
 date: "2022-09-13"
+description: "A collection of the self-customized Mobjects for generating math animation with Manim"
 link:
     github: "https://github.com/liu-qilong/mobjTOB"
 ---

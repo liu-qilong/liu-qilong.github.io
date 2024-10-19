@@ -1,6 +1,7 @@
 ---
 title: "CV template"
 date: "2024-09-20"
+description: "A simple CV template with customized functionalities"
 link:
     github: "https://github.com/liu-qilong/CV"
 ---
