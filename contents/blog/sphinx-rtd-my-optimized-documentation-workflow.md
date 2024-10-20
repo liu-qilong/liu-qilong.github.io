@@ -7,6 +7,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846822181810082106"
 ---
 
+# Sphinx + ReadTheDocs: My optimized documentation workflow
+
 [Sphinx](https://www.sphinx-doc.org/en/master/) is an excellent tool for documenting Python projects. It can generate comprehensive documentation from [docstrings](https://en.wikipedia.org/wiki/Docstring#:~:text=In%20programming%2C%20a%20docstring%20is,a%20specific%20segment%20of%20code.) in the code, which means that the comments you write for your code also serve as its documentation.
 
 If you are not familiar with writing docstrings or Sphinx documentation, I highly recommend checking out this tutorial:

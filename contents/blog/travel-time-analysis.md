@@ -10,6 +10,8 @@ link:
     xiaohongshu: "https://www.xiaohongshu.com/explore/67079f43000000002c02e597"
 ---
 
+# Travel time analysis with Apple Shortcut
+
 ## Motivation
 
 Travel during public holidays in China is a headache-inducing activity, especially during national day holidays, one of the longest public holidays. People tend to pour out to visit their family/friends or travel to long-expecting tour sites. Traffic could be overwhelmingly heavy during this period.

@@ -8,6 +8,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846824868471325074"
 ---
 
+# Deep Work | Cal Newport
+
 ## Part I: The Idea
 
 ### Deep Work Is Valuable

@@ -9,6 +9,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846823296094163346"
 ---
 
+# How to Become A Straight-A Student | Cal Newport
+
 > [How to Become a Straight-A Student - Cal Newport](https://www.amazon.com/dp/0767922719?ref_=cm_sw_r_cp_ud_dp_VQPMW14BAYW14TAZN5N0)
 
 ## Part I: Study Basics

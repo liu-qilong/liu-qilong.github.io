@@ -6,6 +6,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846821855820415479"
 ---
 
+# Conda: Frequent commands
+
 When working on a Python project, it's considered good practice to create a virtual environment. In this case, every project is running in a separate environment, with their own dependencies. This can save you tons of headache - if you install all your projects' dependencies in one place, things may quickly crash with each other.
 
 > I personally learned this lesson the hard way after spending an entire night trying to fix version crashes. Eventually, I had no choice but to delete everything and start from scratch.

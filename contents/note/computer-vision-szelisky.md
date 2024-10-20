@@ -9,6 +9,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846823958970355764"
 ---
 
+# Computer Vision: Algorithms and Applications | Richard Szelisky
+
 > Free official electronic version: [Computer Vision: Algorithms and Applications, 2nd ed.](https://szeliski.org/Book/)
 
 ## Introduction

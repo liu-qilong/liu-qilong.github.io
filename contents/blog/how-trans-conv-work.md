@@ -6,6 +6,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846821235948400889"
 ---
 
+# Why transposed convolution can be used to reconstruct activating features from the input images
+
 > Cover image source: [A guide to convolution arithmetic for deep learning - Vincent Dumoulin, Francesco Visin - ArXiv](https://arxiv.org/abs/1603.07285)
 
 In [ZF Net](http://dx.doi.org/10.1007/978-3-319-10590-1_53), the transposed convolution is used to approximate the inverse of convolution, leading to the reconstruction of the activating features from the input image that activates a particular layer. However, strictly speaking, the transposed convolution is not really the inverse of convolution. Then why can it be used to do the reconstruction?

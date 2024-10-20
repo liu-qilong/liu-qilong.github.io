@@ -21,6 +21,10 @@ body {
   }
 }
 
+h1 {
+  display: none;
+}
+
 h2 {
   @apply before:content-["#"] hover:bg-slate-100 text-slate-500 mt-10 mb-5 border-b text-2xl md:text-3xl
 }

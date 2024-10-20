@@ -6,6 +6,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846821014564667636"
 ---
 
+# How to set the padding of convolution to make the stride acting as a scale factor
+
 > Cover image source: [A guide to convolution arithmetic for deep learning - Vincent Dumoulin, Francesco Visin - ArXiv](https://arxiv.org/abs/1603.07285)
 
 When doing convolution, the kernel is shift around the input image. Let's consider the case when the kernel moves left-to-right. The up-to-down scenario are just the same.

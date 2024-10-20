@@ -9,6 +9,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846823737716625597"
 ---
 
+# So Good They Can't Ignore You | Cal Newport
+
 > [So Good They Can't Ignore You - Cal Newport](https://www.amazon.com/gp/product/1455509124/)
 
 ## Rule #1 Don’t Follow Your Passion

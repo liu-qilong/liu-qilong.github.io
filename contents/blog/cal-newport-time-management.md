@@ -6,6 +6,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846449294993510436"
 ---
 
+# Cal Newport's time management system
+
 > [Cal Newport]()'s time management system is summarized in [The Time-Block Planner - Cal Newport](https://www.timeblockplanner.com). Combining the techniques discussed in this tiny pamphlet and his other books/podcasts, I compiled this blog post.
 
 ## Core value of time management 💡

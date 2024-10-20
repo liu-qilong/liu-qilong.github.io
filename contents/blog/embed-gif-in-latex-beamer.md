@@ -7,6 +7,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846450947062738965"
 ---
 
+# Embed GIF and MP4 in LaTeX Beamer
+
 As an research postgraduate student, I frequently make "academic-looking" slides for meetings, which comprise a lot of references, tables, charts, and sometimes math equations. LaTeX is excellent for typesetting these elements, so using LaTeX to make slides sounds like a good idea.
 
 With tutorials like [Beamer - Overleaf](https://www.overleaf.com/learn/latex/Beamer), I got started with this approach and feel more and more comfortable. I even made a series of templates for me and my friends (for more details: [Beamer-LaTeX-Themes](/project/beamer-latex)). Here are some example pages:

@@ -7,6 +7,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846825804011131030"
 ---
 
+# Computing and Processing Correspondences with Functional Maps | Maks Ovsjanikov et. al
+
 > [Computing and processing correspondences with functional maps | ACM SIGGRAPH 2017 Courses](https://dl.acm.org/doi/10.1145/3084873.3084877)
 
 

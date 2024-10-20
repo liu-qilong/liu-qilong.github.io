@@ -7,6 +7,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846449869051064390"
 ---
 
+# Best practices for marking changes of LaTeX documents
+
 When submitting academic manuscript, it's usually mandatory to submit the marked changes for revisions/resubmissions. Word is particularly handy in this regard. But if your manuscript is consists of lots math formula, e.g. in the field of deep learning, $\LaTeX$ is a more common choice. In this case, `latexdiff` is the go-to choice for generating the document with marked changes.
 
 ## Install `latexdiff`

@@ -7,6 +7,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846450726555521248"
 ---
 
+# Setup Windows development environment
+
 Recently, I tried to set up a Windows machine for development, focusing on Python, machine learning (PyTorch with CUDA), and web development (Node.js with NPM). Following is the summarization of some critical steps and relevant materials.
 
 Later, I further set it up as a `ssh` server that can be accessed by my laptop over the internet. If you are interested, please check [this post](/blog/win-ssh-host).

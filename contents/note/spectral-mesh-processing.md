@@ -7,6 +7,8 @@ link:
     x: "https://x.com/liu_qi_long/status/1846825230276481294"
 ---
 
+# Spectral Mesh Processing | Bruno Lévy & Hao Zhang
+
 > [Spectral mesh processing | ACM SIGGRAPH 2010 Courses](https://dl.acm.org/doi/10.1145/1837101.1837109)
 
 ## A gentle introduction
