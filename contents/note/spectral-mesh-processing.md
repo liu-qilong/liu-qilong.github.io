@@ -1,10 +1,12 @@
 ---
-title: "Spectral Mesh Processing | Bruno Lévy & Hao Zhang"
+title: Spectral Mesh Processing | Bruno Lévy & Hao Zhang
+tags:
+  - Kolmo/CV
 date: "2024-08-27"
 update: 
 link:
-    link: "https://dl.acm.org/doi/10.1145/1837101.1837109"
-    x: "https://x.com/liu_qi_long/status/1846825230276481294"
+  link: https://dl.acm.org/doi/10.1145/1837101.1837109
+  x: https://x.com/liu_qi_long/status/1846825230276481294
 ---
 
 # Spectral Mesh Processing | Bruno Lévy & Hao Zhang

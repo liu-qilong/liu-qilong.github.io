@@ -1,9 +1,11 @@
 ---
-title: "Cal Newport's time management system"
+title: Cal Newport's time management system
+tags:
+  - Achilles/Carrer
 date: "2024-04-15"
 update: "2024-05-12"
 link:
-    x: "https://x.com/liu_qi_long/status/1846449294993510436"
+  x: "https://x.com/liu_qi_long/status/1846449294993510436"
 ---
 
 # Cal Newport's time management system

@@ -1,15 +1,17 @@
 ---
-title: "A complete guide to setup WSL (Windows Subsystem for Linux)"
+title: A complete guide to setup WSL (Windows Subsystem for Linux)
+tags:
+  - Kolmo/Instrument
 date: "2023-11-02"
 update: "2023-12-06"
 link:
-    medium: "https://medium.com/@liu-qilong/a-complete-guide-to-setup-wsl-windows-subsystem-for-linux-4547e88b6cdb"
-    x: "https://x.com/liu_qi_long/status/1846450474117169238"
+  medium: "https://medium.com/@liu-qilong/a-complete-guide-to-setup-wsl-windows-subsystem-for-linux-4547e88b6cdb"
+  x: "https://x.com/liu_qi_long/status/1846450474117169238"
 ---
 
 # A complete guide to setup WSL (Windows Subsystem for Linux)
 
- WSL (Windows Subsystem for Linux) has various great advantages against dual-boot (installing Linux and Windows on the same computer), among them the most significant is that you can literally running both systems at the same time without the need to stop every software that's running and reboot to another system. Procedure to set up a WSL is roughly the same as setting up a real Linux OS, therefore this guide can also be used as a reference to Linux setup. The specifications of WSL setup procedure are mainly in _Install WSL_, _CUDA and PyTorch_, _VTK with PyVista, and _Remote development with SSH_ as described below.
+WSL (Windows Subsystem for Linux) has various great advantages against dual-boot (installing Linux and Windows on the same computer), among them the most significant is that you can literally running both systems at the same time without the need to stop every software that's running and reboot to another system. Procedure to set up a WSL is roughly the same as setting up a real Linux OS, therefore this guide can also be used as a reference to Linux setup. The specifications of WSL setup procedure are mainly in _Install WSL_, _CUDA and PyTorch_, _VTK with PyVista, and _Remote development with SSH_ as described below.
 
 ## Install WSL
 

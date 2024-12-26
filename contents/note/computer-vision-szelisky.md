@@ -1,31 +1,34 @@
 ---
 title: "Computer Vision: Algorithms and Applications | Richard Szelisky"
+tags:
+  - Kolmo/CV
+  - Kolmo/ML
 date: "2024-06-02"
 update: 
 link:
-    amazon: "https://www.amazon.com/dp/3030343715?ref_=cm_sw_r_cp_ud_dp_YBKQW67V2K5A0SSHJHDC"
-    link: "https://szeliski.org/Book/"
-    xiaohongshu: "https://www.xiaohongshu.com/explore/6687858e0000000003026108"
-    x: "https://x.com/liu_qi_long/status/1846823958970355764"
+  amazon: https://www.amazon.com/dp/3030343715?ref_=cm_sw_r_cp_ud_dp_YBKQW67V2K5A0SSHJHDC
+  link: https://szeliski.org/Book/
+  xiaohongshu: https://www.xiaohongshu.com/explore/6687858e0000000003026108
+  x: https://x.com/liu_qi_long/status/1846823958970355764
 ---
 
 # Computer Vision: Algorithms and Applications | Richard Szelisky
 
 > Free official electronic version: [Computer Vision: Algorithms and Applications, 2nd ed.](https://szeliski.org/Book/)
 
+_P.S. Part name was added by me._
+
 ## Introduction
 
-- What is computer vision? The inverse problem of computer graphics.
+- Sample Editor Command
     Very difficult due to imperfect information.
 - A brief history of computer vision.
 
 ## Part I: The Basics
 
-_P.S. Part name added myself._
-
 ### Image formation
-		  
-- Geometric primitives and transformation
+
+- Sample Editor Command
     Homogeneous coordinates and how to use it to describe 2D/3D transformation compactly.
 - Photometric image formation
     Models of lighting, reflectance, shading, and optics.
@@ -77,8 +80,6 @@ _P.S. Part name added myself._
     - Other networks: [RNN](), [Transformer](), [VAE](), [GAN](), etc.
 
 ## Part II: 2D Vision
-
-_P.S. Part name added myself._
 
 ### Recognition
 
@@ -157,7 +158,7 @@ _P.S. Part name added myself._
     - Patch-based method
         Performs translational alignment within a coarse-to-fine pyramid.
     - [Deep Learning]()-based methods
-        e.g. DeepFlow, FlowNetS, SPyNet, PWC-Net, HD$^3$, LiteFlowNet3, etc.
+        e.g. DeepFlow, FlowNetS, SPyNet, PWC-Net, $\text{HD}^3$, LiteFlowNet3, etc.
 - Layered motion
     Group pixels into layers/objects.
 
@@ -177,8 +178,6 @@ _P.S. Part name added myself._
     Can be used f/ hole filling, non-photorealistic rendering, style transfer, etc.
 
 ## Part III: 3D Vision
-
-_P.S. Part name added myself._
 
 ### Structure from motion and SLAM
 

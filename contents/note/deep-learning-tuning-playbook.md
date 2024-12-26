@@ -1,10 +1,12 @@
 ---
-title: "Deep Learning Tuning Playbook | Google Research"
+title: Deep Learning Tuning Playbook | Google Research
+tags:
+  - Kolmo/ML
 date: "2024-08-16"
 update: 
 link:
-    github: "https://github.com/google-research/tuning_playbook"
-    xiaohongshu: "https://www.xiaohongshu.com/explore/66bed0820000000009015668"
+  github: https://github.com/google-research/tuning_playbook
+  xiaohongshu: https://www.xiaohongshu.com/explore/66bed0820000000009015668
 ---
 
 # Deep Learning Tuning Playbook | Google Research

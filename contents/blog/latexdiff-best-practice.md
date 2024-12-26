@@ -1,10 +1,12 @@
 ---
-title: "Best practices for marking changes of LaTeX documents"
+title: Best practices for marking changes of LaTeX documents
+tags:
+  - Kolmo/Instrument/LaTeX
 date: "2024-03-23"
 update: "2024-03-24"
 link:
-    medium: "https://medium.com/@liu-qilong/best-practices-for-marking-changes-of-latex-documents-45451db41bb7"
-    x: "https://x.com/liu_qi_long/status/1846449869051064390"
+  medium: "https://medium.com/@liu-qilong/best-practices-for-marking-changes-of-latex-documents-45451db41bb7"
+  x: "https://x.com/liu_qi_long/status/1846449869051064390"
 ---
 
 # Best practices for marking changes of LaTeX documents
@@ -46,7 +48,7 @@ mkdir diff@1-0
 latexdiff draft@0/paper.tex draft@1/paper.tex > draft@1-0/diff.tex
 ```
 
-Noted that the path to the drafts should go down to the exact `.tex` file, ie. `draft@0/paper.tex` and `draft@1/paper.tex`, with the former one as the old version and the later one as the new version. `draft@1-0/diff.tex` file will be generated with marked changes between these two `.tex`, which is an ordinary $\LaTeX$ file that can be compiled separately. However, before compiling it, remember to place all [[#About the figures and other resources|figures and other resources]] to the folder of `diff.tex`.
+Noted that the path to the drafts should go down to the exact `.tex` file, ie. `draft@0/paper.tex` and `draft@1/paper.tex`, with the former one as the old version and the later one as the new version. `draft@1-0/diff.tex` file will be generated with marked changes between these two `.tex`, which is an ordinary $\LaTeX$ file that can be compiled separately. However, before compiling it, remember to place all figures and other resources to the folder of `diff.tex`.
 
 _P.S. Here only the figures of the newer version needed to be placed since only these will be shown in the marked changes document._
 

@@ -1,9 +1,11 @@
 ---
-title: "Why transposed convolution can be used to reconstruct activating features from the input images"
+title: Why transposed convolution can be used to reconstruct activating features from the input images
+tags:
+  - Kolmo/ML
 date: "2024-03-13"
 update: "2024-03-14"
 link:
-    x: "https://x.com/liu_qi_long/status/1846821235948400889"
+  x: "https://x.com/liu_qi_long/status/1846821235948400889"
 ---
 
 # Why transposed convolution can be used to reconstruct activating features from the input images
@@ -44,7 +46,7 @@ That's exactly a transposed convolution of ${C}$!
 
 In previous discussions, the transposed convolution is converted to the flatten vectorized form, which may be a little bit confusing. However, the vectorized form can always be stacked back to the matrix form, which leads to the conclusion that a transposed convolution is actually an ordinary convolution but padding the original ${X}$ inside and outside with the stride, as shown below:
 
-![img](/cover/blog/how-trans-conv-work.gif)
+![img](/img/how-trans-conv-work.gif)
 
 > Image source: [A guide to convolution arithmetic for deep learning - Vincent Dumoulin, Francesco Visin - ArXiv](https://arxiv.org/abs/1603.07285)
 

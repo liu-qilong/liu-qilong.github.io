@@ -1,10 +1,12 @@
 ---
-title: "Computing and Processing Correspondences with Functional Maps | Maks Ovsjanikov et. al"
+title: Computing and Processing Correspondences with Functional Maps | Maks Ovsjanikov et. al
+tags:
+  - Kolmo/CV
 date: "2024-09-27"
 update: 
 link:
-    link: "https://dl.acm.org/doi/10.1145/3084873.3084877"
-    x: "https://x.com/liu_qi_long/status/1846825804011131030"
+  link: https://dl.acm.org/doi/10.1145/3084873.3084877
+  x: https://x.com/liu_qi_long/status/1846825804011131030
 ---
 
 # Computing and Processing Correspondences with Functional Maps | Maks Ovsjanikov et. al
@@ -14,7 +16,7 @@ link:
 
 ## Part I: Functional Maps Basics
 
-_P.S. Partition was added by me._
+_P.S. Part name was added by me._
 
 ### What are Functional Maps?
 
@@ -36,8 +38,6 @@ _P.S. Partition was added by me._
         For volume preserving deformation, $C$ should be orthonormal. In this case, aligning $C \Phi_M$ and $\Phi_N$ becomes [[BeslPJ1992|ICP]] algorithm and the $C$ itself can be iteratively refined.
 
 ## Part II: Functional Maps in Special Settings
-
-_P.S. Partition was added by me._
 
 ### Partial Functional Maps
 
@@ -66,8 +66,6 @@ _P.S. Partition was added by me._
 The idea of functional maps can be transferred to the vector fields domain.
 
 ## Part III: Advanced Computation & Conversion
-
-_P.S. Partition was added by me._
 
 ### Computing Functional Maps
 

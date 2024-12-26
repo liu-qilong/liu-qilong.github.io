@@ -1,10 +1,12 @@
 ---
-title: "Embed GIF and MP4 in LaTeX Beamer"
+title: Embed GIF and MP4 in LaTeX Beamer
+tags:
+  - Kolmo/Instrument/LaTeX
 date: "2022-06-20"
 update: "2023-07-16"
 link:
-    medium: "https://medium.com/@liu-qilong/embed-gif-in-latex-beamer-ed5ced8c041"
-    x: "https://x.com/liu_qi_long/status/1846450947062738965"
+  medium: "https://medium.com/@liu-qilong/embed-gif-in-latex-beamer-ed5ced8c041"
+  x: "https://x.com/liu_qi_long/status/1846450947062738965"
 ---
 
 # Embed GIF and MP4 in LaTeX Beamer

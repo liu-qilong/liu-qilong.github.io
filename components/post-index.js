@@ -19,27 +19,32 @@ export default function PostIndex( {type, allpost} ) {
     // generate index page body
     const index_body = allpost.map(
         ( post ) => {
-            let post_year = post.date.slice(0, 4)
-            let year_heading = (<></>)
+            try {
+                let post_year = post.date.slice(0, 4)
+                let year_heading = (<></>)
 
-            if (post_year !== year) {
-                year = post_year
-                year_heading = (
-                    <h1 className="text-center mt-10 font-mono text-rose-600">{">>" + year + "<<"}</h1>
-                )
-            }
-            
-            // generate post block
-            let post_block = <BlockType post={post} show_abstract={true} key={post.id}/>
+                if (post_year !== year) {
+                    year = post_year
+                    year_heading = (
+                        <div className="text-center mt-10 font-mono text-rose-700">{">>" + year + "<<"}</div>
+                    )
+                }
 
-            return (
-                <div key={type + year}>
-                    {year_heading}
-                    <div className="group rounded-lg mt-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-slate-100">
-                    {post_block}
+                // generate post block
+                let post_block = <BlockType post={post} show_abstract={true} key={post.id}/>
+
+                return (
+                    <div key={type + year}>
+                        {year_heading}
+                        <div className="group rounded-lg mt-6 p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-slate-100">
+                        {post_block}
+                        </div>
                     </div>
-                </div>
-            )
+                )
+            } catch (err) {
+                console.error(err)
+                console.log(post)
+            }
         }
     )
 

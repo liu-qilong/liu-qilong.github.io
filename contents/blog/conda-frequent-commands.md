@@ -1,12 +1,14 @@
 ---
-title: "Conda: Frequent commands"
+title: "Conda frequent commands"
+tags:
+  - Kolmo/Instrument/Python
 date: "2023-03-08"
 update: "2023-04-27"
 link:
-    x: "https://x.com/liu_qi_long/status/1846821855820415479"
+  x: "https://x.com/liu_qi_long/status/1846821855820415479"
 ---
 
-# Conda: Frequent commands
+# Conda frequent commands
 
 When working on a Python project, it's considered good practice to create a virtual environment. In this case, every project is running in a separate environment, with their own dependencies. This can save you tons of headache - if you install all your projects' dependencies in one place, things may quickly crash with each other.
 
@@ -63,7 +65,9 @@ matplotlib <= <version>
 ....
 ```
 
-And then, create a new virtual environment for it and batch install dependencies with `pip` [^1]:
+And then, create a new virtual environment for it and batch install dependencies with `pip`:
+
+_P.S. According to `conda`'s official documentation, issues may arise when using `pip` and `conda` together. When combining `conda` and `pip`, it is best to use an isolated `conda` environment. Only after `conda` has been used to install as many packages as possible should `pip` be used to install any remaining software._
 
 ```
 conda create -n <env_name> python=<version>
@@ -72,5 +76,3 @@ pip install -r requirements.txt
 ```
 
 Then you are all set👏
-
-[^1]: According to `conda`'s official documentation, issues may arise when using `pip` and `conda` together. When combining `conda` and `pip`, it is best to use an isolated `conda` environment. Only after `conda` has been used to install as many packages as possible should `pip` be used to install any remaining software.

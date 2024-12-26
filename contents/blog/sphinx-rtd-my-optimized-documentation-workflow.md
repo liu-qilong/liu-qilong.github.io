@@ -1,10 +1,12 @@
 ---
 title: "Sphinx + ReadTheDocs: My optimized documentation workflow"
+tags:
+  - Kolmo/Instrument/Python
 date: "2022-11-18"
 update: "2023-04-27"
 link:
-    medium: "https://medium.com/@liu-qilong/sphinx-readthedocs-my-optimized-documentation-workflow-169308270e99"
-    x: "https://x.com/liu_qi_long/status/1846822181810082106"
+  medium: "https://medium.com/@liu-qilong/sphinx-readthedocs-my-optimized-documentation-workflow-169308270e99"
+  x: "https://x.com/liu_qi_long/status/1846822181810082106"
 ---
 
 # Sphinx + ReadTheDocs: My optimized documentation workflow
