@@ -14,7 +14,7 @@ export default function Post( {allpaper} ) {
 }
 
 export async function getStaticProps() {
-    const allpaper = getSortedPostsData('contents/paper', flase)
+    const allpaper = getSortedPostsData('contents/paper', false)
     return {
         props: {
             allpaper,
