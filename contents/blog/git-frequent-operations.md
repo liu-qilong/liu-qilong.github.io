@@ -5,6 +5,7 @@ tags:
 date: "2024-12-26"
 update: 
 link:
+  x: https://x.com/liu_qi_long/status/1872581308846952651
 ---
 
 # Git frequent operations

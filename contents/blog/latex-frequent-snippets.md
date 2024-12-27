@@ -4,6 +4,8 @@ tags:
   - Kolmo/Instrument/LaTeX
 date: "2023-05-23"
 update: 
+link:
+  x: https://x.com/liu_qi_long/status/1872581509066145833
 ---
 
 # LaTeX frequent snippets

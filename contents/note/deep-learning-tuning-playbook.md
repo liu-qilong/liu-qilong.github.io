@@ -6,7 +6,7 @@ date: "2024-08-16"
 update: 
 link:
   github: https://github.com/google-research/tuning_playbook
-  xiaohongshu: https://www.xiaohongshu.com/explore/66bed0820000000009015668
+  xiaohongshu: https://www.xiaohongshu.com/explore/66bed0820000000009015668?xsec_token=ABgXo5zAH7tHnJjGUBSodsiLwmuHXwyrfU2jQO2Yi8dyM=&xsec_source=pc_user
 ---
 
 # Deep Learning Tuning Playbook | Google Research

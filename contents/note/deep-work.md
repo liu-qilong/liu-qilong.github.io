@@ -6,8 +6,8 @@ date: "2024-07-17"
 update: 
 link:
   amazon: https://www.amazon.com/dp/1455586692
-  xiaohongshu: https://www.xiaohongshu.com/explore/669e0a7d000000000500499e
   x: https://x.com/liu_qi_long/status/1846824868471325074
+  xiaohongshu: https://www.xiaohongshu.com/explore/669e0a7d000000000500499e?xsec_token=AB882MwHiDYMJZFOqog_GBNPN9uFnbfQ32MLMXHyxF6to=&xsec_source=pc_user
 ---
 
 # Deep Work | Cal Newport

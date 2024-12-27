@@ -5,8 +5,8 @@ tags:
 date: "2024-07-05"
 update: 
 link:
-  xiaohongshu: https://www.xiaohongshu.com/explore/668787600000000003027317
   x: https://x.com/liu_qi_long/status/1846824674992558301
+  xiaohongshu: https://www.xiaohongshu.com/explore/668787600000000003027317?xsec_token=AB31uUMsx4WGFz8V9F7ELlO5ZXxc9PHgPhbig8M0kYb2M=&xsec_source=pc_user
 ---
 
 # Clean Code Handbook: LeetCode 50 Common Interview Questions | LeetCode
