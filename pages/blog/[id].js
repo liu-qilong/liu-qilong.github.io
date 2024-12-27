@@ -38,7 +38,7 @@ export default function BlogPage({ post }) {
                 <meta property="twitter:card" content="summary"/>
                 <meta property="twitter:site" content="@liu_qi_long"/>
                 <meta property="twitter:title" content={post.title}/>
-                <meta property="twitter:image" content={post.coverpath}/>
+                <meta property="twitter:image" content={`https://liu-qilong.github.io${post.coverpath}`}/>
             </Head>
             <div>
                 <BlogBlock post={post} titleclass="text-2xl md:text-3xl font-medium text-slate-700" dateclass="font-mono text-sm" imgsize="150"/>
