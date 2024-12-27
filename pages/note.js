@@ -14,7 +14,7 @@ export default function Post( {allnote} ) {
 }
 
 export async function getStaticProps() {
-    const allnote = getSortedPostsData('contents/note')
+    const allnote = getSortedPostsData('contents/note', 1000, false)
     return {
         props: {
             allnote,

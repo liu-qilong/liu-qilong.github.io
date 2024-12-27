@@ -25,10 +25,10 @@ export default function Home( {allpaper, allproject, allblog, allnote} ) {
 }
 
 export async function getStaticProps() {
-    const allpaper = getSortedPostsData('contents/paper')
-    const allproject = getSortedPostsData('contents/project')
-    const allblog = getSortedPostsData('contents/blog')
-    const allnote = getSortedPostsData('contents/note')
+    const allpaper = getSortedPostsData('contents/paper', 1000, 10)
+    const allproject = getSortedPostsData('contents/project', 1000, 10)
+    const allblog = getSortedPostsData('contents/blog', 1000, 10)
+    const allnote = getSortedPostsData('contents/note', 1000, 10)
 
     return {
         props: {

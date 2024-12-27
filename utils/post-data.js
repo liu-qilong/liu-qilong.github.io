@@ -11,7 +11,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 
 
-export function getSortedPostsData ( relativePath ) {
+export function getSortedPostsData ( relativePath, trim=false, maxnum=false ) {
     const post_folder = path.join(process.cwd(), relativePath)
     let file_names = fs.readdirSync(post_folder)
 
@@ -21,10 +21,16 @@ export function getSortedPostsData ( relativePath ) {
 
         // read markdown file as string
         const full_path = path.join(post_folder, file_name)
-        const file_content = fs.readFileSync(full_path, 'utf8')
+        let file_content = fs.readFileSync(full_path, 'utf8')
 
         // use gray-matter to parse the post metadata section
         const matterResult = matter(file_content)
+
+        if (trim) {
+            if (matterResult.content.length > trim) {
+                matterResult.content = matterResult.content.substring(0, trim) + '...'
+            }
+        }
 
         // get cover image path
         let coverpath = get_cover(relativePath, id)
@@ -42,13 +48,19 @@ export function getSortedPostsData ( relativePath ) {
     })
 
     // sort posts by date
-    return all_posts.sort((a, b) => {
+    let sorted_posts = all_posts.sort((a, b) => {
         if (a.date < b.date) {
             return 1
         } else {
             return -1
         }
     })
+    
+    if (maxnum) {
+        return sorted_posts = sorted_posts.slice(0, maxnum)
+    } else {
+        return sorted_posts
+    }
 }
 
 export function getAllPostIds ( relativePath ) {
