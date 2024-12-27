@@ -104,7 +104,8 @@ function get_cover( relativePath, id ) {
 
     for (let format of ['.png', '.jpg', '.jpeg', '.gif']) {
         if (fs.existsSync(path.join(process.cwd(), cover_folder, `${id}${format}`))) {
-            photo_base_path = cover_folder.replace('public/', 'https://liu-qilong.github.io/')
+            // photo_base_path = cover_folder.replace('public/', 'https://liu-qilong.github.io/')
+            photo_base_path = cover_folder.replace('public/', '/')
             coverpath = `${photo_base_path}/${id}${format}`
             break
         }
