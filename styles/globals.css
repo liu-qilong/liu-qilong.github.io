@@ -49,6 +49,22 @@ h4 code {
   @apply p-0 text-lg md:text-xl pl-1 pr-1
 }
 
+h5 {
+  @apply hover:bg-slate-100 text-slate-500 mt-5 mb-5 text-lg md:text-xl
+}
+
+h5 code {
+  @apply p-0 text-lg md:text-xl pl-1 pr-1
+}
+
+h6 {
+  @apply hover:bg-slate-100 text-slate-500 mt-5 mb-5 text-lg md:text-xl
+}
+
+h6 code {
+  @apply p-0 text-lg md:text-xl pl-1 pr-1
+}
+
 p {
   @apply mt-5 text-justify
 }
