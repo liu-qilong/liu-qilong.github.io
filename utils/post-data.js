@@ -11,7 +11,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 
 
-export function getSortedPostsData ( relativePath, trim=false, maxnum=false ) {
+export function getSortedPostsData ( relativePath, maxnum=false ) {
     const post_folder = path.join(process.cwd(), relativePath)
     let file_names = fs.readdirSync(post_folder)
 
@@ -25,12 +25,7 @@ export function getSortedPostsData ( relativePath, trim=false, maxnum=false ) {
 
         // use gray-matter to parse the post metadata section
         const matterResult = matter(file_content)
-
-        if (trim) {
-            if (matterResult.content.length > trim) {
-                matterResult.content = matterResult.content.substring(0, trim) + '...'
-            }
-        }
+        let trim = (matterResult.content.length > 1000)?(matterResult.content.substring(0, 1000) + '...'):(matterResult.content)
 
         // get cover image path
         let coverpath = get_cover(relativePath, id)
@@ -39,7 +34,7 @@ export function getSortedPostsData ( relativePath, trim=false, maxnum=false ) {
         return {
             id,
             coverpath,
-            text: String(matterResult.content)
+            text: String(trim)
                 .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // remove links
                 .replace(/!\[([^\]]+)\]\([^)]+\)/g, '$1') // remove images
                 .replace(/[^A-Za-z0-9 ,.]/g, ' '), // remove special characters

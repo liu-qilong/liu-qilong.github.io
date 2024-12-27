@@ -14,7 +14,7 @@ export default function Post( {allproject} ) {
 }
 
 export async function getStaticProps() {
-    const allproject = getSortedPostsData('contents/project')
+    const allproject = getSortedPostsData('contents/project', false)
     return {
         props: {
             allproject,
