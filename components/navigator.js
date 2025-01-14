@@ -35,7 +35,7 @@ export default function SideBar({ children }) {
                 ['x', 'https://twitter.com/liu_qi_long'],
                 ['xiaohongshu', 'https://www.xiaohongshu.com/user/profile/5c5f9656000000001a0254a3'],
             ]}/>
-            <Link className="text-s hyphens-none" href="qilong-kirov.liu@connect.polyu.hk">qilong-kirov.liu@connect.polyu.hk</Link>
+            <Link className="text-s hyphens-none" href="qi-long.liu@connect.polyu.hk">qi-long.liu@connect.polyu.hk</Link>
 
             {/* navigator */}
             <div>

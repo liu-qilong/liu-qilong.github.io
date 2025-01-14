@@ -159,10 +159,10 @@ Basic structure of a manuscript:
   > Provide enough information so that other researchers can understand exactly what you did and will be able to duplicate your work.
 	- It is common practice to describe methods using the passive voice
 - Result
-	  - Table & figures tips
-	    > 1. They must be able to stand alone... Do not repeat in the body of the manuscript information that is in the captions of tables or figures as this would be redundant.
-	    > 2. It is easier to compare numbers by reading down a column rather than across a row. Therefore, list sets of data you want your reader to compare in vertical form.
-	    >  3. The numbered title is written above the table... The numbered caption is written below the figure.
+  Table & figures tips
+> 1. They must be able to stand alone... Do not repeat in the body of the manuscript information that is in the captions of tables or figures as this would be redundant.
+> 2. It is easier to compare numbers by reading down a column rather than across a row. Therefore, list sets of data you want your reader to compare in vertical form.
+>  3. The numbered title is written above the table... The numbered caption is written below the figure.
 - Discussion & Conclusion
   > In a nutshell, the Discussion section explains the meaning of the results... The Discussion section provides space for you to answer the questions that were posed in the introduction... The Discussion section is also the place for suggesting ideas for future research.
 
