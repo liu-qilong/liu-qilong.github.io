@@ -61,19 +61,31 @@ git add <file>
 
 _P.S. Use `-f` to force stage a file even if it's set to be ignored in `.gitignore`._
 
-Unstage the file changes:
+- Unstage the file changes:
 
 ```
 git restore --staged <file>
 ```
 
-Discard the changes in the working directory:
+- Discard the changes in the working directory:
+
+```
+git restore .
+```
 
 ```
 git restore <file>
 ```
 
 _P.S. The difference is `git restore --staged <file>` affects the staging area by removing the file from it, but leaves the working directory unchanged. `git restore <file>` affects the working directory by discarding changes in the specified file (to match the version in the staging area or the last committed state if the file is not staged), but leaves the staging area unchanged._
+
+- Remove an added file:
+
+```
+git rm --cached <file>
+```
+
+_P.S. Without the `--cached` flag, the file will not only be removed but also be deleted._
 
 #### Commit changes
 
