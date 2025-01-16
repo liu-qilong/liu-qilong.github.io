@@ -11,7 +11,7 @@ import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 
 
-export function getSortedPostsData ( relativePath, maxnum=false ) {
+export function getSortedPostsData ( relativePath) {
     const post_folder = path.join(process.cwd(), relativePath)
     let file_names = fs.readdirSync(post_folder)
 
@@ -51,11 +51,7 @@ export function getSortedPostsData ( relativePath, maxnum=false ) {
         }
     })
     
-    if (maxnum) {
-        return sorted_posts = sorted_posts.slice(0, maxnum)
-    } else {
-        return sorted_posts
-    }
+    return sorted_posts
 }
 
 export function getAllPostIds ( relativePath ) {

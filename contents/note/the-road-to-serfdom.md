@@ -6,9 +6,15 @@ date: "2024-12-30"
 update: 
 link:
   amazon: https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553
+  x: https://x.com/liu_qi_long/status/1879778575743918282
+  xiaohongshu: https://www.xiaohongshu.com/explore/6788af23000000001901a590?xsec_token=ABGUqSnP7USBPkgr26pzYEqAdofQWifKuhx77cljaALBw=&xsec_source=pc_user
 ---
 
 # The Road to Serfdom | Friedrich Hayek
+
+> Nor am I arguing that these developments are inevitable. If they were, there would be no point in writing this. -- Friedrich Hayek
+
+> The ideas of economists and political philosophers, both when they are right and when they are wrong, are more powerful than commonly understood... Madmen in authority, who hear voices in the air, are distilling their frenzy from some academic scribbler of a few years back. -- John Maynard Keynes
 
 _P.S. Part name was added by me._
 
