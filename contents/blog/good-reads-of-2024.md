@@ -33,7 +33,7 @@ For me, *Her Story* is a story about seeing women and seeing oneself. Yes, it’
 
 Rather than calling *Next Year in Moscow* by *The Economist* a podcast, I think it’s more like a movie without visuals. It feels as if you are experiencing, through sound, the spiritual history of Russia from the October Revolution to the war in Ukraine. Journalists, politicians, scholars, artists, students, exiles, soldiers... Through their accounts, you can sense the presence of a giant hand from the past, still plucking the strings of this nation’s fate.
 
-> [# Next Year in Moscow | The Economist](https://www.economist.com/audio/podcasts/next-year-in-moscow)
+> [Next Year in Moscow | The Economist](https://www.economist.com/audio/podcasts/next-year-in-moscow)
 
 ![img](/img/next-year-in-moscow.jpg)
 
@@ -41,7 +41,7 @@ Rather than calling *Next Year in Moscow* by *The Economist* a podcast, I think 
 
 This is *The Economist*'s coverage of the *Out of Eden Walk* project. Paul Salopek has been retracing the steps of humanity’s first migration out of Africa on foot (pictured below), and it’s now been 11 years. Along the way, he’s crossed scorching deserts, escaped war zones, witnessed houses swept away by floods, listened to women in Central Asia cry as they shared their stories, walked through Afghan villages celebrating the harvest (where climate change melted snow in the mountains, temporarily increasing water flow but potentially turning the area into a desert in a few years), and strolled through South Korean streets left empty due to unrelenting heat... It’s hard to imagine how someone with such experiences would view human history, conflict, culture, and humanity.
 
-> [# A journalist retraces humanity’s journey out of Africa—on foot | The Economist](https://www.economist.com/christmas-specials/2024/12/19/a-journalist-retraces-humanitys-journey-out-of-africa-on-foot)
+> [A journalist retraces humanity’s journey out of Africa—on foot | The Economist](https://www.economist.com/christmas-specials/2024/12/19/a-journalist-retraces-humanitys-journey-out-of-africa-on-foot)
 
 ![img](/img/out-of-eden-walk-route.jpg)
 

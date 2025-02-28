@@ -1,8 +1,8 @@
 ---
 title: "Computer Vision: Algorithms and Applications | Richard Szelisky"
 tags:
-  - Kolmo/CV
-  - Kolmo/ML
+  - Hinton/CV
+  - Hinton/ML
 date: "2024-06-02"
 update: 
 link:

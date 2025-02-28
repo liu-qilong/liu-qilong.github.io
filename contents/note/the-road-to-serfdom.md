@@ -1,7 +1,7 @@
 ---
 title: The Road to Serfdom | Friedrich Hayek
 tags:
-  - Marx/Politics
+  - Weber/Politics
 date: "2024-12-30"
 update: 
 link:
@@ -344,4 +344,4 @@ A better solution is federation that provides a platform of "rule of law" in the
 
 > That in the (unsuccessful) attempt to make it world-wide it had to be made weak and that a smaller and at the same time more powerful League might have been a better instrument to preserve peace.. The comparatively close association which a federal union represents will not at first be practicable beyond perhaps even as narrow a region as part of western Europe, though it may be possible gradually to extend it.
 
-_P.S. EU is an excellent representative of this idea._
+_P.S. EU is an excellent representation of this idea._

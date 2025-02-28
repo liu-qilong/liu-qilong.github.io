@@ -1,7 +1,7 @@
 ---
 title: How to set the padding of convolution to make the stride acting as a scale factor
 tags:
-  - Kolmo/ML
+  - Hinton/ML
 date: "2024-03-13"
 update: ""
 link:

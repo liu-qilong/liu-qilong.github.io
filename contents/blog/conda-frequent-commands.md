@@ -1,7 +1,7 @@
 ---
 title: "Conda frequent commands"
 tags:
-  - Kolmo/Instrument/Python
+  - Hinton/Instrument/Python
 date: "2023-03-08"
 update: "2023-04-27"
 link:

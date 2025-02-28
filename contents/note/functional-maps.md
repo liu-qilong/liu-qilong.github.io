@@ -1,7 +1,7 @@
 ---
 title: Computing and Processing Correspondences with Functional Maps | Maks Ovsjanikov et. al
 tags:
-  - Kolmo/CV
+  - Hinton/CV
 date: "2024-09-27"
 update: 
 link:

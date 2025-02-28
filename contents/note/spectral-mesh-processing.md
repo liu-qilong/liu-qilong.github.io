@@ -1,7 +1,7 @@
 ---
 title: Spectral Mesh Processing | Bruno Lévy & Hao Zhang
 tags:
-  - Kolmo/CV
+  - Hinton/CV
 date: "2024-08-27"
 update: 
 link:

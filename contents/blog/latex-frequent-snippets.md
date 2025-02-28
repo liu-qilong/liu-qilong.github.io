@@ -1,7 +1,7 @@
 ---
 title: LaTeX frequent snippets
 tags:
-  - Kolmo/Instrument/LaTeX
+  - Hinton/Instrument/LaTeX
 date: "2023-05-23"
 update: 
 link:
@@ -94,6 +94,18 @@ Then inside the `\begin{document} ... \end{document}`:
 ```
 % bibliography
 \printbibliography
+```
+
+## Math
+
+Matrix:
+
+```
+\begin{bmatrix}
+    x_{11}       & x_{12} & x_{13} & \dots & x_{1n} \\
+    x_{21}       & x_{22} & x_{23} & \dots & x_{2n} \\
+    x_{d1}       & x_{d2} & x_{d3} & \dots & x_{dn}
+\end{bmatrix}
 ```
 
 ## Beamer

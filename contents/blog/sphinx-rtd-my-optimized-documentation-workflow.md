@@ -1,7 +1,7 @@
 ---
 title: "Sphinx + ReadTheDocs: My optimized documentation workflow"
 tags:
-  - Kolmo/Instrument/Python
+  - Hinton/Instrument/Python
 date: "2022-11-18"
 update: "2023-04-27"
 link:

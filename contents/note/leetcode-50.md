@@ -1,7 +1,7 @@
 ---
 title: "Clean Code Handbook: LeetCode 50 Common Interview Questions | LeetCode"
 tags:
-  - Kolmo/Algorithm
+  - Hinton/Algorithm
 date: "2024-07-05"
 update: 
 link:

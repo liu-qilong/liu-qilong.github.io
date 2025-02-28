@@ -20,7 +20,7 @@ _P.S. Part name was added by me. Some chapters are reordered._
 
 As a PhD student, it's important to understand the larger scene of the academic system and look from your supervisor's perspective. The author first introduce 3 typical stages of professorship, corresponding to 3 types of research teams:
 
-- The start-up group (Assistance Professor)
+- The start-up group (Assistant Professor)
   Your supervisor is in his/her junior years, whose career depends on your outcome. You will have frequent & intense interactions will your supervisor.
 - The up-and-running group (Associate Professor)
   Your supervisor is in his/her mid-career, who has a lot of responsibilities and less time for you. Your fellow graduate students are your main support.

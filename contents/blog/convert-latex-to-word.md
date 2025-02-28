@@ -1,7 +1,7 @@
 ---
 title: Convert LaTeX to Word
 tags:
-  - Kolmo/Instrument/LaTeX
+  - Hinton/Instrument/LaTeX
 date: "2022-05-04"
 update: "2023-04-27"
 link:

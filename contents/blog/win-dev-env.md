@@ -1,7 +1,7 @@
 ---
 title: Setup Windows development environment
 tags:
-  - Kolmo/Instrument
+  - Hinton/Instrument
 date: "2023-06-08"
 update: "2023-06-11"
 link:

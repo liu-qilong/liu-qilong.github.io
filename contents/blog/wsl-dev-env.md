@@ -1,7 +1,7 @@
 ---
 title: A complete guide to setup WSL (Windows Subsystem for Linux)
 tags:
-  - Kolmo/Instrument
+  - Hinton/Instrument
 date: "2023-11-02"
 update: "2023-12-06"
 link:

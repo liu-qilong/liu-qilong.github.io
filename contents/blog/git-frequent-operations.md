@@ -1,7 +1,7 @@
 ---
 title: Git frequent operations
 tags:
-  - Kolmo/Instrument/Git
+  - Hinton/Instrument/Git
 date: "2024-12-26"
 update: 
 link:

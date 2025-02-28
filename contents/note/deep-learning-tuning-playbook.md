@@ -1,7 +1,7 @@
 ---
 title: Deep Learning Tuning Playbook | Google Research
 tags:
-  - Kolmo/ML
+  - Hinton/ML
 date: "2024-08-16"
 update: 
 link:

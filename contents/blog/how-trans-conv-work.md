@@ -1,7 +1,7 @@
 ---
 title: Why transposed convolution can be used to reconstruct activating features from the input images
 tags:
-  - Kolmo/ML
+  - Hinton/ML
 date: "2024-03-13"
 update: "2024-03-14"
 link:

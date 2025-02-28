@@ -1,7 +1,7 @@
 ---
 title: Embed GIF and MP4 in LaTeX Beamer
 tags:
-  - Kolmo/Instrument/LaTeX
+  - Hinton/Instrument/LaTeX
 date: "2022-06-20"
 update: "2023-07-16"
 link:
