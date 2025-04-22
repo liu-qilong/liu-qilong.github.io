@@ -67,6 +67,12 @@ _P.S. Use `-f` to force stage a file even if it's set to be ignored in `.gitigno
 git restore --staged <file>
 ```
 
+_P.S. Unstage all files' cahnges:_
+
+```
+git reset
+```
+
 - Discard the changes in the working directory:
 
 ```

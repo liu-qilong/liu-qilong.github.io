@@ -10,7 +10,7 @@ link:
 
 # How to set the padding of convolution to make the stride acting as a scale factor
 
-![img](/img/set-conv-padding.gif)
+![img](set-conv-padding.gif)
 
 > Cover image source: [A guide to convolution arithmetic for deep learning - Vincent Dumoulin, Francesco Visin - ArXiv](https://arxiv.org/abs/1603.07285)
 

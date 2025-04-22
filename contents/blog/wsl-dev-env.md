@@ -33,7 +33,7 @@ wsl --install -d Ubuntu-18.04
 
 ## Fish shell
 
-![img](/img/fish-shell.png)
+![img](fish-shell.png)
 
 ### Install
 
@@ -354,7 +354,11 @@ sudo systemctl restart ssh
 
 > [How To Configure SSH Key-Based Authentication on a Linux Server | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
 
-Having to enter password for each `ssh` login  is not very convenient. We can make our life a little bit easier by setting up key authentication. First generate a key:
+Having to enter password for each `ssh` login  is not very convenient. We can make our life a little bit easier by setting up key authentication.
+
+#### On the client machine
+
+First generate a key:
 
 ```
 ssh-keygen
@@ -371,10 +375,12 @@ Noted that you will need to add it again when you reboot your local machine. You
 Then send the key to the remote server:
 
 ```
-ssh-copy-id -i <key path> -p 2222 <address>
+ssh-copy-id -i <key path> -p <port> <address>
 ```
 
-Noted the the `-p` argument is the port number of the remote server you set before. Moreover, the `addr` is the IP address of the remote server which can be check by `ifconfig`.
+Noted the the `-p` argument is the port number of the remote server you set before. Moreover, the `address` is the IP address of the remote server which can be check by `ifconfig`.
+
+#### On the host machine
 
 Before you can log in to the remote server without entering the password, you will need to enable key authentication first:
 

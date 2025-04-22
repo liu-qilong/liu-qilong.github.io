@@ -192,7 +192,7 @@ _P.S. Part name was added by me._
 - Structure from motion (SfM)
     SfM aims at recovering the corresponding points locations in space as well as the cameras poses at the same time.
     - Epipolar geometry
-        ![img](/img/epipolar-geometry.jpeg)
+        ![img](epipolar-geometry.jpeg)
         - Points in $l_0$ is mapped to $l_1$ when viewed from camera 1.
         - Essential matrix $E = [t]_{\times} R$
             Epipolar constraint: $\hat{x}_1^T E \hat{x}_0 = 0$
@@ -237,7 +237,7 @@ _P.S. Part name was added by me._
     - Albedo maps
         Light source can be explicitly modeled to estimate the reflectance component (albedo) maps as well as making the texture map estimation more accurate.
     - Bidirectional reflectance distribution functions (BRDFs)
-        ![img](/img/BRDF.jpeg)
+        ![img](BRDF.jpeg)
         For view-dependent appearance modeling.
 
 ### Image-based rendering

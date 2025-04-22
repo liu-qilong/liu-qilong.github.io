@@ -5,7 +5,8 @@ tags:
 date: "2025-02-28"
 update: 
 link:
-  link: https://neurips.cc
+  link: https://neurips.cc/Conferences/2024
+  xiaohongshu: https://www.xiaohongshu.com/explore/67c1325e000000000d016baa?xsec_token=ABdnb9J32yoL9Ob0yrVUfFuqEP67oksfeqT8ZFdk2M3oM=&xsec_source=pc_user
 ---
 
 # NeurIPS 2024 oral notes
@@ -15,11 +16,11 @@ link:
 - Generative AI
 	- [ChunlinTian2024NeurIPS](https://openreview.net/forum?id=qEpi8uWX3N) investigates the parameter inefficiency of LoRA and proposes an improvement
 	- 3D generation
-		- [MinghuaLiu2024NeurIPS](https://openreview.net/forum?id=x7pjdDod6Z) generates mesh with 3D sparse voxels as representation, instead of triplane #ToRead
+		- [MinghuaLiu2024NeurIPS](https://openreview.net/forum?id=x7pjdDod6Z) generates mesh with 3D sparse voxels as representation, instead of triplane #📖
 		  *P.S. Trained with 8xH100 for 1 week*
 	- Image generation
 		- [KeyuTian2024NeurIPS](https://openreview.net/forum?id=gojL67CfS8) presents a new generation paradigm that redefines the autoregressive learning on images as coarse-to-fine "next-scale prediction", diverging from the standard raster-scan "next-token prediction"
-		  It presents two important properties of LLMs: scaling laws and zero-shot task generalization #ToRead
+		  It presents two important properties of LLMs: scaling laws and zero-shot task generalization #📖
 		- [TianhongLi2024NeurIPS+](https://openreview.net/forum?id=clTa4JFBML) improves unconditioned image generation by using latent representation to conditioned the image generation process
 	- Video generation
 		- [SichengXu2024NeurIPS](https://openreview.net/forum?id=5zSCSE0k41) learns a disentangled face latent space for facial dynamics and head motion. It's then used for audio to facial video conversion in real-time

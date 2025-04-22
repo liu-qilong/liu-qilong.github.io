@@ -13,7 +13,7 @@ link:
 
 Finally achieved the goal of reading 12 books in 2024 🎯 Having finished these books, I don’t feel particularly different. Every day in life is still the same as always. But perhaps my perception of life has become sharper than before. If the length of life cannot easily be extended through personal effort, then perhaps maintaining sensitivity in perception is equivalent to broadening the width of life.
 
-![img](/img/good-reads-2024.jpeg)
+![img](good-reads-2024.jpeg)
 
 Following are my favorite books 📖, movies 🎬, podcasts 🎙️, and articles ✍️ of this year. I hope that in 2025, I can also strive to remain spiritually free.
 
@@ -21,13 +21,13 @@ Following are my favorite books 📖, movies 🎬, podcasts 🎙️, and article
 
 Hayek's *The Road to Serfdom* was the most challenging book I read this year, so much so that I still haven’t finished organizing my notes—its sentences feel as if they are engraved on stone tablets, impossible to rewrite or condense, only to be quoted. Looking back, the book speaks of nothing more than common sense, but holding on to common sense is difficult in any era. Grand narratives are always more captivating, especially when common sense chooses to remain silent.
 
-![img](/img/the-road-to-serfdom.jpg)
+![img](the-road-to-serfdom.jpg)
 
 ## Favorite Movie of 2024 🎬
 
 For me, *Her Story* is a story about seeing women and seeing oneself. Yes, it’s merely about "seeing." By the end of the story, the characters’ lives remain unchanged in any substantial way. But "seeing" is important—especially seeing oneself and recognizing the value of the individual. In Chinese society, we are accustomed to thinking of the spiritual world as merely an accessory to the material world, dismissing anything that doesn’t benefit material interests as false. But this perspective reduces humans to tools -- after all, the only difference between a person and a chair is the possession of a thinking organ. Many of the problems we face in the economic domain these past years are, to a large extent, extensions of a spiritual crisis.
 
-![img](/img/her-story.jpg)
+![img](her-story.jpg)
 
 ## Favorite Podcast of 2024 🎙️
 
@@ -35,7 +35,7 @@ Rather than calling *Next Year in Moscow* by *The Economist* a podcast, I think 
 
 > [Next Year in Moscow | The Economist](https://www.economist.com/audio/podcasts/next-year-in-moscow)
 
-![img](/img/next-year-in-moscow.jpg)
+![img](next-year-in-moscow.jpg)
 
 ## Favorite Article of 2024 ✍️
 
@@ -43,6 +43,6 @@ This is *The Economist*'s coverage of the *Out of Eden Walk* project. Paul Salop
 
 > [A journalist retraces humanity’s journey out of Africa—on foot | The Economist](https://www.economist.com/christmas-specials/2024/12/19/a-journalist-retraces-humanitys-journey-out-of-africa-on-foot)
 
-![img](/img/out-of-eden-walk-route.jpg)
+![img](out-of-eden-walk-route.jpg)
 
-![img](/img/out-of-eden-walk.jpg)
+![img](out-of-eden-walk.jpg)
