@@ -9,7 +9,7 @@ link:
   amazon: https://www.amazon.com/dp/3030343715?ref_=cm_sw_r_cp_ud_dp_YBKQW67V2K5A0SSHJHDC
   link: https://szeliski.org/Book/
   x: https://x.com/liu_qi_long/status/1846823958970355764
-  xiaohongshu: https://www.xiaohongshu.com/explore/6687858e0000000003026108?xsec_token=AB31uUMsx4WGFz8V9F7ELlOxxnLbq2faV32MdGl32RdNU=&xsec_source=pc_user
+  rednote: https://www.xiaohongshu.com/explore/6687858e0000000003026108?xsec_token=AB31uUMsx4WGFz8V9F7ELlOxxnLbq2faV32MdGl32RdNU=&xsec_source=pc_user
 ---
 
 # Computer Vision: Algorithms and Applications | Richard Szelisky

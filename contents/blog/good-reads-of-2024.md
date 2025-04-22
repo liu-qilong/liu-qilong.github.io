@@ -6,7 +6,7 @@ date: "2024-12-31"
 update: 
 link:
   x: https://x.com/liu_qi_long/status/1879795649522413632
-  xiaohongshu: https://www.xiaohongshu.com/explore/6773b7ec000000000900fe40?xsec_token=ABQaEr8Mh7g0-Ezhvs0VqOJOEIzXxdKBa0aq5GsNColxc=&xsec_source=pc_user
+  rednote: https://www.xiaohongshu.com/explore/6773b7ec000000000900fe40?xsec_token=ABQaEr8Mh7g0-Ezhvs0VqOJOEIzXxdKBa0aq5GsNColxc=&xsec_source=pc_user
 ---
 
 # Good reads of 2024

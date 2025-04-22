@@ -6,6 +6,8 @@ date: "2025-04-21"
 update: 
 link:
   amazon: https://www.amazon.com/Straight-Line-Leadership-Living-Velocity-Turbulent/dp/1934759538
+  x: https://x.com/liu_qi_long/status/1914587284864950331
+  rednote: https://www.xiaohongshu.com/explore/68074f49000000000e005d84?xsec_token=ABif5AgFepkMfvdbm36bvtPeJc139sE2m05IEpWupy0A0=&xsec_source=pc_user
 ---
 
 # Straight-line Leadership | Dusan Djukich

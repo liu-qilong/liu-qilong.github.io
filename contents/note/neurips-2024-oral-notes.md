@@ -6,7 +6,7 @@ date: "2025-02-28"
 update: 
 link:
   link: https://neurips.cc/Conferences/2024
-  xiaohongshu: https://www.xiaohongshu.com/explore/67c1325e000000000d016baa?xsec_token=ABdnb9J32yoL9Ob0yrVUfFuqEP67oksfeqT8ZFdk2M3oM=&xsec_source=pc_user
+  rednote: https://www.xiaohongshu.com/explore/67c1325e000000000d016baa?xsec_token=ABdnb9J32yoL9Ob0yrVUfFuqEP67oksfeqT8ZFdk2M3oM=&xsec_source=pc_user
 ---
 
 # NeurIPS 2024 oral notes

@@ -8,7 +8,7 @@ link:
   amazon: https://www.amazon.com/gp/product/1455509124/
   link: https://www.amazon.com/gp/product/1455509124/
   x: https://x.com/liu_qi_long/status/1846823737716625597
-  xiaohongshu: https://www.xiaohongshu.com/explore/669e0695000000000d00eaed?xsec_token=AB882MwHiDYMJZFOqog_GBNPH0oDfR2xzAKtdI08TrxZs=&xsec_source=pc_user
+  rednote: https://www.xiaohongshu.com/explore/669e0695000000000d00eaed?xsec_token=AB882MwHiDYMJZFOqog_GBNPH0oDfR2xzAKtdI08TrxZs=&xsec_source=pc_user
 ---
 
 # So Good They Can't Ignore You | Cal Newport

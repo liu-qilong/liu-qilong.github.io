@@ -7,7 +7,7 @@ update:
 link:
   amazon: https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553
   x: https://x.com/liu_qi_long/status/1879778575743918282
-  xiaohongshu: https://www.xiaohongshu.com/explore/6788af23000000001901a590?xsec_token=ABGUqSnP7USBPkgr26pzYEqAdofQWifKuhx77cljaALBw=&xsec_source=pc_user
+  rednote: https://www.xiaohongshu.com/explore/6788af23000000001901a590?xsec_token=ABGUqSnP7USBPkgr26pzYEqAdofQWifKuhx77cljaALBw=&xsec_source=pc_user
 ---
 
 # The Road to Serfdom | Friedrich Hayek
