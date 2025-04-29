@@ -6,6 +6,8 @@ date: "2025-04-29"
 update: 
 link:
   amazon: https://www.amazon.com/Amps-Apps-How-Computers-Work/dp/1718500661
+  x: https://x.com/liu_qi_long/status/1917042336284184824
+  rednote: https://www.xiaohongshu.com/explore/68103c160000000022036522?xsec_token=ABKhudwnLRWG8iyAjB5c3QFsxjbrIl9PmvdwqXLkpcOHA=&xsec_source=pc_user
 ---
 
 # How Computers Really Work | Matthew Justic
