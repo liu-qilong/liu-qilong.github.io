@@ -11,6 +11,8 @@ link:
 
 # NeurIPS 2024 oral notes
 
+_P.S. The paper descriptions are based on my personal understanding. Some text were extracted from the abstracts and reviews._
+
 ## Domain
 
 - Generative AI

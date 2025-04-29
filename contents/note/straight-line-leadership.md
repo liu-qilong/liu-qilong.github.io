@@ -31,7 +31,7 @@ We always operate with _inner stances_, i.e. how we think, plan, decide, and act
 
 - Shell ourselves from the stress of taken risk by keep gathering more and more information and consider that as "progress". However, information won't lead to any outcome if it's not used.
   > See also: [Why You Should Take Action Before You Feel Ready (The Information Trap) | Sam Matla](https://m.youtube.com/watch?v=vINjzigVlQA)
-- Shell ourselves from actually doing the work by keep finding better tools/softwares/platforms that will solve our problem "once and for all". However, the perfect tool for you don't exist at all; even if you find it, it will still be you who do the work, not the tool.
+- Shell ourselves from actually doing the work by keep finding better tools/softwares/platforms that will solve our problem "once and for all". However, the perfect tool for you doesn't exist at all; even if you find it, it will still be you who do the work, not the tool.
   > See also: [Stop Procrastinating With Note-Taking Apps Like Obsidian, Roam, Logseq | Sam Matla](https://m.youtube.com/watch?v=baKCC2uTbRc)
 - Invent a bunch of unnecessary "works" to do rather than taking the _core required actions_. Do we really need to check all the emails before start reading the paper? Nah. Do we really need to think through all detailed steps perfectly before start doing the project? Nah. Do we really need to wait for tomorrow before start working out? Damn not! However, it's just very compelling to invent those _fake works & prerequisites_ to shell ourselves from the _real work_. We know that we may fail with the _real works_, not the _fake works_. We always know.
   > See also: [You feel stuck because you won't choose action | Sam Matla](https://m.youtube.com/watch?v=34CrJKCWaSA)
@@ -99,7 +99,7 @@ _P.S. Section names are added by me. Distinctions are intensely reordered & regr
 	  
 	  > These people don’t see that they are wasting a precious resource. They don’t realize that the mind can just as easily be used the opposite way—to discover “how it can be done.” And when the mind is used in that direction, a straight line to your intended result has begun.
 	  
-	  > McGovern’s quest was always for information he could immediately and usefully apply to his profession... So I was always committed to learning more to differentiate myself in the marketplace”... Clients hire McGovern because he can add more value than others—because he has more business and real estate knowledge. Outsiders get confused and think his success is due to the fact that he’s been around so long that he has “old boy” relationships.
+	  > McGovern’s quest was always for information he could immediately and usefully apply to his profession... “So I was always committed to learning more to differentiate myself in the marketplace”... Clients hire McGovern because he can add more value than others—because he has more business and real estate knowledge. Outsiders get confused and think his success is due to the fact that he’s been around so long that he has “old boy” relationships.
 - I'm responsible _v.s_ It's their fault
   > He knew he would either be responsible for the mess, or remain a victim of it. And by coming from the inner stance of victim (which is weakness itself) he would never survive.
 	- Owner _v.s._ Victim

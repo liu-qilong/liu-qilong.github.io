@@ -1,5 +1,5 @@
 ---
-title: Best practices for marking changes of LaTeX documents
+title: "latexdiff: mark changes of LaTeX documents"
 tags:
   - Hinton/Instrument/LaTeX
 date: "2024-03-23"

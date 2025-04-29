@@ -3,7 +3,7 @@ title: LaTeX frequent snippets
 tags:
   - Hinton/Instrument/LaTeX
 date: "2023-05-23"
-update: 
+update: "2025-04-23"
 link:
   x: https://x.com/liu_qi_long/status/1872581509066145833
 ---
@@ -183,13 +183,13 @@ In Beamers, the following commands can be used to control the visibility of the 
 Writing in Tikz could be painful if we don't follow a good structure/pattern. The most important principles are:
 
 - Define the styles in a separate place and reuse them in the diagram.
-- Use `scope` to group a series of related elements and give the `scope` of name, so that it's position can be referenced like a node. For example, `<scope>.center`, `<scope>.south`, etc.
+- Use `scope` to group a series of related elements and give the `scope` a name, so that its position can be referenced like a node. For example, `<scope>.center`, `<scope>.south`, etc.
 - Always align two elements relatively as long as possible, rather than hard coding their absolute positions.
 	- Use `chains` for aligning a chain of nodes (within a `scope` or `tikzpicture`) to avoid specifying alignment direction & distance in every node.
 	- Use `calc` for programmatically assign position to a node.
 - Use `\for` loop and `\newcommand` to draw repeated elements.
 
-Following these principles can make the Tikz diagram human-readable, maintainable, and, most important, elegant.
+Following these principles can make the Tikz diagram human-readable, maintainable, and, most importantly, elegant.
 
 ### Include packages
 
