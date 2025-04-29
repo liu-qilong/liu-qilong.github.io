@@ -21,8 +21,9 @@ _P.S. Part names are added by me. Some chapters are merged and renamed._
 | Term | Explanation | Measured in | Water analogy |
 | --- | --- | --- | --- |
 | Electric charge |  Causes matter to experience a force | Coulombs | Water |
-| Electric current | The flow of charge Amps Flow of water through a pipe | Voltage | The difference in electric |
-| Volts | Water pressure potential between two points | Resistance | A measure of the difficulty | Ohms | The width of a pipe |
+| Electric current | The flow of charge | Amps | Flow of water through a pipe |
+| Voltage | The difference in electric potential between two points | Volts | Water pressure |
+| Resistance | A measure of the difficulty for current to flow through a material | Ohms | The width of a pipe |
 
 - Ohm’s Law
   $$I = \frac{V}{R}$$
@@ -44,7 +45,7 @@ _P.S. Part names are added by me. Some chapters are merged and renamed._
   `AND` `OR` `NOT` `XOR`
   `NAND` = `NOT` `AND`
   `NOR` = `NOT` `OR`
-  All with an associated _truth table_ to define its behavior
+  All with associated _truth tables_ to define its behavior
 
 ### Digital circuits
 
