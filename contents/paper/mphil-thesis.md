@@ -1,6 +1,6 @@
 ---
 title: "Construction of multi-component finite element model to predict biomechanical behaviour of breasts during running and quantification of the stiffness impact of internal structure"
-author: "Qi-long Liu👋"
+author: "Qilong Liu👋"
 venue: "MPhil Thesis, The Hong Kong Polytechnic University"
 date: "2024"
 doi: "https://theses.lib.polyu.edu.hk/handle/200/12914"

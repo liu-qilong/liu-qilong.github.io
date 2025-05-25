@@ -3,18 +3,20 @@ title: Deep learning environment setup
 tags:
   - Hinton/CS
 date: "2025-04-22"
-update: 
+update: "2025-05-22"
 link:
 ---
 
 # Deep learning environment setup
 
-## Install Ubuntu
+## Install Ubuntu 22.04 LTS
 
 > [Install Ubuntu Desktop | Ubuntu](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
 > [Ubuntu Releases](https://releases.ubuntu.com/)
 
-For fast installation, I didn't connect to the Internet and didn't download any upgrade. However, full-upgrade of kernel/packages must be done after the installation. Otherwise, newly added packages could clash.
+Select the right version of Ubuntu is important. Softwares for deep learning like CUDA and NCCL provide specific compiles for different Ubuntu versions; not all Ubuntu versions are available. In 2025, Ubuntu 22.04 and Ubuntu 20.04 are the safe choices.
+
+After install the OS, full-upgrade of kernel/packages must be done. Otherwise, newly added packages could clash.
 
 ```bash
 sudo apt update
@@ -59,7 +61,7 @@ set -g theme_display_virtualenv no
 set -g theme_display_date yes
 set -g theme_date_format "+%a %H:%M"
 set -g theme_newline_cursor yes
-set -g theme_newline_prompt '> '
+set -g theme_newline_prompt '$ '
 ```
 
 ### Enter `fish` automatically in Bash shell
@@ -138,24 +140,32 @@ echo \
 sudo apt-get update
 ```
 
-> [Install Docker Desktop on Ubuntu \| Docker Docs](https://docs.docker.com/desktop/setup/install/linux/ubuntu/)
-
-Download the latest release and then:
+> [Install Docker Engine on Ubuntu \| Docker Docs](https://docs.docker.com/engine/install/ubuntu/)
 
 ```bash
-sudo apt-get install ./docker-desktop-amd64.deb
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ```
 
-> [Sign in \| Docker Docs](https://docs.docker.com/desktop/setup/sign-in/#signing-in-with-docker-desktop-for-linux)
-
-Create `gpg` key and the initialize `pass`:
+_P.S. Run this in `bash` shell instead of `fish` shell._
 
 ```bash
-gpg --generate-key
-pass init <your_generated_gpg-id_public_key>
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-And then launch Docker Desktop to sign in.
+```bash
+sudo docker run hello-world
+```
+
+> [Install the Docker Compose plugin \| Docker Docs](https://docs.docker.com/compose/install/linux/)
+
+```bash
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
+
+```bash
+docker compose version
+```
 
 ## Python & Conda
 
@@ -172,13 +182,14 @@ _P.S. If you enter `fish` shell from `bash` shell, the previous commands only au
 conda init
 ```
 
-## Nvidia driver & CUDA & PyTorch
+## Nvidia driver & PyTorch
 
 ### Driver 550
 
 Install the newest Nvidia driver compatible with your GPU. You don't need to worry about its compatibility with CUDA, since the driver is designed to be backward-compatible:
 
 > [Download The Official NVIDIA Drivers \| NVIDIA](https://www.nvidia.com/en-us/drivers/)
+> [NVIDIA drivers installation - Ubuntu Server documentation](https://documentation.ubuntu.com/server/how-to/graphics/install-nvidia-drivers/index.html)
 
 ```bash
 sudo apt install nvidia-driver-550
@@ -219,7 +230,9 @@ python
 
 ### CUDA 12.4
 
-_P.S. If you just want to use PyTorch with CUDA, as specified before, you don't need to install CUDA yourself. However, if you want to compile PyTorch yourself or write customized CUDA codeto boost performance, you will need to install the CUDA Toolkit yourself. If it's the case, follow steps below:_
+_P.S. If you just want to use PyTorch with CUDA, as specified before, you don't need to install CUDA yourself. However, if you want to compile PyTorch yourself or write customized CUDA codeto boost performance, you will need to install the CUDA Toolkit yourself._
+
+_P.S. Run `nvidia-smi` to see the highest CUDA version your current driver supports._
 
 > [CUDA Toolkit 12.4 Downloads \| NVIDIA Developer](https://developer.nvidia.com/cuda-12-4-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=22.04&target_type=deb_local)
 
@@ -233,19 +246,29 @@ sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-4
 ```
 
-Add the following lines to `~/.bashrc`:
+Launch a new terminal and verify:
 
 ```bash
-# cuda path
-export PATH="/usr/local/cuda-11.8/bin:$PATH"
-export LD_LIBRARY_PATH="/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH"
+nvcc --version
 ```
 
-Verify:
+### NCCL 2.26.5
+
+NCCL is for multi-nodes/GPUs operation. Select the appropriate version according to your CUDA version.
+
+> [NVIDIA Collective Communications Library (NCCL) \| NVIDIA Developer](https://developer.nvidia.com/nccl)
+> [Installation Guide | NVIDIA Deep Learning NCCL Documentation](https://docs.nvidia.com/deeplearning/nccl/install-guide/index.html)
 
 ```bash
-nvcc -V
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt-get update
+sudo apt install libnccl2=2.26.5-1+cuda12.4 libnccl-dev=2.26.5-1+cuda12.4
 ```
+
+Tests:
+
+> [GitHub - NVIDIA/nccl-tests: NCCL Tests](https://github.com/NVIDIA/nccl-tests)
 
 ## SSH
 
@@ -428,10 +451,18 @@ tmux attach
 tmux attach -t <name>
 ```
 
-### Kill a specific session
+### Kill sessions
+
+Kill a specific session:
 
 ```bash
 tmux kill-session -t <name>
+```
+
+Kill all sessions (except the session you are in):
+
+```bash
+tmux kill-session -a
 ```
 
 ## Appendix
@@ -474,12 +505,6 @@ Acquire::http::Proxy "http://<address>:<port>";
 ```bash
 git config --global http.proxy http://<address>:<port>
 ```
-
-#### Use `docker` with proxy
-
-> [Change settings \| Docker Docs](https://docs.docker.com/desktop/settings-and-maintenance/settings/#proxies)
-
-Docker Desktop > Setting > Resource > Proxies > Enable Manual > Fill in HTTP & HTTPS proxies
 
 ### Performance benchmarking
 

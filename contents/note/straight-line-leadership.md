@@ -211,7 +211,7 @@ _P.S. Section names are added by me. Distinctions are intensely reordered & regr
 
 ### Finding your purpose?
 
-1. How do you want to use the rest of your life?
+1. How do you want to use the rest of your life/next 3 years?
    > Your life is raw opportunity, not something happening to you.
 2. Will you make it worthwhile for you?
 3. How do you want this to go?

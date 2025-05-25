@@ -178,6 +178,28 @@ In Beamers, the following commands can be used to control the visibility of the 
 \visbile<>{}
 ```
 
+In `itemize` and `enumerate` environments, you don't need to manually write these commands for 1-by-1 roll out. Just use `<+->` or `<+>`:
+
+- Appears one by one:
+
+```latex
+\begin{itemize}[<+->]
+  \item First
+  \item Second
+  \item Third
+\end{itemize}
+```
+
+- Appears one by one with the previous one disappears:
+
+```latex
+\begin{itemize}[<+>]
+  \item First
+  \item Second
+  \item Third
+\end{itemize}
+```
+
 ## Tikz
 
 Writing in Tikz could be painful if we don't follow a good structure/pattern. The most important principles are:

@@ -1,6 +1,6 @@
 ---
 title: "Construction of multi-component finite element model to predict biomechanical behaviour of breasts during running and quantification of the stiffness impact of internal structure"
-author: "Jia-zhen Chen, Yue Sun, Qi-long Liu👋, Joanne Yip, Kit‐lun Yick"
+author: "Jiazhen Chen, Yue Sun, Qilong Liu👋, Joanne Yip, Kitlun Yick"
 venue: "Biomechanics and Modeling in Mechanobiology"
 date: "2024-05-28"
 doi: "http://dx.doi.org/10.1007/s10237-024-01862-2"
