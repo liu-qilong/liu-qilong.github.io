@@ -259,7 +259,7 @@ This will launch a [X11 server](https://en.wikipedia.org/wiki/X_Window_System) f
 jupyter lab --NotebookApp.token='' --no-browser --port=8888
 ```
 
-_P.S. If you connect to the WSL wish `ssh`, `jupyter-server-proxy` is needed to be setup:_
+_P.S. If you connect to the WSL with `ssh`, `jupyter-server-proxy` is needed to be setup:_
 
 > [Trame Jupyter Backend for PyVista — PyVista 0.42.3 documentation](https://docs.pyvista.org/version/stable/user-guide/jupyter/trame.html)
 
@@ -289,7 +289,7 @@ import pyvista as pv
 
 pv.set_jupyter_backend('static')
 os.environ['DISPLAY'] = ':99.0'
-os.environ['PYVISTA_OFF_SCREEM'] = 'true'
+os.environ['PYVISTA_OFF_SCREEN'] = 'true'
 ```
 
 _P.S. I haven't yet figure out how to enable iterative plotting in VS Code environment. Therefore, I select the `static` backend._

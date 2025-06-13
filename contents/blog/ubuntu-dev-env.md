@@ -38,32 +38,6 @@ sudo apt-get update
 sudo apt-get install fish
 ```
 
-### Theme
-
-> [GitHub - oh-my-fish/theme-bobthefish: A Powerline-style, Git-aware fish theme optimized for awesome.](https://github.com/oh-my-fish/theme-bobthefish)
-
-Use `oh-my-fish` to manage `fish` themes. Here we choose `bobthefish`:
-
-```bash
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-omf install bobthefish
-omf theme bobthefish
-```
-
-Configure `fish` by append the following contents to `~/.config/fish/config.fish`:
-
-```bash
-set -g default_user na
-set -g theme_display_hostname no
-set -g fish_prompt_pwd_dir_length 0
-set -g theme_display_git_default_branch yes
-set -g theme_display_virtualenv no
-set -g theme_display_date yes
-set -g theme_date_format "+%a %H:%M"
-set -g theme_newline_cursor yes
-set -g theme_newline_prompt '$ '
-```
-
 ### Enter `fish` automatically in Bash shell
 
 Add this line to the end of `~/.bashrc`:
@@ -75,9 +49,33 @@ fish
 
 _P.S. `~/.bashrc` will be executed whenever a new `bash` shell is launched. Please note that all commands after this line will only be executed after you `exit` the `fish` shell. Therefore make sure that this line is at the end of `~/.bashrc`._
 
-### Powerline font
+### Theme
 
-To show `bobthefish` theme properly, we need to install [Powerline fonts](https://github.com/powerline/fonts). I personally prefer [Liberation Mono for Powerline](https://github.com/powerline/fonts/blob/master/LiberationMono/Literation%20Mono%20Powerline.ttf), which is the default monospace font used in VS Code with Powerline style special symbols. For Ubuntu's default terminal: right click the terminal icon > Preference > Unnamed > Custom font.
+I really love the [Pastel Powerline Preset \| Starship](https://starship.rs/presets/pastel-powerline) preset of [Starship](https://starship.rs):
+
+```bash
+curl -sS https://starship.rs/install.sh | sh
+```
+
+Add the following to the end of `~/.config/fish/config.fish`:
+
+```bash
+# init starship
+starship init fish | source
+```
+
+_P.S. If you want to add conda & python information to the command prompt, download my [starship.toml](https://github.com/liu-qilong/scripts/blob/main/starship.toml) and use it to replace `~/.config/starship.toml`:_
+
+Then open a new terminal:
+
+```bash
+starship preset pastel-powerline -o ~/.config/starship.toml
+```
+
+Noted that we need to use the [Nerd Fonts](https://www.nerdfonts.com/font-downloads). I personally prefer CaskaydiaCove Nerd Font ([download](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CascadiaCode.zip). Set it as the font used in terminal after installing it:
+
+- Ubuntu's default terminal: right click the terminal icon > Preference > Unnamed > Custom font.
+- VS Code's terminal: Setting > Search "terminal font" > Set as `CaskaydiaCove Nerd Font`.
 
 ## VS Code
 
@@ -463,6 +461,34 @@ Kill all sessions (except the session you are in):
 
 ```bash
 tmux kill-session -a
+```
+
+### PyVista remote rendering
+
+I use PyVista package quite a lot for 3D mesh rendering. When it's on the remote ssh host, things could get a little bit difficult. Here is a worked recipe:
+
+> [Installation — PyVista 0.45.2 documentation](https://docs.pyvista.org/getting-started/installation#running-on-remote-servers)
+> [python - PyVista plotting issue in Visual Studio Code using WSL 2 with Ubuntu 22.04.4 - Stack Overflow](https://stackoverflow.com/questions/78951451/pyvista-plotting-issue-in-visual-studio-code-using-wsl-2-with-ubuntu-22-04-4)
+
+```bash
+conda create --n vtk python=3.9
+conda activate vtk
+pip install pyvista[jupyter] ipykernel
+```
+
+Then in the `.ipynb` notebook on VS Code connected to the host via SSH:
+
+```python
+import pyvista as pv
+pv.set_jupyter_backend('html')
+
+# example
+pl = pv.Plotter()
+pl.add_mesh(
+    mesh=pv.read('output/x.obj'),
+    texture=pv.read_texture('output/texture.png'),
+)
+pl.show()
 ```
 
 ## Appendix

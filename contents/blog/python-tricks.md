@@ -210,3 +210,92 @@ echo '*.ipynb filter=strip-notebook-output' > .gitattributes
 
 This gist is based on @dirkjot's answer.
 > [How to clear Jupyter Notebook's output in all cells from the Linux terminal? - Stack Overflow](https://stackoverflow.com/questions/28908319/how-to-clear-jupyter-notebooks-output-in-all-cells-from-the-linux-terminal)
+
+## Release to PyPI
+
+> [Building and Publishing - Python Packaging User Guide](https://packaging.python.org/en/latest/guides/section-build-and-publish/)
+> [Publishing package distribution releases using GitHub Actions CI/CD workflows - Python Packaging User Guide](https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/)
+
+### Prepare
+
+```bash
+pip install twine build
+```
+
+### Setup `pyproject.toml`
+
+```toml
+# local install: pip install -e .
+# local build: python -m build
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "<pkg>"
+version = "<ver>"
+description = "<str>"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.7"
+license = { text = "<license>" }
+authors = [
+  { name = "<name>", email = "<email>" }
+]
+dependencies = [
+  "<pkg1>",
+  "<pkg2>",
+]
+
+[project.urls]
+Repository = "<repo link>"
+# You can also add more links, e.g. Homepage, Documentation, Bug Tracker, etc.
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["<pkg folder>*"]
+```
+
+_P.S. The `pyproject.toml` can also be used for local install:_
+
+```bash
+pip install -e .
+```
+
+### Build & check
+
+Firstly, to avoid including unnecessary or even sensitive files, e.g. you API keys in `.env` files, clone the project to other places. In that folder, build the project:
+
+```bash
+python -m build
+```
+
+Check:
+
+```bash
+twine check dist/*
+```
+
+### Upload
+
+If you want to further confirm the release is OK, firstly upload it to TestPyPi:
+
+```bash
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
+When you're ready, upload it to PyPI:
+
+```bash
+twine upload --repository-url dist/*
+```
+
+_P.S. You need to signup an account and acquire the API key on both [PyPI](https://pypi.org) and [TestPyPI](https://test.pypi.org), separately._
+
+### Cleanup
+
+Clear the `dist/` folder:
+
+```bash
+rm -rf dist/
+```
