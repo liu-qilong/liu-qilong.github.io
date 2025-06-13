@@ -6,6 +6,7 @@ date: "2025-02-28"
 update: 
 link:
   link: https://neurips.cc/Conferences/2024
+  x: https://x.com/liu_qi_long/status/1933402958169059531
   rednote: https://www.xiaohongshu.com/explore/67c1325e000000000d016baa?xsec_token=ABdnb9J32yoL9Ob0yrVUfFuqEP67oksfeqT8ZFdk2M3oM=&xsec_source=pc_user
 ---
 

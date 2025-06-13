@@ -6,6 +6,8 @@ date: "2025-06-13"
 update: 
 link:
   link: https://iclr.cc/Conferences/2025
+  x: https://x.com/liu_qi_long/status/1933411943597088833
+  rednote: https://www.xiaohongshu.com/explore/684bdc02000000002001e272?xsec_token=ABR0Qhl0DVO_G1FfwbZfWx652_7t7ztn7bNktSLL7L0mE=&xsec_source=pc_user
 ---
 
 # ICLR 2025 oral notes
