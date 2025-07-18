@@ -3,7 +3,7 @@ title: Deep learning environment setup
 tags:
   - Hinton/CS
 date: "2025-04-22"
-update: "2025-05-22"
+update: "2025-07-18"
 link:
 ---
 
@@ -396,6 +396,43 @@ tunnels:
 ```bash
 ngrok service install --config ~/.config/ngrok/ngrok.yml
 ngrok service start
+```
+
+### NAT traversal with Cloudflare
+
+`ngrok` is easy to setup, but it has a bandwidth limit of 1 GB for free users. You can use Cloudflare to setup the tunnel as well, given that you own a domain. Even if you don't have a domain, buying one from Cloudflare is still cheaper than `ngrok`'s paid subscription.
+
+Follow this guide to set it up:
+
+> [Connect to SSH with client-side cloudflared (legacy) · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/use-cases/ssh/ssh-cloudflared-authentication/)
+
+Key steps:
+
+- Create a SSH tunnel in Cloudflare's Web dashboard: [Create a tunnel (dashboard) · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/)
+- Install and run a connector on your host machine. _P.S. Detailed guid is shown in the Overview tab of the tunnel you just created on Cloudflare's Web dashboard._
+- Install `cloudflare` on you client machine. Add this to `~/.ssh/config`:
+
+```
+Host ssh.example.com
+ProxyCommand /usr/local/bin/cloudflared access ssh --hostname %h
+```
+
+Then you can:
+
+```bash
+ssh user@ssh.example.com
+```
+
+_P.S. As you can see, `ProxyCommand` defines what happens when you launch `ssh` to a host. In this case, it runs `cloudflared access ssh --hostname %h` to setup the tunnel, i.e. one `cloudflare` process per connection. However, if your network is not stable (due to whatever reason, e.g. GFW), this could make your connection vulnerable. A better solution is:_
+
+```bash
+cloudflared access ssh --hostname ssh.example.com --url localhost:2222
+```
+
+Then you can:
+
+```bash
+ssh user@127.0.0.1 -p 2222
 ```
 
 ### `tmux`

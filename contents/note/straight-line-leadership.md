@@ -100,6 +100,8 @@ _P.S. Section names are added by me. Distinctions are intensely reordered & regr
 	  > These people don’t see that they are wasting a precious resource. They don’t realize that the mind can just as easily be used the opposite way—to discover “how it can be done.” And when the mind is used in that direction, a straight line to your intended result has begun.
 	  
 	  > McGovern’s quest was always for information he could immediately and usefully apply to his profession... “So I was always committed to learning more to differentiate myself in the marketplace”... Clients hire McGovern because he can add more value than others—because he has more business and real estate knowledge. Outsiders get confused and think his success is due to the fact that he’s been around so long that he has “old boy” relationships.
+	- Separate _v.s._ The same
+	  > _What you are going through_ and _your commitment to change your life_ are two separate things... They tend to collapse situations in their lives instead of seeing the separateness that would give them freedom... They don’t see that they have two separate situations occurring. Being broke is one issue, and choosing to start a new business is something entirely different.
 - I'm responsible _v.s_ It's their fault
   > He knew he would either be responsible for the mess, or remain a victim of it. And by coming from the inner stance of victim (which is weakness itself) he would never survive.
 	- Owner _v.s._ Victim
@@ -151,8 +153,6 @@ _P.S. Section names are added by me. Distinctions are intensely reordered & regr
 	  > Commitment is relentless. A professional doesn’t quit until the job is done. A true commitment alters behaviors and actions. When a person says he’s committed and his behaviors and actions remain the same—he’s not committed.
 	  
 	  > One of the first signs of commitment is a request for assistance... When you make a request based on a worthy cause, to which you are committed, you also provide that individual with an opportunity to contribute and grow.
-	- Separate _v.s._ The same
-	  > _What you are going through_ and _your commitment to change your life_ are two separate things... They tend to collapse situations in their lives instead of seeing the separateness that would give them freedom... They don’t see that they have two separate situations occurring. Being broke is one issue, and choosing to start a new business is something entirely different.
 	- Now _v.s._ Later
 	  > The only time you can ever do something about anything is now. The problem with individuals who tolerate mediocrity in their lives is that no matter what good idea for taking action comes up, it’s never going to happen now... The only real question you face regarding your goals in life is “Now or later?” And realize that later is code for never. We speak in code because it’s too painful to really confront how passive we have been.
 	  
@@ -211,7 +211,7 @@ _P.S. Section names are added by me. Distinctions are intensely reordered & regr
 
 ### Finding your purpose?
 
-1. How do you want to use the rest of your life/next 3 years?
+1. How do you want to use the rest of your life/next 3 years/next week?
    > Your life is raw opportunity, not something happening to you.
 2. Will you make it worthwhile for you?
 3. How do you want this to go?

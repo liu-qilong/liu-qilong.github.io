@@ -184,9 +184,9 @@ In `itemize` and `enumerate` environments, you don't need to manually write thes
 
 ```latex
 \begin{itemize}[<+->]
-  \item First
-  \item Second
-  \item Third
+    \item First
+    \item Second
+    \item Third
 \end{itemize}
 ```
 
@@ -194,9 +194,9 @@ In `itemize` and `enumerate` environments, you don't need to manually write thes
 
 ```latex
 \begin{itemize}[<+>]
-  \item First
-  \item Second
-  \item Third
+    \item First
+    \item Second
+    \item Third
 \end{itemize}
 ```
 
@@ -335,10 +335,10 @@ _P.S. Use `label=<direction>:<text>`_ to add label to a node. If multi-line is n
 \begin{document}
 \begin{tikzpicture}
     \foreach \x in {0, 1, 2, 3} {
-    \foreach \y in {0, 1, 2} {
-        \mycircle{blue}{\x}{\y};
-    }
-}
+	    \foreach \y in {0, 1, 2} {
+	        \mycircle{blue}{\x}{\y};
+	    }
+	}
 \end{tikzpicture}
 \end{document}
 ```
