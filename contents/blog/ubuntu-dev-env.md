@@ -3,7 +3,7 @@ title: Deep learning environment setup
 tags:
   - Hinton/CS
 date: "2025-04-22"
-update: "2025-07-18"
+update: "2025-07-31"
 link:
 ---
 
@@ -268,13 +268,15 @@ Tests:
 
 > [GitHub - NVIDIA/nccl-tests: NCCL Tests](https://github.com/NVIDIA/nccl-tests)
 
-## SSH
+## Remote development
+
+### SSH
 
 ```bash
 sudo apt-get install openssh-server
 ```
 
-### Configuration
+#### Configuration
 
 ```bash
 code /etc/ssh/sshd_config
@@ -298,7 +300,7 @@ After altering the configuration, restart `ssh` server:
 sudo systemctl restart ssh
 ```
 
-### SSH connect
+#### SSH connect
 
 ```bash
 sudo apt install net-tools
@@ -317,13 +319,13 @@ _P.S. If you've changed the port number:_
 ssh <user>@<address> -p <port>
 ```
 
-### Key authentication
+#### Key authentication
 
 > [How To Configure SSH Key-Based Authentication on a Linux Server | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
 
 Having to enter password for each `ssh` login  is not very convenient. We can make our life a little bit easier by setting up key authentication.
 
-#### On the client machine
+**On the client machine**
 
 First generate a key:
 
@@ -347,7 +349,7 @@ ssh-copy-id -i <key path> -p <port> <address>
 
 Noted the the `-p` argument is the port number of the remote server you set before. Moreover, the `address` is the IP address of the remote server which can be check by `ifconfig`.
 
-#### On the host machine
+**On the host machine**
 
 Before you can log in to the remote server without entering the password, you will need to enable key authentication first:
 
@@ -365,42 +367,9 @@ sudo systemctl restart sshd
 
 If everything is setup well, you will no longer need to enter the password the next time you `ssh` into the remote machine.
 
-### NAT traversal with `ngrok`
-
-To access the ssh host from the internet, we need to expose it to the internet. One simple and free way is using `ngrok`:
-
-#### Installation
-
-> [Setup & Installation | ngrok](https://dashboard.ngrok.com/get-started/setup/linux)
-
-Sign up a `ngrok` account and install it following the guide on this link.
-
-#### Configuration
-
-> [Configuration File \| ngrok documentation](https://ngrok.com/docs/agent/config/)
-> [Version 3 \| ngrok documentation](https://ngrok.com/docs/agent/config/v3/)
-
-Add `ssh` tunnel setting in `~/.config/ngrok/ngrok.yml`:
-
-```yml
-tunnels:
-  ssh:
-    proto: tcp
-    addr: 22
-```
-
-#### Setup system service
-
-> [Running ngrok in the background | ngrok documentation](https://ngrok.com/docs/agent/#background-service)
-
-```bash
-ngrok service install --config ~/.config/ngrok/ngrok.yml
-ngrok service start
-```
-
 ### NAT traversal with Cloudflare
 
-`ngrok` is easy to setup, but it has a bandwidth limit of 1 GB for free users. You can use Cloudflare to setup the tunnel as well, given that you own a domain. Even if you don't have a domain, buying one from Cloudflare is still cheaper than `ngrok`'s paid subscription.
+To access the ssh host from the internet, we need to expose it to the internet, i.e. NAT traversal. You can use Cloudflare to setup the tunnel as well, given that you own a domain. Even if you don't have a domain, buying one from Cloudflare is still cheaper than some NAT tools' paid subscriptions.
 
 Follow this guide to set it up:
 
@@ -408,9 +377,17 @@ Follow this guide to set it up:
 
 Key steps:
 
-- Create a SSH tunnel in Cloudflare's Web dashboard: [Create a tunnel (dashboard) · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/)
-- Install and run a connector on your host machine. _P.S. Detailed guid is shown in the Overview tab of the tunnel you just created on Cloudflare's Web dashboard._
-- Install `cloudflare` on you client machine. Add this to `~/.ssh/config`:
+- Create a SSH tunnel in Cloudflare's Web dashboard: Cloudflare dashboard > Zero Trust > Networks > Tunnels > Create tunnel
+  > [Create a tunnel (dashboard) · Cloudflare Zero Trust docs](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/)
+	- Follow the guide in the _Overview tab_ to install and run a connector on your host machine
+	- Create a public hostname in the _Public hostnames tab_
+		- Subdomain & domain -> `<subdomain>.<domain>` the public domain to access the service, e.g. `ssh.example.com`
+		- Service type & url -> `<type>://<url>` the url to the access the service on the remote machine, e.g. `ssh://localhost:22`
+- Install `cloudflare` on you client machine.
+
+#### Option 1: SSH to domain name
+
+Add this to `~/.ssh/config`:
 
 ```
 Host ssh.example.com
@@ -423,17 +400,63 @@ Then you can:
 ssh user@ssh.example.com
 ```
 
-_P.S. As you can see, `ProxyCommand` defines what happens when you launch `ssh` to a host. In this case, it runs `cloudflared access ssh --hostname %h` to setup the tunnel, i.e. one `cloudflare` process per connection. However, if your network is not stable (due to whatever reason, e.g. GFW), this could make your connection vulnerable. A better solution is:_
+#### Option 2: SSH via reverse proxy
+
+As you can see, `ProxyCommand` defines what happens when you launch `ssh` to a host. In this case, it runs `cloudflared access ssh --hostname %h` to setup the tunnel, i.e. one `cloudflare` process per connection. However, if your network is not stable (due to whatever reason, e.g. GFW), this could make your connection vulnerable. A better solution is:
 
 ```bash
-cloudflared access ssh --hostname ssh.example.com --url localhost:2222
+cloudflared access ssh --hostname ssh.example.com --url localhost:<local-port>
 ```
 
 Then you can:
 
 ```bash
-ssh user@127.0.0.1 -p 2222
+ssh user@localhost -p <local-port>
 ```
+
+#### Access internal (campus) resources via SOCKS5 proxy
+
+Access of some online resources are restricted outside the campus. For example, the eStudent website is painstakingly slow--almost unusable. With SSH, you can easily turn your remote machine into a SOCKS5 proxy server; whatever accessible to the remote machine will then be accessible to you:
+
+```bash
+ssh user@<address> -p <port> -D <another-port>
+```
+
+Then setup SOCKS5 proxy in your OS/browser's proxy setting.
+
+#### Expose web services to a domain name via Cloudflare
+
+We might launch some web services on the remote machine, such as [TensorBoard](https://www.tensorflow.org/tensorboard) for monitoring the training progress:
+
+```bash
+tensorboard --logdir experiment/
+```
+
+This will launch a web page on `http://localhost:6006` by default. Using `tmux` (in the next section) or `nohup`, you can make it run in background like an persistent web service. If you want to access it from your local machine, one approach is with SSH's port forwarding:
+
+```bash
+ssh user@<address> -p <port> -L 6006:localhost:6006
+```
+
+However, this is a little bit inconvenient. Instead, you can use Cloudflare to expose it to a domain name:
+
+- In the tunnel's setting, create a public hostname in the _Public hostnames tab_
+	- Subdomain & domain -> `<subdomain>.<domain>` the public domain to access the service, e.g. `tb.example.com`
+	- Service type & url -> `<type>://<url>` the url to the access the service on the remote machine, e.g. `http://localhost:6006`
+
+Then the webpage will be accessible via Internet. However, this could raise privacy or security concerns. **You are strongly recommended to setup restrictions on who can access it.** For example, set it as **only you** can access:
+
+- Cloudflare dashboard > Zero Trust > Settings > Authentication > Add new > GitHub. Follow the guidance to setup GitHub OAuth
+- Cloudflare dashboard > Zero Trust > Access > Policies > Add a policy
+	- Add rule: selector `Emails` value `your-github-email`, i.e. only you can access this service
+- Cloudflare dashboard > Zero Trust > Access > Applications > Add an application
+	- Fill in the application name, subdomain, and domain, the same as the ones you previously added in the tunnel settings
+	- Policy: add the previously created policy, i.e. only you can access this service
+	- Login method: select GitHub
+
+Then when you open `http://<subdomain>.<domain>`, you will need to authenticate via GitHub. It will check whether your GitHub account's email matches the one you fill in the policy. If so, you will be directed to the webpage; otherwise, your access will be denied.
+
+_P.S. The default authentication method is one-time-password via email. However, due to unknown reason, I couldn't receive any authentication email. You may explore other authentication methods as well._
 
 ### `tmux`
 
@@ -486,7 +509,7 @@ tmux attach
 tmux attach -t <name>
 ```
 
-### Kill sessions
+#### Kill sessions
 
 Kill a specific session:
 
@@ -508,24 +531,40 @@ I use PyVista package quite a lot for 3D mesh rendering. When it's on the remote
 > [python - PyVista plotting issue in Visual Studio Code using WSL 2 with Ubuntu 22.04.4 - Stack Overflow](https://stackoverflow.com/questions/78951451/pyvista-plotting-issue-in-visual-studio-code-using-wsl-2-with-ubuntu-22-04-4)
 
 ```bash
-conda create --n vtk python=3.9
+conda create --n vtk python=3.10
 conda activate vtk
 pip install pyvista[jupyter] ipykernel
 ```
 
-Then in the `.ipynb` notebook on VS Code connected to the host via SSH:
+Then in the `.ipynb` notebook on the remote machine:
+
+- Online rendering
 
 ```python
 import pyvista as pv
 pv.set_jupyter_backend('html')
 
-# example
 pl = pv.Plotter()
 pl.add_mesh(
     mesh=pv.read('output/x.obj'),
     texture=pv.read_texture('output/texture.png'),
 )
 pl.show()
+```
+
+- Offscreen export rendered images:
+
+```python
+
+import pyvista as pv
+
+pl = pv.Plotter(off_screen=True)
+pl.add_mesh(
+    mesh=pv.read('output/x.obj'),
+    texture=pv.read_texture('output/texture.png'),
+)
+pl.screenshot('output.png', window_size=[1024, 1024], return_img=False)
+pl.close()
 ```
 
 ## Appendix

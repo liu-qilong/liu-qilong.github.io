@@ -62,6 +62,16 @@ Additional symbols:
 \end{lstlisting}
 ```
 
+_P.S. The frame need to be set as `[fragile]` to use `lstlisting`:_
+
+```latex
+\begin{frame}[fragile]{}
+\begin{lstlisting}[language=Python]
+
+\end{lstlisting}
+\end{frame}
+```
+
 ## Table
 
 ```latex
