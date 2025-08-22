@@ -6,6 +6,7 @@ date: "2025-08-22"
 update: 
 link:
   link: https://cvpr.thecvf.com/Conferences/2025
+  rednote: https://www.xiaohongshu.com/explore/68a7dfce000000001d01ec24?xsec_token=ABo-A2GKruEG4jNanb3mOLpPS4xK9SOGY4mv1BA1ndbUQ=&xsec_source=pc_user
 ---
 
 # CVPR 2025 oral notes
