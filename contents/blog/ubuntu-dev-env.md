@@ -369,7 +369,7 @@ If everything is setup well, you will no longer need to enter the password the n
 
 ### NAT traversal with Cloudflare
 
-To access the ssh host from the internet, we need to expose it to the internet, i.e. NAT traversal. You can use Cloudflare to setup the tunnel as well, given that you own a domain. Even if you don't have a domain, buying one from Cloudflare is still cheaper than some NAT tools' paid subscriptions.
+To access the ssh host from the internet, we need to expose it to the internet, i.e. NAT traversal. You can use Cloudflare to setup the tunnel, given that you own a domain. Even if you don't have a domain, buying one from Cloudflare is still cheaper than some NAT tools' paid subscriptions.
 
 Follow this guide to set it up:
 
@@ -385,7 +385,7 @@ Key steps:
 		- Service type & url -> `<type>://<url>` the url to the access the service on the remote machine, e.g. `ssh://localhost:22`
 - Install `cloudflare` on you client machine.
 
-#### Option 1: SSH to domain name
+#### Option 1: SSH to the domain name
 
 Add this to `~/.ssh/config`:
 
