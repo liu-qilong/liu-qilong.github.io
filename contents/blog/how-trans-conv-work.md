@@ -46,7 +46,7 @@ That's exactly a transposed convolution of ${C}$!
 
 In previous discussions, the transposed convolution is converted to the flatten vectorized form, which may be a little bit confusing. However, the vectorized form can always be stacked back to the matrix form, which leads to the conclusion that a transposed convolution is actually an ordinary convolution but padding the original ${X}$ inside and outside with the stride, as shown below:
 
-![img](how-trans-conv-work.gif)
+![img](/img/how-trans-conv-work.gif)
 
 > Image source: [A guide to convolution arithmetic for deep learning - Vincent Dumoulin, Francesco Visin - ArXiv](https://arxiv.org/abs/1603.07285)
 

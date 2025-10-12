@@ -320,7 +320,7 @@ Tips:
 
 During the final year, you will need to consider & job search for your future career. The author compiles an example of the potential career opportunities of a PhD:
 
-![img](mastering-your-phd.png)
+![img](/img/mastering-your-phd.png)
 
 - Post-doc
 - Corporate sector

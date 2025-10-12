@@ -91,7 +91,7 @@ link:
     - [#32 Binary Tree Upside Down]()
         - Top-down approach: At each iteration, first keep copies of the current nodes left and right trees and then edit the current node: place the previous right node as the current node's left node and place previous edited node as the current node's right node - for accumulatively constructing an upside-down tree. Then set the kept left node as the current node and launch another iteration.
         - Bottom-up approach: Constructing the bottom-up tree by recursion is way more intuitive, as shown in this figure:
-            ![img](leetcode-50-ex32.png)
+            ![img](/img/leetcode-50-ex32.png)
 
 ### Stack
 

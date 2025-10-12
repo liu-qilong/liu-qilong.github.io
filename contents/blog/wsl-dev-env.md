@@ -33,7 +33,7 @@ wsl --install -d Ubuntu-18.04
 
 ## Fish shell
 
-![img](fish-shell.png)
+![img](/img/fish-shell.png)
 
 ### Install
 

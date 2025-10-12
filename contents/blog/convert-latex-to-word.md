@@ -32,21 +32,36 @@ Noted that `./word/template.docx ` is a Word file serving as the referencing tem
 You may have noticed the `--reference-doc` variable here. It accepts a Word file as the template so that you can specify the styles of the generated file. You can prepared a Word file as template following these steps:
 
 - Run the convert command without `--reference-doc`:
-	```
-	pandoc paper.tex -o word/template.docx --bibliography=bibliography.bib --citeproc
-	```
+
+```bash
+pandoc paper.tex -o word/template.docx --bibliography=bibliography.bib --citeproc
+```
+
 - Fine-tune the styles of the generated `./word/template.docx` file [^1]. Changing the styles of a Word document is itself a sophisticated topic. You can read the following tutorial for more detail:
 	> [Customize or create new styles - Microsoft](https://support.microsoft.com/en-us/office/customize-or-create-new-styles-d38d6e47-f6fc-48eb-a607-1eb120dec563)
 - Now you have a Word file that can serve as the reference template. Rerun the command and your generated Word file should look just the way you want:
-	```
-	pandoc paper.tex -o word/paper.docx --reference-doc=word/template.docx --bibliography=bibliography.bib --citeproc
-	```
+
+```bash
+pandoc paper.tex -o word/paper.docx --reference-doc=word/template.docx --bibliography=bibliography.bib --citeproc
+```
 
 [^1]: According to [Unable to create a custom reference.docx using pandoc - Stackoverflow](https://stackoverflow.com/questions/58642039/unable-to-create-a-custom-reference-docx-using-pandoc), the personal-specified template file `reference.docx` should be revised based on a pandoc default output file.
 
 _P.S. If you'd like to reset the default template [^2], placing the `reference.docx` to `$HOME/.local/share/pandoc` then the template shall overwrite the default settings._
 
 [^2]: Please refer to `--data-dir=DIRECTORY` entry of [Manual - Pandoc](https://pandoc.org/MANUAL.html)
+
+## Citation style
+
+The default citation style is (author, year). It you want other citation style, you can download it via: [GitHub - citation-style-language/styles: Official repository for Citation Style Language (CSL) citation styles.](https://github.com/citation-style-language/styles)
+
+For example, `ieee.csl`:
+
+```bash
+curl -o word/ieee.csl https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl
+
+pandoc draft.tex -o word/draft.docx --reference-doc=word/template.docx --bibliography=ref.bib --citeproc --csl=word/ieee.csl
+```
 
 ## Exclude all images
 

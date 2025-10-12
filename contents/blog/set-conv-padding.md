@@ -10,7 +10,7 @@ link:
 
 # How to set the padding of convolution to make the stride acting as a scale factor
 
-![img](set-conv-padding.gif)
+![img](/img/set-conv-padding.gif)
 
 > Cover image source: [A guide to convolution arithmetic for deep learning - Vincent Dumoulin, Francesco Visin - ArXiv](https://arxiv.org/abs/1603.07285)
 
@@ -24,11 +24,11 @@ $$2p + w$$
 
 At the begging, the kernel is placed on the left of this total length, and is then moved towards right side with step length of $s$, until no more space is available. Denotes the number of the placable potions as $n$, then the output width of the convolution is also $n$. It should satisfys:
 
-$$2p + w - s < k + (n-1) s \leq 2p + w \tag{a}$$
+$$2p + w - s < k + (n-1) s \leq 2p + w$$ (a)
 
 When will the stride $s$ acts as a scale factor? It can be formally written as:
 
-$$n = \frac{w}{s} \tag{b}$$
+$$n = \frac{w}{s}$$ (b)
 
 Substitute (b) to (a) yields:
 

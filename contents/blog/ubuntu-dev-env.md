@@ -489,6 +489,12 @@ Or start with a custom name:
 tmux new -s mysession
 ```
 
+_P.S. It can be renamed outside the session:_
+
+```bash
+tmux rename-session -t <old_name> <new_name>
+```
+
 It will launch a terminal like the ordinary one. When you disconnect to the host, the process running in that terminal will continue to run. To view the status of all running sessions:
 
 ```bash
@@ -673,3 +679,25 @@ sudo apt install nvtop
 
 > [GitHub - Syllo/nvtop: GPU & Accelerator process monitoring for AMD, Apple, Huawei, Intel, NVIDIA and Qualcomm](https://github.com/Syllo/nvtop)
 > [安静、高性价比双卡装机【100亿模型计划】](https://youtu.be/kzSI_7K3_so?si=G9KlyrsTBua1BVAn)
+
+_P.S. CUDA memory test:_
+
+[GitHub - ComputationalRadiationPhysics/cuda\_memtest: Fork of CUDA GPU memtest :eyeglasses:](https://github.com/ComputationalRadiationPhysics/cuda_memtest)
+
+```bash
+git clone git@github.com:ComputationalRadiationPhysics/cuda_memtest.git
+
+# build
+mkdir build
+cd build
+# RTX 3090 is capability 8.5 -> 85
+# check here for other models: https://developer.nvidia.com/cuda-gpus
+cmake -DCMAKE_CUDA_ARCHITECTURES=85 .. 
+make
+cd ..
+mv build/cuda_memtest .
+
+# testing
+./sanity_check.sh
+./cuda_memtest
+```

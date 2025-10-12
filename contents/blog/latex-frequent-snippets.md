@@ -77,6 +77,9 @@ _P.S. The frame need to be set as `[fragile]` to use `lstlisting`:_
 ```latex
 \begin{table}[h]
 	\centering
+	\caption{<>}
+	\label{tab:<>}
+	\vskip5pt
 	\begin{tabular}{lcc}
 		\toprule
 		& & \\
@@ -84,12 +87,23 @@ _P.S. The frame need to be set as `[fragile]` to use `lstlisting`:_
 		& & \\
 		\bottomrule
 	\end{tabular}
-	\caption{<>}
-	\label{tab:<>}
 \end{table}
 ```
 
 _P.S. `booktabs` package needed._
+
+_P.S. Snippets for marking 1st, 2nd, and 3rd best methods:_
+
+```latex
+\colorlet{bestclr}{teal!60}
+\colorlet{secondclr}{teal!40}
+\colorlet{thirdclr}{teal!20}
+\newcommand{\firstplace}{\cellcolor{bestclr}\textbf}
+\newcommand{\secondplace}{\cellcolor{secondclr}}
+\newcommand{\thirdplace}{\cellcolor{thirdclr}}
+\def\tabclrscheme{The first/second/third best results are highlighted in \colorbox{bestclr}{\textbf{bolded teal}}, \colorbox{secondclr}{light teal}, and \colorbox{thirdclr}{lighter teal}, respectively.}
+
+```
 
 ## Figure
 
@@ -141,6 +155,28 @@ Then inside the `\begin{document} ... \end{document}`:
 % bibliography
 \printbibliography
 ```
+
+## Reference
+
+```latex
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={black},
+    citecolor={black},
+    urlcolor={black}
+}
+
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsubsectionautorefname}{Section}
+\renewcommand{\figureautorefname}{Fig.}
+\renewcommand{\tableautorefname}{Table}
+```
+
+Then you can just `\autoref{}` sections, figures, and tables without having to manually type prefix like  `Fig.~\ref{}`.
+
+However, for equation, use `\eqref{}`.
 
 ## Beamer
 

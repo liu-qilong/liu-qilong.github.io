@@ -29,7 +29,7 @@ _P.S. In my opinion, Straight-line Productivity might be a more appropriate name
 
 We always operate with _inner stances_, i.e. how we think, plan, decide, and action. Our inner stances are deeply intertwined with some presumptions of how to live & success. Unfortunately, since most people are uncomfortable with uncertainty & stress, those presumptions are very probable to be skewed towards _ineffective_ directions. For example:
 
-- Shell ourselves from the stress of taken risk by keep gathering more and more information and consider that as "progress". However, information won't lead to any outcome if it's not used.
+- Shell ourselves from the stress of taking risk by keep gathering more and more information and consider that as "progress". However, information won't lead to any outcome if it's not used.
   > See also: [Why You Should Take Action Before You Feel Ready (The Information Trap) | Sam Matla](https://m.youtube.com/watch?v=vINjzigVlQA)
 - Shell ourselves from actually doing the work by keep finding better tools/softwares/platforms that will solve our problem "once and for all". However, the perfect tool for you doesn't exist at all; even if you find it, it will still be you who do the work, not the tool.
   > See also: [Stop Procrastinating With Note-Taking Apps Like Obsidian, Roam, Logseq | Sam Matla](https://m.youtube.com/watch?v=baKCC2uTbRc)
@@ -84,12 +84,6 @@ _P.S. Section names are added by me. Distinctions are intensely reordered & regr
 	  > Tolerations are the things that you’re putting up with that you actually have the ability to resolve and yet you still choose to ignore. Tolerations are things that literally suck and drain your attention and your energy. They always live in the back of your mind from the minute you get up in the morning to the moment you fall asleep. They sometimes live after that in bad dreams. They are like mind parasites.
 	  
 	  > It’s always a refreshing experience to ask myself, “What am I tolerating right now?” And then list those tolerations. Am I ready to confront what’s on the list? If so, I look at each item and either do, drop, or delegate.
-- Being truthful about where you are _v.s._ Lying about it
-  > When people keep ignoring what’s present, it makes them stupid... If you are my client my first duty is to get you back to reality and relieve you of your disempowering stories. The truth is always more exciting to work with than some cover-up made of fiction.
-	- Radical self-honesty _v.s._ Being insincere
-	  > Being real is saying what you mean and doing what you say.
-	  
-	  > There’s another form of insincerity that is even more damaging to a purpose or a project, and that’s internal insincerity. It’s the insincerity with yourself about what you’re doing throughout the day... Am I just inventing things to do to avoid or put off the necessary required actions.
 - A created world _v.s._ A reported-on world
   > He was making a classic mistake, made famous in Michael Gerber’s E Myth books, of working in his business instead of working on his business. He was showing up every day and reacting to whatever the current crisis was... It was a backwards, reported-on world.
 	- Language that creates reality _v.s._ Language that describes reality
@@ -119,11 +113,17 @@ _P.S. Section names are added by me. Distinctions are intensely reordered & regr
 - Corrective actions _v.s._ Protective actions
   > Any boat or plane on a journey is in a constant state of correction. It is always off course the majority of time until it arrives. The corrections it makes are what get the desired result... However, we get upset when we are off course. We think we have failed, or are making a mistake and need to protect ourselves from criticism and low self-esteem.
 	- Growth choices _v.s._ Safe choices
-	  > don’t forget to ask yourself, “Which option would be most likely to grow me? Which option is most likely to just keep me safe?”
+	  > Don’t forget to ask yourself, “Which option would be most likely to grow me? Which option is most likely to just keep me safe?”
 	- Investment _v.s._ Cost
 	  > When straight-line individuals are confronted with a potential opportunity, they will look at the opportunity in terms of an investment.If they are going to participate, they look at the potential return for the time, money, and energy that they will expend.Unfortunately, most people who struggle on a consistent basis look at only one thing: cost.
-	- The valley of death _v.s._ Optimistic denial
-	  > If you find yourself in such a valley, with no way out, it’s time to _cut your losses and move on_. Trying to pretend that what you did isn’t what you did will only keep you stuck... Living in optimistic denial is no more effective than beating yourself up.
+	- Being truthful about where you are _v.s._ Lying about it
+	  > When people keep ignoring what’s present, it makes them stupid... If you are my client my first duty is to get you back to reality and relieve you of your disempowering stories. The truth is always more exciting to work with than some cover-up made of fiction.
+		- Radical self-honesty _v.s._ Being insincere
+		  > Being real is saying what you mean and doing what you say.
+		  
+		  > There’s another form of insincerity that is even more damaging to a purpose or a project, and that’s internal insincerity. It’s the insincerity with yourself about what you’re doing throughout the day... Am I just inventing things to do to avoid or put off the necessary required actions.
+		- The valley of death _v.s._ Optimistic denial
+		  > If you find yourself in such a valley, with no way out, it’s time to _cut your losses and move on_. Trying to pretend that what you did isn’t what you did will only keep you stuck... Living in optimistic denial is no more effective than beating yourself up.
 
 ### Taking action
 
