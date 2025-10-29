@@ -1,7 +1,7 @@
 ---
 title: Setup Windows machine as SSH host
 tags:
-  - Hinton/Instrument
+  - Hinton/CS
 date: "2023-06-08"
 update: "2023-06-11"
 link:

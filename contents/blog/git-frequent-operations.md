@@ -1,7 +1,7 @@
 ---
 title: Git frequent operations
 tags:
-  - Hinton/Instrument/Git
+  - Hinton/CS/Git
 date: "2024-12-26"
 update: 
 link:

@@ -1,7 +1,7 @@
 ---
 title: "latexdiff: mark changes of LaTeX documents"
 tags:
-  - Hinton/Instrument/LaTeX
+  - Hinton/CS/LaTeX
 date: "2024-03-23"
 update: "2024-03-24"
 link:

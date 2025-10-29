@@ -1,7 +1,7 @@
 ---
 title: Embed GIF and MP4 in LaTeX Beamer
 tags:
-  - Hinton/Instrument/LaTeX
+  - Hinton/CS/LaTeX
 date: "2022-06-20"
 update: "2023-07-16"
 link:

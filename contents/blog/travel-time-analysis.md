@@ -1,7 +1,7 @@
 ---
 title: Travel time analysis with Apple Shortcut
 tags:
-  - Hinton/Instrument
+  - Hinton/CS
   - Odyssey
 date: "2024-10-10"
 update: "2024-10-11"

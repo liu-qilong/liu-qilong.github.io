@@ -1,7 +1,7 @@
 ---
 title: LaTeX frequent snippets
 tags:
-  - Hinton/Instrument/LaTeX
+  - Hinton/CS/LaTeX
 date: "2023-05-23"
 update: "2025-04-23"
 link:

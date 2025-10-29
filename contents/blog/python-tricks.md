@@ -1,7 +1,7 @@
 ---
 title: Python tricks
 tags:
-  - Hinton/Instrument/Python
+  - Hinton/CS/Python
 date: "2025-05-18"
 update:
 ---
