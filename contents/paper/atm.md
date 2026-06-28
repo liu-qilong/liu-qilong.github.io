@@ -1,0 +1,10 @@
+---
+title: "Articulating then Matching: Zero-Shot Shape Matching for Uncurated Data"
+author: "QilongLiu*👋, Qinfeng Xiao*, Chenyuan Yi, Liying Zhang, Kit-lun Yick"
+remark: "* Equal contribution"
+venue: "arXiv preprint"
+date: "2026-06-28"
+doi: ""
+page: "https://liu-qilong.github.io/ATM/"
+abstract: "Finding dense correspondences between 3D shapes is a fundamental yet unresolved challenge, especially in real-world environments. These environments present severe challenges, including the lack of time and sufficient samples for training, the prevalence of uncurated extreme-high resolution data with topological distortions, and the need to handle diverse 3D representations. In this paper, we present ATM, a zero-shot framework that requires no correspondence-specific training and robustly addresses these issues at once through an articulate-then-match paradigm. Rather than relying on intrinsic geometric properties, we leverage powerful pretrained vision foundation models and parametric shape priors to estimate parametric shape models from multi-view renderings, and systematically ground these estimations via multi-view geometric consistency. By mapping diverse inputs into a shared canonical parametric space, we inherently establish robust coarse correspondences that bypass topological noise, which are then refined into precise dense mappings via spectral refinement. Operating purely on test-time optimized parametric reconstructions, ATM requires no correspondence training data, is naturally immune to connectivity artifacts, and seamlessly handles diverse 3D modalities, including meshes, point clouds, and 3D Gaussians. Extensive experiments demonstrate that our method achieves strong results on non-isometric benchmarks (average geodesic errors of 2.4-TOPKIDS, 3.8-SMAL), reducing errors by 73% and 37% respectively compared to the baseline URSSM. Furthermore, it exhibits unprecedented robustness on in-the-wild raw scans of up to 200k vertices per shape while maintaining near-constant computation time and consistent superior accuracy."
+---

@@ -33,6 +33,7 @@ export default function PaperBlock ({post, show_abstract=false, show_doi=false, 
                 <div className="md:ml-3 basis-4/5">
                     <div className={titleclass}>{post.title}</div>
                     <div className={dateclass}>{post.author}</div>
+                    {post.remark && <div className={dateclass}>{post.remark}</div>}
                     <div className={dateclass}>{post.venue}, {post.date}</div>
                 </div>
             </div>
