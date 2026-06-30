@@ -21,8 +21,8 @@ export default function ProjectBlock ({post, show_abstract=false, divclass="flex
     return (
         <div>
             <div className={divclass}>
-                <Link href={post_link}>
-                    <Image src={coverpath} height={imgsize} width={imgsize} className="mx-auto basis-1/5" alt=""/>
+                <Link href={post_link} className="w-full md:w-auto md:shrink-0">
+                    <Image src={coverpath} height={imgsize} width={imgsize} style={{'--post-imgsize': `${imgsize}px`}} className="mx-auto w-[90%] h-auto md:w-[var(--post-imgsize)]" alt=""/>
                 </Link>
                 <div className="md:ml-2 basis-4/5">
                     <Link href={post_link}>

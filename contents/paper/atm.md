@@ -1,6 +1,6 @@
 ---
 title: "Articulating then Matching: Zero-Shot Shape Matching for Uncurated Data"
-author: "QilongLiu*👋, Qinfeng Xiao*, Chenyuan Yi, Liying Zhang, Kit-lun Yick"
+author: "Qilong Liu*👋, Qinfeng Xiao*, Chenyuan Yi, Liying Zhang, Kit-lun Yick"
 remark: "* Equal contribution"
 venue: "arXiv preprint"
 date: "2026-06-28"

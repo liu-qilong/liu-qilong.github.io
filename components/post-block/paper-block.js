@@ -27,8 +27,8 @@ export default function PaperBlock ({post, show_abstract=false, show_doi=false, 
     return (
         <Link href={post_link}>
             <div className={divclass}>
-                <div>
-                <Image src={coverpath} height={imgsize} width={imgsize} className="mx-auto basis-1/5" alt=""/>
+                <div className="w-full md:w-auto md:shrink-0">
+                    <Image src={coverpath} height={imgsize} width={imgsize} style={{'--post-imgsize': `${imgsize}px`}} className="mx-auto w-[90%] h-auto md:w-[var(--post-imgsize)]" alt=""/>
                 </div>
                 <div className="md:ml-3 basis-4/5">
                     <div className={titleclass}>{post.title}</div>
