@@ -4,9 +4,8 @@ tags:
   - Hinton/CS/LaTeX
 date: "2022-06-20"
 update: "2023-07-16"
-link:
-  medium: "https://medium.com/@liu-qilong/embed-gif-in-latex-beamer-ed5ced8c041"
-  x: "https://x.com/liu_qi_long/status/1846450947062738965"
+link_medium: "https://medium.com/@liu-qilong/embed-gif-in-latex-beamer-ed5ced8c041"
+link_x: "https://x.com/liu_qi_long/status/1846450947062738965"
 ---
 
 # Embed GIF and MP4 in LaTeX Beamer
@@ -42,6 +41,22 @@ magick convert -coalesce *.gif fig%3d.png
 ```
 
 _P.S. When converting other files to `.gif`, if you want it to loop for infinity times, add option `-loop 0`._
+
+### P.S. Convert png series to gif
+
+Install on linux:
+
+```bash
+sudo apt install imagemagick
+```
+
+Conversion:
+
+```bash
+convert *.png animate.gif
+```
+
+_P.S. 100 delay = 1s_
 
 ## Embedded them to the beamer
 

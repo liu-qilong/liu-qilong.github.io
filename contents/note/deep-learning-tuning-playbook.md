@@ -4,9 +4,8 @@ tags:
   - Hinton/ML
 date: "2024-08-16"
 update: 
-link:
-  github: https://github.com/google-research/tuning_playbook
-  rednote: https://www.xiaohongshu.com/explore/66bed0820000000009015668?xsec_token=ABgXo5zAH7tHnJjGUBSodsiLwmuHXwyrfU2jQO2Yi8dyM=&xsec_source=pc_user
+link_github: https://github.com/google-research/tuning_playbook
+link_rednote: https://www.xiaohongshu.com/explore/66bed0820000000009015668?xsec_token=ABgXo5zAH7tHnJjGUBSodsiLwmuHXwyrfU2jQO2Yi8dyM=&xsec_source=pc_user
 ---
 
 # Deep Learning Tuning Playbook | Google Research

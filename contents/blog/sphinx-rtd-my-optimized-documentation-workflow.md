@@ -4,9 +4,8 @@ tags:
   - Hinton/CS/Python
 date: "2022-11-18"
 update: "2023-04-27"
-link:
-  medium: "https://medium.com/@liu-qilong/sphinx-readthedocs-my-optimized-documentation-workflow-169308270e99"
-  x: "https://x.com/liu_qi_long/status/1846822181810082106"
+link_medium: "https://medium.com/@liu-qilong/sphinx-readthedocs-my-optimized-documentation-workflow-169308270e99"
+link_x: "https://x.com/liu_qi_long/status/1846822181810082106"
 ---
 
 # Sphinx + ReadTheDocs: My optimized documentation workflow
@@ -15,7 +14,7 @@ link:
 
 If you are not familiar with writing docstrings or Sphinx documentation, I highly recommend checking out this tutorial:
 
-> [A “How to” Guide for Sphinx + ReadTheDocs - sglvladi](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/)
+> [A "How to" Guide for Sphinx + ReadTheDocs - sglvladi](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/)
 
 My workflow was adapted from this tutorial with some personalization. Here is an example:
 
@@ -33,7 +32,7 @@ At `docs/`, run
 sphinx-quickstart
 ```
 
-with option “separated `source/` and `build/` directories”.
+with option "separated `source/` and `build/` directories".
 
 ## Files and configuration
 

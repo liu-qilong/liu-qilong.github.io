@@ -4,9 +4,8 @@ tags:
   - Hinton/CS/LaTeX
 date: "2024-03-23"
 update: "2024-03-24"
-link:
-  medium: "https://medium.com/@liu-qilong/best-practices-for-marking-changes-of-latex-documents-45451db41bb7"
-  x: "https://x.com/liu_qi_long/status/1846449869051064390"
+link_medium: "https://medium.com/@liu-qilong/best-practices-for-marking-changes-of-latex-documents-45451db41bb7"
+link_x: "https://x.com/liu_qi_long/status/1846449869051064390"
 ---
 
 # latexdiff: mark changes of LaTeX documents

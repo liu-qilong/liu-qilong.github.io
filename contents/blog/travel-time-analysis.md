@@ -5,12 +5,11 @@ tags:
   - Odyssey
 date: "2024-10-10"
 update: "2024-10-11"
-link:
-  github: "https://github.com/liu-qilong/scripts/blob/main/notebook/travel-time-analysis/analysis.ipynb"
-  link: "https://www.icloud.com/shortcuts/818e538f2b2c45b6804d73515557a54e"
-  medium: "https://medium.com/@liu-qilong/travel-time-analysis-with-apple-shortcut-bb49a596f2b0"
-  x: "https://x.com/liu_qi_long/status/1846447008141529131"
-  rednote: "https://www.xiaohongshu.com/explore/67079f43000000002c02e597?xsec_token=ABYDZe8Ohp1TX7N4mMg5ARhUGqlxf6qd52QXBI6bRW2Fw=&xsec_source=pc_user"
+link_github: "https://github.com/liu-qilong/scripts/blob/main/notebook/travel-time-analysis/analysis.ipynb"
+link: "https://www.icloud.com/shortcuts/818e538f2b2c45b6804d73515557a54e"
+link_medium: "https://medium.com/@liu-qilong/travel-time-analysis-with-apple-shortcut-bb49a596f2b0"
+link_x: "https://x.com/liu_qi_long/status/1846447008141529131"
+link_rednote: "https://www.xiaohongshu.com/explore/67079f43000000002c02e597?xsec_token=ABYDZe8Ohp1TX7N4mMg5ARhUGqlxf6qd52QXBI6bRW2Fw=&xsec_source=pc_user"
 ---
 
 # Travel time analysis with Apple Shortcut

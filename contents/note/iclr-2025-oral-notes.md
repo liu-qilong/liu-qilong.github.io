@@ -4,10 +4,9 @@ tags:
   - Hinton/ConferenceReview
 date: "2025-06-13"
 update: 
-link:
-  link: https://iclr.cc/Conferences/2025
-  x: https://x.com/liu_qi_long/status/1933411943597088833
-  rednote: https://www.xiaohongshu.com/explore/684bdc02000000002001e272?xsec_token=ABR0Qhl0DVO_G1FfwbZfWx652_7t7ztn7bNktSLL7L0mE=&xsec_source=pc_user
+link: https://iclr.cc/Conferences/2025
+link_x: https://x.com/liu_qi_long/status/1933411943597088833
+link_rednote: https://www.xiaohongshu.com/explore/684bdc02000000002001e272?xsec_token=ABR0Qhl0DVO_G1FfwbZfWx652_7t7ztn7bNktSLL7L0mE=&xsec_source=pc_user
 ---
 
 # ICLR 2025 oral notes
@@ -18,17 +17,17 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 
 ### LLM
 
-- Transfusion [ChuntingZhou2025ICLR](https://openreview.net/forum?id=SI2hI0frk6) combines _next-token prediction_ for text and _diffusion-based learning_ for images within a single transformer architecture, bridging the modality gap without quantizing images into discrete tokens #🧠 
+- Transfusion [ChuntingZhou2025ICLR](https://openreview.net/forum?id=SI2hI0frk6) combines _next-token prediction_ for text and _diffusion-based learning_ for images within a single transformer architecture, bridging the modality gap without quantizing images into discrete tokens #🗞️/🧠 
 - Embedding
 	- [AlexIacob2025ICLR](https://openreview.net/forum?id=vf5aUZT0Fz) introduces a pre-training framework that decouples embedding layers from the transformer body, enabling robust training on heterogeneous data _(avoiding the curse of multi-linguality)_, improving generalization, and reducing memory footprint
 	- [ZiyueLi2025ICLR+](https://openreview.net/forum?id=eFGQ97z5Cd) investigates the limitation of using decoder-only models for embedding and finds that a good embedding can be acquired from the MoE layer, by combining routing weights (RW) and hidden states (HS)
 	  _They found that weighted sum of RW and HS outperforms concatenation, similar to [[AshishVaswani2017NeurIPS|Transformer]]'s positional embedding_
-	- [KihoPark2025ICLR](https://openreview.net/forum?id=bVTM2QKYuA) extend the _linear representation hypothesis_ to general concepts and show that hierarchical relationships are encoded as orthogonality #🧠 
+	- [KihoPark2025ICLR](https://openreview.net/forum?id=bVTM2QKYuA) extend the _linear representation hypothesis_ to general concepts and show that hierarchical relationships are encoded as orthogonality #🗞️/🧠 
 - Training
 	- Analysis
 		- [YiRen2025ICLR](https://openreview.net/forum?id=tPNHOoZFl9) proposes a novel _learning dynamics_ framework, i.e. how specific training examples influences the model's predictions on other examples, to understand LLM's behavior during fine-tuning (e.g., SFT, DPO, and other variants)
-		  Some counter-intuitive behavior can be well explained by the proposed framework, e.g. specific types of hallucination are strengthened after fine-tuning #🧠
-		- [JiyeonKim2025ICLR](https://openreview.net/forum?id=eHehzSDUFp) introduces the concept of _knowledge entropy_ to analyze how language models store and access knowledge and shows that knowledge entropy decreases as models are trained, correlating with a reduced ability to learn new information and an increased tendency to forget existing knowledge #🧠 
+		  Some counter-intuitive behavior can be well explained by the proposed framework, e.g. specific types of hallucination are strengthened after fine-tuning #🗞️/🧠
+		- [JiyeonKim2025ICLR](https://openreview.net/forum?id=eHehzSDUFp) introduces the concept of _knowledge entropy_ to analyze how language models store and access knowledge and shows that knowledge entropy decreases as models are trained, correlating with a reduced ability to learn new information and an increased tendency to forget existing knowledge #🗞️/🧠 
 		- [YudaSong2025ICLR](https://openreview.net/forum?id=mtJSMcF3ek) conducts a comprehensive examination on LLM self-improvement capability and finds that the generation-verification gap grows with more training, with better or worse model verifying or generating
 		- [SachinGoyal2025ICLR](https://openreview.net/forum?id=SPS6HzVzyt) identifies and thoroughly analyzes an important phenomenon called _context-parametric inversion_ in instruction-tuned large language models, where models counter-intuitively become less reliant on input context as training progresses
 	- Pre-training
@@ -42,8 +41,8 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 		- Safety
 			- [TianshengHuang2025ICLR](https://openreview.net/forum?id=tTPHgb0EtV) proposes an alignment-stage method to defend against _harmful fine-tuning attack_ by adding a loss regularizer in the alignment stage's optimization
 			- [XinranWang2025ICLR](https://openreview.net/forum?id=NN6QHwgRrQ) aligns generative models with _multiple human values_ by framing value alignment as a optimization problem with user-set constraints
-			- Backtracking [YimingZhang2025ICLR++](https://openreview.net/forum?id=Bo62NeU6VF) rethink about an fundamental limitation of generative LLM: the generation is unidirectional, thus unable to _backtrack_. By introducing a `RESET` token for backtracking during SFT or DPO, the author improves the safety without harming helpfulness #🧠 
-			- [XiangyuQi2025ICLR+](https://openreview.net/forum?id=6Mxhg9PtDE) probs a fundamental vulnerability in current safety alignment approaches: _shallow safety alignment_, i.e. primarily adapting a model's generative distribution over only its very first few output tokens. It proposes "deep safety alignment" as a promising defense #🧠 
+			- Backtracking [YimingZhang2025ICLR++](https://openreview.net/forum?id=Bo62NeU6VF) rethink about an fundamental limitation of generative LLM: the generation is unidirectional, thus unable to _backtrack_. By introducing a `RESET` token for backtracking during SFT or DPO, the author improves the safety without harming helpfulness #🗞️/🧠 
+			- [XiangyuQi2025ICLR+](https://openreview.net/forum?id=6Mxhg9PtDE) probs a fundamental vulnerability in current safety alignment approaches: _shallow safety alignment_, i.e. primarily adapting a model's generative distribution over only its very first few output tokens. It proposes "deep safety alignment" as a promising defense #🗞️/🧠 
 		- Reinforcement learning based
 			- [HaoSun2025ICLR](https://openreview.net/forum?id=rfdblE10qm) investigates the use of the Bradley-Terry model for reward modeling in LLM alignment, establishing its theoretical foundations while questioning its necessity for downstream optimization. It introduce _order consistency_ as a central objective and propose a classification-based alternative
 			  _The experiments are quite extensive: more than 12,000 experimental setups, using base LLMs_
@@ -79,7 +78,7 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 	- Copyright
 		- [JavierAbad2025ICLR](https://openreview.net/forum?id=kRoWeLTpL4) adaptively aggregates the model outputs to minimize the reproduction of copyrighted content, based on models trained on disjoint sets of copyrighted material
 - Evaluation
-	- [YanScholten2025ICLR+](https://openreview.net/forum?id=51WraMid8K) discusses the limitation of deterministic evaluations in capturing the whole output distribution. It proposes a formal probabilistic evaluation framework for LLMs with high-probability guarantees. It presents a solid case in unlearning #🧠 
+	- [YanScholten2025ICLR+](https://openreview.net/forum?id=51WraMid8K) discusses the limitation of deterministic evaluations in capturing the whole output distribution. It proposes a formal probabilistic evaluation framework for LLMs with high-probability guarantees. It presents a solid case in unlearning #🗞️/🧠 
 	- Evaluation pitfalls
 		- [XiaosenZheng2025ICLR](https://openreview.net/forum?id=syThiTmWWm) show that _null models_ that always return the same cheating responses can achieve high win rates on automatic LLM benchmarks, advocating for anti-cheat mechanisms
 		- [RicardoDominguezOlmedo2025ICLR+](https://openreview.net/forum?id=jOmk0uS1hl)defines _training on the test task_ as a potential problem for evaluating LLMs, which could be common practice and strictly speaking not data contamination. It proposes fine-tuning on a small, common set of task-related data to put all the methods on equal footing
@@ -100,7 +99,7 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 		- [JaehunJung2025ICLR](https://openreview.net/forum?id=UHPnqSTBPO) proposes a LLM-as-Judge framework that _dynamically selects_ when to trust different judge models to reduce evaluation overhead, while providing a provable guarantee of human-judge agreement
 - Interpretability
 	- Identify critical heads
-		- [JunsolKim2025ICLR](https://openreview.net/forum?id=rwqShzb9li) probes & isolates the attention heads that are most highly influential over political bias. These heads can be used to monitor the LLM's stances. Interestingly, by applying linear interventions to these attention heads, the LLM can be _steered_ toward a more liberal or conservative stance #🧠 
+		- [JunsolKim2025ICLR](https://openreview.net/forum?id=rwqShzb9li) probes & isolates the attention heads that are most highly influential over political bias. These heads can be used to monitor the LLM's stances. Interestingly, by applying linear interventions to these attention heads, the LLM can be _steered_ toward a more liberal or conservative stance #🗞️/🧠 
 		- [WenhaoWu2025ICLR](https://openreview.net/forum?id=EytBpUGB1Z) demonstrates how to detect _retrieval heads_, which extract relevant information from long context, and validates them with experiments. Specifically, under a Needle-in-a-Haystack Test (NIAH) setting, it searches for attention heads that consistently attends to the injected tokens from a long-context input
 		- [ZhenhongZhou2025ICLR](https://openreview.net/forum?id=h0Ak8A5yqw) interprets the contribution of individual attention heads to LLM safety and identifies critical heads
 	- Sparse auto-encoders (SAEs)
@@ -151,15 +150,15 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 			- [HaiyangLiu2025ICLR](https://openreview.net/forum?id=LbEWwJOufy) generates high-fidelity co-speech gesture videos using a motion graph-based retrieval approach. It addresses audio-motion misalignment and visual artifacts by introducing (i) a hierarchical audio-motion joint embedding and (ii) a diffusion-based interpolation network
 - 3D
 	- 3D segmentation
-		- [XiuweiXu2025ICLR](https://openreview.net/forum?id=XFYUwIyTxQ) proposes a geometry-aware module that lifts 2D mask to 3D queries for using SAM, a 2D vision foundation models (VFM), in _real time_ 3D segmentation #🚀
-		- Open-YOLO 3D [MohamedElAmineBoudjoghra2025ICLR](https://openreview.net/forum?id=CRmiX0v16e) presents an efficient approach to open-vocabulary 3D instance segmentation by leveraging 2D bounding box priors from a pre-trained open-vocabulary 2D object detector. Main contribution is the Multi-View Prompt Distribution (MVPDist) method, which effectively utilizes multi-view information while addressing potential misclassification from the 2D object detector #🚀 
+		- [XiuweiXu2025ICLR](https://openreview.net/forum?id=XFYUwIyTxQ) proposes a geometry-aware module that lifts 2D mask to 3D queries for using SAM, a 2D vision foundation models (VFM), in _real time_ 3D segmentation #🗞️/🚀
+		- Open-YOLO 3D [MohamedElAmineBoudjoghra2025ICLR](https://openreview.net/forum?id=CRmiX0v16e) presents an efficient approach to open-vocabulary 3D instance segmentation by leveraging 2D bounding box priors from a pre-trained open-vocabulary 2D object detector. Main contribution is the Multi-View Prompt Distribution (MVPDist) method, which effectively utilizes multi-view information while addressing potential misclassification from the 2D object detector #🗞️/🚀 
 	- 3D reconstruction
 		- [BotaoYe2025ICLR](https://openreview.net/forum?id=P4o9akekdf) reconstructs 3DGS from sparse and unposed images, avoiding errors associated with per-frame Gaussians and pose estimation. It's trained solely on photometric constraints without the geometric ground truth, making a wider range of datasets available for training
 		- TetSphere splatting [MinghaoGuo2025ICLR](https://openreview.net/forum?id=8enWnd6Gp3) represents 3D shapes by deforming a collection of tetrahedral spheres, with geometric regularizations and constraints that effectively resolve common mesh issues such as irregular triangles, non-manifoldness, and floating artifacts
 		- NeuralPlane [HanqiaoYe2025ICLR](https://openreview.net/forum?id=5UKrnKuspb)  utilizes foundational models to provide prior (normal, segmentation, etc) and then employ neural fields to learn a plane field that is aware of both geometry and scene semantics
-		- Grendel [HexuZhao2025ICLR](https://openreview.net/forum?id=pQqeQpMkE7) presents a parallel training method for 3DGS for 3D reconstruction, which significantly improves the training speed and working scene scale #🚀 
+		- Grendel [HexuZhao2025ICLR](https://openreview.net/forum?id=pQqeQpMkE7) presents a parallel training method for 3DGS for 3D reconstruction, which significantly improves the training speed and working scene scale #🗞️/🚀 
 	- Novel view synthesis
-		- LVSM [HaianJin2025ICLR](https://openreview.net/forum?id=QQBPWtvtcn)  uses purely transformer-based framework for scalable and generalizable novel view synthesis from sparse-view inputs. It bypasses the _3D inductive biases_ used in previous methods, from 3D representations (e.g., NeRF, 3DGS) to network designs (e.g., epipolar projections, plane sweeps), addressing novel view synthesis with a _fully data-driven approach_ #🚀
+		- LVSM [HaianJin2025ICLR](https://openreview.net/forum?id=QQBPWtvtcn)  uses purely transformer-based framework for scalable and generalizable novel view synthesis from sparse-view inputs. It bypasses the _3D inductive biases_ used in previous methods, from 3D representations (e.g., NeRF, 3DGS) to network designs (e.g., epipolar projections, plane sweeps), addressing novel view synthesis with a _fully data-driven approach_ #🗞️/🚀
 - Vision-language model
 	- [SimonSchrodi2025ICLR](https://openreview.net/forum?id=uAFHCZRmXk) studies the phenomena of modality gap and object bias in contrastive VLMs, and shows that they stem from an _information imbalance_ between modalities, limiting alignment in the embedding space, with the modality gap driven by few dimensions
 	  _Praised by the reviewers as intriguing by connecting the modality gap with entropy, an innovative perspective_
@@ -258,7 +257,7 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 		- [NetaShaul2025ICLR](https://openreview.net/forum?id=tcvMzR2NrP) makes a significant contribution to _discrete generative modeling_ by broadening the design space of flow matching methods, allowing the use of arbitrary probability paths with a strong theoretical foundation grounded in kinetic-optimal velocities
 		- [YongxingZhang2025ICLR](https://openreview.net/forum?id=EO8xpnW7aX) extends diffusion model to learn distributions over the group of permutations $S_n$, which is essential in fields of combinatorics, physics, and chemistry, etc.
 	- Flexible-length generation
-		- Block Diffusion [MarianneArriola2025ICLR](https://openreview.net/forum?id=tyEyYT267x) proposes to decompose a sequence into blocks of tokens, within each discrete diffusion is used, for enabling flexible-length generation. It also improves inference efficiency with KV caching and parallel token sampling #🧠 
+		- Block Diffusion [MarianneArriola2025ICLR](https://openreview.net/forum?id=tyEyYT267x) proposes to decompose a sequence into blocks of tokens, within each discrete diffusion is used, for enabling flexible-length generation. It also improves inference efficiency with KV caching and parallel token sampling #🗞️/🧠 
 	- Few-step generation
 		- [VinhTong2025ICLR](https://openreview.net/forum?id=xDrFWUmCne) improves the inference-time time-step schedule with a teacher/student framework to learn the _optimal time discretization_ based on minimizing the KL divergence between the teacher and student's output distribution
 		  _It's validated on image, point cloud, & protein structure tasks_
@@ -287,7 +286,7 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 		- [XunhaoLai2025ICLR](https://openreview.net/forum?id=OfjIlbelrT) proposes a sparse attention mechanism for efficient long-sequence inference. The core idea is to dynamically adjust sparse attention with query-aware sparse pattern determination and cumulative-attention based index selection
 - Training efficiency
 	- Cut Cross-Entropy (CCE) [ErikWijmans2025ICLR](https://openreview.net/forum?id=E4Fk3YuG56) proposes to drastically reduce the memory consumption of the cross-entropy loss, by avoiding materializing the logits of all tokens in vocabulary and only computes the logits for the correct token and evaluates the log-sum-exp over on the fly
-	  _As the vocabulary size grows, memory consumption increasingly shifts from weights and activations to the cross-entropy layer. Thus such technique could reduce memory footprint of loss computation from 24 GB to 1 MB in a 2B model_ #🧠 
+	  _As the vocabulary size grows, memory consumption increasingly shifts from weights and activations to the cross-entropy layer. Thus such technique could reduce memory footprint of loss computation from 24 GB to 1 MB in a 2B model_ #🗞️/🧠 
 - Theoretical analysis
 	- [GiuseppeBruno2025ICLR](https://openreview.net/forum?id=eBS3dQQ8GV) studies a mean-field limit for a simplified model of transformers, with the framework Geshkovski et al. (2023) and extends it in various theoretical aspects
 	- [JunoKim2025ICLR+](https://openreview.net/forum?id=n2NidsYDop) studies a simple setup of $k$-parity problem with 1-layer Transformer and provides a separation results for transformer (i) trained without intermediate supervision and (ii) trained with teacher forcing, thereby showing the importance of chain-of-thought
@@ -296,7 +295,7 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 
 - RNN
 	- [RiccardoGrazzi2025ICLR](https://openreview.net/forum?id=UvTo3tVBk2) demonstrates that extending the eigenvalue range of Mamba and DeltaNet to include negative values not only enables them to solve parity but consistently improves their performance on state-tracking tasks
-	- LinOSS [TKonstantinRusch2025ICLR](https://openreview.net/forum?id=GRMfXcAAFh)  is inspired by cortical dynamics of biological neural networks and uses forced harmonic oscillators to form the state space. It outperforms Mamba and LRU by nearly 2x on a sequence modeling task with sequences of length 50k #🚀 
+	- LinOSS [TKonstantinRusch2025ICLR](https://openreview.net/forum?id=GRMfXcAAFh)  is inspired by cortical dynamics of biological neural networks and uses forced harmonic oscillators to form the state space. It outperforms Mamba and LRU by nearly 2x on a sequence modeling task with sequences of length 50k #🗞️/🚀 
 - Time series pattern machine (TSPM)
 	- [ShiyuWang2025ICLR](https://openreview.net/forum?id=1CLzLXSFNn) transforms time series data into multi-resolution images to capture complex _temporal and frequency-domain patterns_, achieving impressive results in various time series analytical tasks
 
@@ -324,7 +323,7 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 
 ### Information theory inspired
 
-- KAN (Kolmogorov-Arnold Networks) [ZimingLiu2025ICLR](https://openreview.net/forum?id=Ozo7qJ5vZi) has learnable activation functions on all edges ("weights'') -- every weight parameter is replaced by a univariate function parametrized as a spline. It's claimed to have better sample efficiency, parameter efficiency, & interpretability than [[DavidERumelhart1986Nature|MLP]], thus suitable for AI4Science tasks. However, it's much slower to train #🔥
+- KAN (Kolmogorov-Arnold Networks) [ZimingLiu2025ICLR](https://openreview.net/forum?id=Ozo7qJ5vZi) has learnable activation functions on all edges ("weights'') -- every weight parameter is replaced by a univariate function parametrized as a spline. It's claimed to have better sample efficiency, parameter efficiency, & interpretability than [[DavidERumelhart1986Nature|MLP]], thus suitable for AI4Science tasks. However, it's much slower to train #🗞️/🔥
 - [AndreasChristianSchneider2025ICLR](https://openreview.net/forum?id=CLE09ESvul) proposes using Partial Information Decomposition as a local objective for neurons training and thus achieves neuron-level interpretability
 
 ### Probabilistic methods
@@ -348,7 +347,7 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 	- [JingyangLi2025ICLR](https://openreview.net/forum?id=25kAzqzTrz) theoretically justifies why FixMatch-like self-supervised learning methods outperform supervised learning (SL) in generalization for deep networks, showing that FixMatch learns all class features while SL captures only a subset. It also proposes an enhanced version of FixMatch
 	- [KrishnaBalasubramanian2025ICLR](https://openreview.net/forum?id=sbG8qhMjkZ) provides a convergence analysis of the Stein Variational Gradient Descent (SVGD) algorithm in its full formulation, i.e., using finitely many particles and in discrete time
 	  _P.S. Praised by the reviewers as providing a long sought result_
-	- [SungyoonKim2025ICLR](https://openreview.net/forum?id=4xWQS2z77v) studies the loss landscape of regularized ReLU networks based on convex duality, focusing on the structure of _stationary points_, the _connectivity_ of optimal solutions and the _non uniqueness_ of optimal solutions. The authors starts with a two-layer network with scalar output and considers extensions to minimal norm interpolation, vector-valued networks, and deep neural networks #🧠 
+	- [SungyoonKim2025ICLR](https://openreview.net/forum?id=4xWQS2z77v) studies the loss landscape of regularized ReLU networks based on convex duality, focusing on the structure of _stationary points_, the _connectivity_ of optimal solutions and the _non uniqueness_ of optimal solutions. The authors starts with a two-layer network with scalar output and considers extensions to minimal norm interpolation, vector-valued networks, and deep neural networks #🗞️/🧠 
 	  _Praised by reviewers as insightful, especially the "staircase of connectivity" phenomenon_
 	- [ArthurJacot2025ICLR+](https://openreview.net/forum?id=1HCN4pjTb4) shows that _neural collapse_ provably holds in the end-to-end training of the model with weight decay, when low training error, balancedness of linear layers, and bounded conditioning of pre-linear features are meet
 - Experimental
@@ -396,7 +395,7 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 	- [AbhishekPanigrahi2025ICLR+](https://openreview.net/forum?id=wPMRwmytZe) investigates why progressive distillation can mitigate the challenge of better teacher doesn't always lead to a better student. It identifies that its benefits stems from an "implicit curriculum" embedded within these intermediate teacher checkpoints, which accelerates the optimization process of the student
 - Continuous learning
 	- [GangweiJiang2025ICLR](https://openreview.net/forum?id=gc8QAQfXv6) studies the phenomenon of _catastrophic forgetting_ using Function Vectors and found that task similarity is correlated with the amount of forgetting. It proposes two solution: (ii) intervening on the trained model using function vectors of previous tasks and (iii) training the model with additional regularization with the function vectors of previous tasks
-	- [ZhuoxiaoChen2025ICLR](https://openreview.net/forum?id=Y6aHdDNQYD) proposes a test-time adaptation framework for LiDAR-based 3D object detection. The main idea is to dynamically select and assemble historical checkpoints to build a composite "super model" that adapts to domain shifts #🧠 
+	- [ZhuoxiaoChen2025ICLR](https://openreview.net/forum?id=Y6aHdDNQYD) proposes a test-time adaptation framework for LiDAR-based 3D object detection. The main idea is to dynamically select and assemble historical checkpoints to build a composite "super model" that adapts to domain shifts #🗞️/🧠 
 	- [SongTang2025ICLR](https://openreview.net/forum?id=FIj9IEPCKr) uses vision-language models (VLMs) for source-free domain adaptation (SFDA). The major contribution is addressing the noise of VLMs' supervision with proxy denoising (ProDe) before target adaptation
 
 ### Federated learning

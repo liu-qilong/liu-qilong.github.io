@@ -4,10 +4,9 @@ tags:
   - Hinton/ConferenceReview
 date: "2025-02-28"
 update: 
-link:
-  link: https://neurips.cc/Conferences/2024
-  x: https://x.com/liu_qi_long/status/1933402958169059531
-  rednote: https://www.xiaohongshu.com/explore/67c1325e000000000d016baa?xsec_token=ABdnb9J32yoL9Ob0yrVUfFuqEP67oksfeqT8ZFdk2M3oM=&xsec_source=pc_user
+link: https://neurips.cc/Conferences/2024
+link_x: https://x.com/liu_qi_long/status/1933402958169059531
+link_rednote: https://www.xiaohongshu.com/explore/67c1325e000000000d016baa?xsec_token=ABdnb9J32yoL9Ob0yrVUfFuqEP67oksfeqT8ZFdk2M3oM=&xsec_source=pc_user
 ---
 
 # NeurIPS 2024 oral notes
@@ -48,7 +47,7 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 	- [MichaelLuo2024NeurIPS](https://openreview.net/forum?id=3Odq2tGSpp) automatically selects and composes task-specific adapters for diffusion models based on a user-provided prompt
 	- Generation
 		- [KeyuTian2024NeurIPS](https://openreview.net/forum?id=gojL67CfS8) presents a new generation paradigm that redefines the autoregressive learning on images as coarse-to-fine "next-scale prediction", diverging from the standard raster-scan "next-token prediction"
-		  It presents two important properties of LLMs: scaling laws and zero-shot task generalization #📖
+		  It presents two important properties of LLMs: scaling laws and zero-shot task generalization #🗞️/👀
 		- [TianhongLi2024NeurIPS+](https://openreview.net/forum?id=clTa4JFBML) improves unconditioned image generation by using latent representation to conditioned the image generation process
 - Video
 	- Generation
@@ -62,7 +61,7 @@ _P.S. The paper descriptions are based on my personal understanding. Some text w
 		- [JunhaoCai2024NeurIPS](https://openreview.net/forum?id=SSCtCq2MH2) uses Gaussians for simulation & physical property estimation
 		- [ZhongchaoYi2024NeurIPS](https://openreview.net/forum?id=tnh4LK72yj) cooperative multi-dimensional and multi-task learning for urban intelligence
 	- Generation
-		- [MinghuaLiu2024NeurIPS](https://openreview.net/forum?id=x7pjdDod6Z) generates mesh with 3D sparse voxels as representation, instead of triplane #📖
+		- [MinghuaLiu2024NeurIPS](https://openreview.net/forum?id=x7pjdDod6Z) generates mesh with 3D sparse voxels as representation, instead of triplane #🗞️/👀
 		  *P.S. Trained with 8xH100 for 1 week*
 
 ### Recommendation

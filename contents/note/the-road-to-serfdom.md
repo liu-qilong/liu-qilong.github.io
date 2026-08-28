@@ -4,10 +4,9 @@ tags:
   - Weber/Politics
 date: "2024-12-30"
 update: 
-link:
-  amazon: https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553
-  x: https://x.com/liu_qi_long/status/1879778575743918282
-  rednote: https://www.xiaohongshu.com/explore/6788af23000000001901a590?xsec_token=ABGUqSnP7USBPkgr26pzYEqAdofQWifKuhx77cljaALBw=&xsec_source=pc_user
+link_amazon: https://www.amazon.com/Road-Serfdom-Documents-Definitive-Collected/dp/0226320553
+link_x: https://x.com/liu_qi_long/status/1879778575743918282
+link_rednote: https://www.xiaohongshu.com/explore/6788af23000000001901a590?xsec_token=ABGUqSnP7USBPkgr26pzYEqAdofQWifKuhx77cljaALBw=&xsec_source=pc_user
 ---
 
 # The Road to Serfdom | Friedrich Hayek
@@ -123,7 +122,7 @@ In effect, it destructs the "rule of law" and becomes the "rule of status", lead
 
 > A necessary, and only apparently paradoxical, result of this is that formal equality before the law is in conflict, and in fact incompatible, with any activity of the government deliberately aiming at material or substantive equality of different people, and that any policy aiming directly at a substantive ideal of distributive justice must lead to the destruction of the Rule of Law.
 
-> It means in effect a return to the rule of status, a reversal of the “movement of progressive societies... By giving the government unlimited powers, the most arbitrary rule can be made legal; and in this way a democracy may set up the most complete despotism imaginable.
+> It means in effect a return to the rule of status, a reversal of the "movement of progressive societies... By giving the government unlimited powers, the most arbitrary rule can be made legal; and in this way a democracy may set up the most complete despotism imaginable.
 
 ## Part III: Central Planning Leads to Totalitarianism
 
@@ -155,7 +154,7 @@ The central control of production leads to a complete control of available posit
 
 > We shall no longer be free to be rational or efficient only when and where we think it worth while; we shall all have to conform to the standards which the planning authority must fix in order to simplify its task ... It will have to reduce the diversity of human capacities and inclinations to a few categories of readily interchangeable units and deliberately to disregard minor personal differences.
 
-> Although the professed aim of planning would be that man should cease to be a mere means, in fact—since it would be impossible to take account in the plan of individual likes and dislikes—the individual would more than ever become a mere means, to be used by the authority in the service of such abstractions as the “social welfare” or the “good of the community.
+> Although the professed aim of planning would be that man should cease to be a mere means, in fact—since it would be impossible to take account in the plan of individual likes and dislikes—the individual would more than ever become a mere means, to be used by the authority in the service of such abstractions as the "social welfare" or the "good of the community.
 
 > We should be seriously deceiving ourselves if for these apprehensions we sought comfort in the consideration that the adoption of central planning would merely mean a return, after a brief spell of a free economy, to the ties and regulations which have governed economic activity through most ages, and that therefore the infringements of personal liberty need not be greater than they were before the age of laissez faire. This is a dangerous illusion.
 
@@ -163,14 +162,14 @@ The central control of production leads to a complete control of available posit
 
 By abolishing private property, the guaranty of our freedom is also abolished:
 
-> What our generation has forgotten is that the system of private property is the most important guaranty of freedom, not only for those who own property, but scarcely less for those who do not. It is only because the control of the means of production is divided among many people acting independently that nobody has complete power over us, that we as individuals can decide what to do with ourselves. If all the means of production were vested in a single hand, whether it be nominally that of “society” as a whole or that of a dictator, whoever exercises this control has complete power over us.
+> What our generation has forgotten is that the system of private property is the most important guaranty of freedom, not only for those who own property, but scarcely less for those who do not. It is only because the control of the means of production is divided among many people acting independently that nobody has complete power over us, that we as individuals can decide what to do with ourselves. If all the means of production were vested in a single hand, whether it be nominally that of "society" as a whole or that of a dictator, whoever exercises this control has complete power over us.
 
 > The choice open to us is not between a system in which everybody will get what he deserves according to some absolute and universal standard of right, and one where the individual shares are determined partly by accident or good or ill chance, but between a system where it is the will of a few persons that decides who is to get what, and one where it depends at least partly on the ability and enterprise of the people concerned and partly on unforeseeable circumstances.
 > As the coercive power of the state will alone decide who is to have what, the only power worth having will be a share in the exercise of this directing power.
 
 There is no definite rules/principles that can be defined/agreed to. Thus the ruling of a planed society can only be coercive and in effect only selectively benefits the groups favored by the ruling party:
 
-> It does not free us from the necessity of deciding in every particular instance between the merits of particular individuals or groups, and it gives us no help in that decision. All it tells us in effect is to take from the rich as much as we can. But, when it comes to the distribution of the spoils, the problem is the same as if the formula of “greater equality” had never been conceived.
+> It does not free us from the necessity of deciding in every particular instance between the merits of particular individuals or groups, and it gives us no help in that decision. All it tells us in effect is to take from the rich as much as we can. But, when it comes to the distribution of the spoils, the problem is the same as if the formula of "greater equality" had never been conceived.
 
 > What standards we have are derived from the competitive regime we have known and would necessarily disappear soon after the disappearance of competition. What we mean by a just price, or a fair wage is either the customary price or wage, the return which past experience has made people expect, or the price or wage that would exist if there were no monopolistic exploitation.
 
@@ -180,7 +179,7 @@ There is no definite rules/principles that can be defined/agreed to. Thus the ru
 
 The groups whose conditions are relatively worsen, e.g. the middle class, could turn to support Fascism movements. Though they appear to support different groups than the socialists, they are exercising exactly the same principles. As Hayek has pointed out: "Fascism is the stage reached after communism has proved an illusion".
 
-> There can be little doubt that no single economic factor has contributed more to help these movements than the envy of the unsuccessful professional man, the university-trained engineer or lawyer, and of the “white-collared proletariat” in general, of the engine driver or compositor and other members of the strongest trade-unions whose income was many times theirs.
+> There can be little doubt that no single economic factor has contributed more to help these movements than the envy of the unsuccessful professional man, the university-trained engineer or lawyer, and of the "white-collared proletariat" in general, of the engine driver or compositor and other members of the strongest trade-unions whose income was many times theirs.
 
 > Fascism and National Socialism, on the other hand, grew out of the experience of an increasingly regulated society’s awakening to the fact that democratic and international socialism was aiming at incompatible ideals. Their tactics were developed in a world already dominated by socialist policy and the problems it creates. They had no illusions about the possibility of a democratic solution of problems which require more agreement among people than can reasonably be expected. They had no illusions about the capacity of reason to decide all the questions of the relative importance of the wants of different men or groups which planning inevitably raises, or about the formula of equality providing an answer. They knew that the strongest group which rallied enough supporters in favor of a new hierarchical order of society, and which frankly promised privileges to the classes to which it appealed, was likely to obtain the support of all those who were disappointed because they had been promised equality but found that they had merely furthered the interest of a particular class.
 
@@ -208,7 +207,7 @@ Security will become a privilege and define one social status. It will be someth
 
 The moral view a totalitarian regime leads to:
 
-> The principle that the end justifies the means is in individualist ethics regarded as the denial of all morals. In collectivist ethics it becomes necessarily the supreme rule; there is literally nothing which the consistent collectivist must not be prepared to do if it serves “the good of the whole,” because the “good of the whole” is to him the only criterion of what ought to be done.
+> The principle that the end justifies the means is in individualist ethics regarded as the denial of all morals. In collectivist ethics it becomes necessarily the supreme rule; there is literally nothing which the consistent collectivist must not be prepared to do if it serves "the good of the whole," because the "good of the whole" is to him the only criterion of what ought to be done.
 
 > Since it is the supreme leader who alone determines the ends, his instruments must have no moral convictions of their own.
 
@@ -236,7 +235,7 @@ In such a corrupted ladder of power, the worst almost always get on top:
 
 To guide public opinion, one effective technique the totalitarian propaganda could use is to deprive the meaning of words:
 
-> And the most efficient technique to this end is to use the old words but change their meaning... The “collective freedom” he offers us is not the freedom of the members of society but the unlimited freedom of the planner to do with society what he pleases... But “freedom” or “liberty” are by no means the only words whose meaning has been changed into their opposites to make them serve as instruments of totalitarian propaganda... Gradually, as this process continues, the whole language becomes despoiled, and words become empty shells deprived of any definite meaning.
+> And the most efficient technique to this end is to use the old words but change their meaning... The "collective freedom" he offers us is not the freedom of the members of society but the unlimited freedom of the planner to do with society what he pleases... But "freedom" or "liberty" are by no means the only words whose meaning has been changed into their opposites to make them serve as instruments of totalitarian propaganda... Gradually, as this process continues, the whole language becomes despoiled, and words become empty shells deprived of any definite meaning.
 
 All channels of knowledge and information will be controlled and all views that could challenge the propaganda will be ruthlessly silenced:
 
@@ -246,7 +245,7 @@ All channels of knowledge and information will be controlled and all views that 
 
 To justify its policy, the totalitarian regime will construct a comprehensive theory for it. Therefore, science will become a political problem:
 
-> Plato’s “noble lies” and Sorel’s “myths” serve the same purpose as the racial doctrine of the Nazis or the theory of the corporative state of Mussolini.4 They are all necessarily based on particular views about facts which are then elaborated into scientific theories in order to justify a preconceived opinion.
+> Plato’s "noble lies" and Sorel’s "myths" serve the same purpose as the racial doctrine of the Nazis or the theory of the corporative state of Mussolini.4 They are all necessarily based on particular views about facts which are then elaborated into scientific theories in order to justify a preconceived opinion.
 
 > Science for science’s sake, art for art’s sake, are equally abhorrent to the Nazis, our socialist intellectuals, and the communists. Every activity must derive its justification from a conscious social purpose... Once science has to serve, not truth, but the interests of a class, a community, or a state, the sole task of argument and discussion is to vindicate and to spread still further the beliefs by which the whole life of the community is directed.
 
@@ -276,7 +275,7 @@ Interestingly, the structure of Prussian nation was astonishingly similar to tha
 
 > The structure of the English nation is based on the distinction between rich and poor, that of the Prussian on that between command and obedience... In Prussia there existed a real state in the most ambitious meaning of the word. There could be, strictly speaking, no private persons. Everybody who lived within the system that worked with the precision of a clockwork, was in some way a link in it.
 
-> The “German idea of the state,” as formulated by Fichte, Lassalle, and Rodbertus, is that the state is neither founded nor formed by individuals, nor an aggregate of individuals, nor is its purpose to serve any interest of individuals. It is a Volksgemeinschaft in which the individual has no rights but only duties.
+> The "German idea of the state," as formulated by Fichte, Lassalle, and Rodbertus, is that the state is neither founded nor formed by individuals, nor an aggregate of individuals, nor is its purpose to serve any interest of individuals. It is a Volksgemeinschaft in which the individual has no rights but only duties.
 
 > Is in the future trade to govern the state, or the state to govern trade? In the face of this question Prussianism and Socialism are the same… Prussianism and Socialism combat the England in our midst.
 
@@ -298,7 +297,7 @@ Organized capital & organized labor both have their versions of quest to an orga
 
 Even in dealing with monopoly, state control is not an ideal solution: it (i) grants the monopoly a permanent position and (ii) makes critiquing the monopoly equivalent to critiquing the party, which will hardly be tolerated. A better option is state regulation that suppresses the monopoly's profit: 
 
-> The conviction that this trend is inevitable is characteristically based on familiar economic fallacies—the presumed necessity of the general growth of monopolies in consequence of technological developments, the alleged “potential plenty,” and all the other popular catchwords which appear in works of this kind.
+> The conviction that this trend is inevitable is characteristically based on familiar economic fallacies—the presumed necessity of the general growth of monopolies in consequence of technological developments, the alleged "potential plenty," and all the other popular catchwords which appear in works of this kind.
 
 > It means in most instances that a temporary monopoly is given the power to secure its position for all time—a power almost certain to be used. Where the power which ought to check and control monopoly becomes interested in sheltering and defending its appointees, where for the government to remedy an abuse is to admit responsibility for it, and where criticism of the actions of monopoly means criticism of the government, there is little hope of monopoly becoming the servant of the community.
 
@@ -316,7 +315,7 @@ The contempt for material consideration is a refusal of recognizing material res
 
 The ill desire of "breaking others' eggs" to achieve one's single-minded idealist can't but produces more severe damage, since it demolishes the ethical fences that individualistic values set:
 
-> The categorical and irresponsible “it must be done at all cost” of the single-minded idealist is likely to do the greatest harm... All this surely indicates that our moral sense has been blunted rather than sharpened. When we are reminded, as more and more frequently happens, that one cannot make omelettes without breaking eggs, the eggs which are broken are almost all of the kind which a generation or two ago were regarded as the essential bases of civilized life. And what atrocities committed by powers with whose professed principles they sympathize have not been readily condoned by many of our so-called “liberals”.
+> The categorical and irresponsible "it must be done at all cost" of the single-minded idealist is likely to do the greatest harm... All this surely indicates that our moral sense has been blunted rather than sharpened. When we are reminded, as more and more frequently happens, that one cannot make omelettes without breaking eggs, the eggs which are broken are almost all of the kind which a generation or two ago were regarded as the essential bases of civilized life. And what atrocities committed by powers with whose professed principles they sympathize have not been readily condoned by many of our so-called "liberals".
 
 > The virtues these people possessed—in a higher degree than most other people, excepting only a few of the smaller nations, like the Swiss and the Dutch—were independence and self-reliance, individual initiative and local responsibility, the successful reliance on voluntary activity, noninterference with one’s neighbor and tolerance of the different and queer, respect for custom and tradition, and a healthy suspicion of power and authority.
 
@@ -332,7 +331,7 @@ To successfully enforce a comprehensive social plan, it needs to push away exter
 
 The socialists propose the solution of an international planning authority. However, it can only be put into practice with coercion since a unitary agreement of the plan around the globe could hardly be reached. The international authority can only be recognized as suppressive if a people's development must depends on its veto/approval:
 
-> Those who at least partly realize these dangers usually draw the conclusion that economic planning must be done “internationally,” i.e., by some supernational authority... But, as the scale increases, the amount of agreement on the order of ends decreases and the necessity to rely on force and compulsion grows... Planning on an international scale, even more than is true on a national scale, cannot be anything but a naked rule of force, an imposition by a small group on all the rest.
+> Those who at least partly realize these dangers usually draw the conclusion that economic planning must be done "internationally," i.e., by some supernational authority... But, as the scale increases, the amount of agreement on the order of ends decreases and the necessity to rely on force and compulsion grows... Planning on an international scale, even more than is true on a national scale, cannot be anything but a naked rule of force, an imposition by a small group on all the rest.
 
 > If most people are not willing to see the difficulty, this is mainly because, consciously or unconsciously, they assume that it will be they who will settle these questions for the others, and because they are convinced of their own capacity to do this justly and equitably... How many people in England would be prepared to submit to the decision of an international authority, however democratically constituted, which had power to decree that the development of the Spanish iron industry must have precedence over similar development in South Wales, that the optical industry had better be concentrated in Germany to the exclusion of Great Britain, or that only fully refined gasoline should be imported to Great Britain and all the industries connected with refining reserved for the producer countries.
 

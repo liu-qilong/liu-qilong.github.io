@@ -4,11 +4,10 @@ tags:
   - Achilles/Carrer
 date: "2024-05-09"
 update: 
-link:
-  amazon: https://www.amazon.com/gp/product/1455509124/
-  link: https://www.amazon.com/gp/product/1455509124/
-  x: https://x.com/liu_qi_long/status/1846823737716625597
-  rednote: https://www.xiaohongshu.com/explore/669e0695000000000d00eaed?xsec_token=AB882MwHiDYMJZFOqog_GBNPH0oDfR2xzAKtdI08TrxZs=&xsec_source=pc_user
+link_amazon: https://www.amazon.com/gp/product/1455509124/
+link: https://www.amazon.com/gp/product/1455509124/
+link_x: https://x.com/liu_qi_long/status/1846823737716625597
+link_rednote: https://www.xiaohongshu.com/explore/669e0695000000000d00eaed?xsec_token=AB882MwHiDYMJZFOqog_GBNPH0oDfR2xzAKtdI08TrxZs=&xsec_source=pc_user
 ---
 
 # So Good They Can't Ignore You | Cal Newport
@@ -17,7 +16,7 @@ link:
 
 ## Rule #1 Don’t Follow Your Passion
 
-- [x] The “Passion” of Steve Jobs
+- [x] The "Passion" of Steve Jobs
 - [x] Passion Is Rare
 - [x] Passion Is Dangerous
 

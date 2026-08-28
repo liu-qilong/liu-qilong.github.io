@@ -4,9 +4,8 @@ tags:
   - Hinton/CV
 date: "2024-08-27"
 update: 
-link:
-  link: https://dl.acm.org/doi/10.1145/1837101.1837109
-  x: https://x.com/liu_qi_long/status/1846825230276481294
+link: https://dl.acm.org/doi/10.1145/1837101.1837109
+link_x: https://x.com/liu_qi_long/status/1846825230276481294
 ---
 
 # Spectral Mesh Processing | Bruno Lévy & Hao Zhang
@@ -38,7 +37,7 @@ link:
         $$\Delta = \text{div grad} = \nabla \cdot \nabla = \sum_i \frac{\partial^2}{\partial x^2_i}$$
         - With exterior calculus (EC)
             $$\Delta = \text{div grad} = \delta d = \sum_i \frac{1}{\sqrt{|g|}}\frac{\partial}{\partial x_i} \sqrt{|g|}\frac{\partial}{\partial x_i}$$
-            > The additional term $|g|$ can be interpreted as a local ”scale” factor since the local area element $dA$ on $\mathcal S$ is given by $dA = \sqrt{|g|} dx_1 \wedge dx_2$.
+            > The additional term $|g|$ can be interpreted as a local "scale" factor since the local area element $dA$ on $\mathcal S$ is given by $dA = \sqrt{|g|} dx_1 \wedge dx_2$.
 
 ## Discretizing the Laplace operator
 

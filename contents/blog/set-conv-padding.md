@@ -4,8 +4,7 @@ tags:
   - Hinton/ML
 date: "2024-03-13"
 update: ""
-link:
-  x: "https://x.com/liu_qi_long/status/1846821014564667636"
+link_x: "https://x.com/liu_qi_long/status/1846821014564667636"
 ---
 
 # How to set the padding of convolution to make the stride acting as a scale factor

@@ -11,9 +11,61 @@ import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 
 
+function get_markdown_file_names (post_folder) {
+    return fs.readdirSync(post_folder, { withFileTypes: true })
+        .filter(entry => entry.isFile() && entry.name.endsWith('.md'))
+        .map(entry => entry.name)
+}
+
+function normalize_display_math (markdown) {
+    let code_fence = null
+
+    return markdown.split('\n').flatMap(line => {
+        const fence_match = line.match(/^\s*(`{3,}|~{3,})/)
+
+        if (fence_match != null) {
+            const fence_marker = fence_match[1][0]
+            code_fence = (code_fence === fence_marker) ? null : fence_marker
+            return [line]
+        }
+
+        if (code_fence != null || !line.includes('$$')) {
+            return [line]
+        }
+
+        const prefix = line.match(/^(\s*(?:>\s*)?)/)[0]
+        const parts = line.slice(prefix.length).split('$$')
+        const normalized_lines = []
+
+        parts.forEach((part, index) => {
+            if (part.length > 0) {
+                normalized_lines.push(prefix + part)
+            }
+
+            if (index < parts.length - 1) {
+                normalized_lines.push(prefix + '$$')
+            }
+        })
+
+        return normalized_lines
+    }).join('\n')
+}
+
+function serialize_metadata (metadata) {
+    return Object.fromEntries(
+        Object.entries(metadata).map(([key, value]) => {
+            if (value instanceof Date) {
+                return [key, value.toISOString().split('T')[0]]
+            }
+
+            return [key, value]
+        })
+    )
+}
+
 export function getSortedPostsData ( relativePath) {
     const post_folder = path.join(process.cwd(), relativePath)
-    let file_names = fs.readdirSync(post_folder)
+    let file_names = get_markdown_file_names(post_folder)
 
     const all_posts = file_names.map(file_name => {
         // remove ".md" from file name to get id
@@ -38,7 +90,7 @@ export function getSortedPostsData ( relativePath) {
                 .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // remove links
                 .replace(/!\[([^\]]+)\]\([^)]+\)/g, '$1') // remove images
                 .replace(/[^A-Za-z0-9 ,.]/g, ' '), // remove special characters
-            ...matterResult.data
+            ...serialize_metadata(matterResult.data)
         }
     })
 
@@ -56,7 +108,7 @@ export function getSortedPostsData ( relativePath) {
 
 export function getAllPostIds ( relativePath ) {
     const post_folder = path.join(process.cwd(), relativePath)
-    const file_names = fs.readdirSync(post_folder)
+    const file_names = get_markdown_file_names(post_folder)
         return file_names.map(file_name => {
             return {
                 params: {
@@ -84,7 +136,7 @@ export async function getPostData ( id, relativePath) {
         .use(remarkRehype)  // convert markdown to HTML
         .use(rehypeKatex)  // convert LaTeX to HTML
         .use(rehypeStringify)  // convert HTML to string
-        .process(matterResult.content)
+        .process(normalize_display_math(matterResult.content))
 
     const content = String(file)
 
@@ -96,7 +148,7 @@ export async function getPostData ( id, relativePath) {
         id,
         content,
         coverpath,
-        ...matterResult.data,
+        ...serialize_metadata(matterResult.data),
     }
 }
 

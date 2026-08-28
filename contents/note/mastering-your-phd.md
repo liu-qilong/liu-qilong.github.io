@@ -4,10 +4,9 @@ tags:
   - Achilles/Carrer
 date: "2024-12-25"
 update: 
-link:
-  amazon: https://www.amazon.com/Mastering-Your-PhD-Survival-Doctoral/dp/3642158463
-  x: https://x.com/liu_qi_long/status/1872581711189729394
-  rednote: https://www.xiaohongshu.com/explore/676e7c2c000000000b021828?xsec_token=ABQaqNleUOoZhW0f6SUmn71teqFBXiRIRsSpzpfFsyseY=&xsec_source=pc_user
+link_amazon: https://www.amazon.com/Mastering-Your-PhD-Survival-Doctoral/dp/3642158463
+link_x: https://x.com/liu_qi_long/status/1872581711189729394
+link_rednote: https://www.xiaohongshu.com/explore/676e7c2c000000000b021828?xsec_token=ABQaqNleUOoZhW0f6SUmn71teqFBXiRIRsSpzpfFsyseY=&xsec_source=pc_user
 ---
 
 # Mastering Your PhD | Patricia Gosling & Bart Noordam

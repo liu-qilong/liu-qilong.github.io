@@ -4,9 +4,8 @@ tags:
   - Hinton/CS
 date: "2023-06-08"
 update: "2023-06-11"
-link:
-  medium: "https://medium.com/@liu-qilong/setup-windows-development-environment-db5b4cf3dfec"
-  x: "https://x.com/liu_qi_long/status/1846450726555521248"
+link_medium: "https://medium.com/@liu-qilong/setup-windows-development-environment-db5b4cf3dfec"
+link_x: "https://x.com/liu_qi_long/status/1846450726555521248"
 ---
 
 # Setup Windows development environment

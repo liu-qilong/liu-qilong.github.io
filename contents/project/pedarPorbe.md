@@ -2,9 +2,8 @@
 title: "pedarProbe"
 date: "2022-12-09"
 description: "Data analysis framework for pedar plantar pressure sensor"
-link:
-    github: "https://github.com/liu-qilong/pedarProbe"
-    read-the-docs: "https://pedarprobe.readthedocs.io/en/latest/?badge=latest"
+link_github: "https://github.com/liu-qilong/pedarProbe"
+link_read-the-docs: "https://pedarprobe.readthedocs.io/en/latest/?badge=latest"
 ---
 
 [![Documentation Status](https://readthedocs.org/projects/pedarprobe/badge/?version=latest)](https://pedarprobe.readthedocs.io/en/latest/?badge=latest)

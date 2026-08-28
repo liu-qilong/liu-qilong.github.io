@@ -4,8 +4,7 @@ tags:
   - Hinton/ML
 date: "2024-03-13"
 update: "2024-03-14"
-link:
-  x: "https://x.com/liu_qi_long/status/1846821235948400889"
+link_x: "https://x.com/liu_qi_long/status/1846821235948400889"
 ---
 
 # Why transposed convolution can be used to reconstruct activating features from the input images

@@ -2,8 +2,7 @@
 title: "obsidian-setup"
 date: "2023-11-30"
 description: "My customized Obsidian Dataview templates, including TagLens, DailyLens, and PaperThread"
-link:
-    github: "https://github.com/liu-qilong/obsidian-setup"
+link_github: "https://github.com/liu-qilong/obsidian-setup"
 ---
 
 # My [Obsidian](https://obsidian.md) setup

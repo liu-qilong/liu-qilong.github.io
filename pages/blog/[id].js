@@ -15,16 +15,16 @@ export default function BlogPage({ post }) {
     )
 
     // tweet id and comment
-    const tweet_id = (post.link && post.link.x != null) ? (
-        post.link.x.split('/').pop()
+    const tweet_id = (post.link_x != null) ? (
+        post.link_x.split('/').pop()
     ) : (
         null
     )
 
-    const comment = (post.link && post.link.x != null) ? (
+    const comment = (post.link_x != null) ? (
         <div>
             <hr className="mt-10 mb-5"/>
-            <div className="italic">Do you have any ideas or comments? Please join the discussion on <a href={post.link.x}>X</a>👇</div>
+            <div className="italic">Do you have any ideas or comments? Please join the discussion on <a href={post.link_x}>X</a>👇</div>
             <Tweet id={tweet_id} />
         </div>
     ) : (

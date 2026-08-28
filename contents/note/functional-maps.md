@@ -4,9 +4,8 @@ tags:
   - Hinton/CV
 date: "2024-09-27"
 update: 
-link:
-  link: https://dl.acm.org/doi/10.1145/3084873.3084877
-  x: https://x.com/liu_qi_long/status/1846825804011131030
+link: https://dl.acm.org/doi/10.1145/3084873.3084877
+link_x: https://x.com/liu_qi_long/status/1846825804011131030
 ---
 
 # Computing and Processing Correspondences with Functional Maps | Maks Ovsjanikov et. al
@@ -42,7 +41,7 @@ _P.S. Part name was added by me._
 ### Partial Functional Maps
 
 - Partial Functional Maps
-    > Assume to be given a full shape $M$ and a partial shape $N$ that is approximately isometric to some (unknown) sub-region $M' \subset M$. The authors showed that for each “partial” eigenfunction $\phi^N_j$ of $N$ there exists a corresponding “full” eigenfunction $\phi^M_i$ of $M$ for some $i \geq j$, such that $C_{ij}= \langle T_F(\phi^M_i, \phi^N_j) \rangle_{L^2(N)} \approx \pm 1$, and zero otherwise.
+    > Assume to be given a full shape $M$ and a partial shape $N$ that is approximately isometric to some (unknown) sub-region $M' \subset M$. The authors showed that for each "partial" eigenfunction $\phi^N_j$ of $N$ there exists a corresponding "full" eigenfunction $\phi^M_i$ of $M$ for some $i \geq j$, such that $C_{ij}= \langle T_F(\phi^M_i, \phi^N_j) \rangle_{L^2(N)} \approx \pm 1$, and zero otherwise.
     
     Therefore, $C$ will shows a slanted-diagonal structure and an angle can pre-computed to optimize for $C$.
 - Deformable clutter
@@ -95,7 +94,7 @@ In this chapter, more advanced techniques for solving functional maps are discus
     - Regularized Map Recovery
         Equivalent to nonrigid CPD registration in embedding space.
     - Product Manifold Filter for Bijective Map Recovery
-        > The resulting pointwise map can be seen as a “denoised” version of the input, in analogy with classical KDE-based denoising of images.
+        > The resulting pointwise map can be seen as a "denoised" version of the input, in analogy with classical KDE-based denoising of images.
     - Linear Assignment Problem
 - Continuous Maps via Vector Field Flows
     > To represent the target point-to-point map as a composition of an arbitrary continuous map between the two surfaces and a flow associated with an unknown vector field on one of them

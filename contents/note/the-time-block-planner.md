@@ -4,9 +4,8 @@ tags:
   - Achilles/Carrer
 date: "2024-04-15"
 update: 
-link:
-  amazon: https://www.amazon.com/Time-Block-Planner-Second-Method-Distracted/dp/0593545397/
-  link: https://www.timeblockplanner.com
+link_amazon: https://www.amazon.com/Time-Block-Planner-Second-Method-Distracted/dp/0593545397/
+link: https://www.timeblockplanner.com
 ---
 
 # The Time-Block Planner | Cal Newport

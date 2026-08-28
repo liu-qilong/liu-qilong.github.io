@@ -4,13 +4,23 @@ tags:
   - Hinton/CS/LaTeX
 date: "2023-05-23"
 update: "2025-04-23"
-link:
-  x: https://x.com/liu_qi_long/status/1872581509066145833
+link_x: https://x.com/liu_qi_long/status/1872581509066145833
 ---
 
 # LaTeX frequent snippets
 
-## Math
+## Basic elements
+
+### Section numbering
+
+Alphabetical numbering:
+
+```latex
+\renewcommand{\thesection}{\Alph{section}}
+\setcounter{section}{0} % reset counter to start from A
+```
+
+### Math
 
 Matrix:
 
@@ -40,11 +50,17 @@ $\hat x, \tilde x, \overline x$:
 \hat x, \tilde x, \overline x
 ```
 
+Argmin with centered subscript:
+
+```latex
+\underset{\Theta_p, \Theta_s, \Theta_a}{\operatorname{argmin}}
+```
+
 Additional symbols:
 
 > [List of LaTeX mathematical symbols - OeisWiki](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols)
 
-## Listing
+### Listing
 
 ```latex
 \begin{itemize}
@@ -56,23 +72,32 @@ Additional symbols:
     \item 
 \end{enumerate}
 ```
-```latex
-\begin{lstlisting}[language=Python]
 
-\end{lstlisting}
-```
-
-_P.S. The frame need to be set as `[fragile]` to use `lstlisting`:_
+### Algorithm
 
 ```latex
-\begin{frame}[fragile]{}
-\begin{lstlisting}[language=Python]
-
-\end{lstlisting}
-\end{frame}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 ```
 
-## Table
+```latex
+\begin{algorithm}
+\caption{Functional Map Refinement}
+\label{alg:fmap_refinement}
+\begin{algorithmic}[1]
+    \State Set $C_\text{refined} \gets C_{\mathcal Y\mathcal X}$
+    \For{$t = 1, \ldots, n_\text{iter}$}
+        \State ...
+        \State ...
+        \State ...
+    \EndFor
+    \State ...
+    \State \Return $\Pi_\text{refined}$
+\end{algorithmic}
+\end{algorithm}
+```
+
+### Table
 
 ```latex
 \begin{table}[h]
@@ -92,20 +117,21 @@ _P.S. The frame need to be set as `[fragile]` to use `lstlisting`:_
 
 _P.S. `booktabs` package needed._
 
-_P.S. Snippets for marking 1st, 2nd, and 3rd best methods:_
+_P.S. Snippets for marking 1st, 2nd, and 3rd best methods. `\usepackage[dvipsnames, table]{xcolor}` needed:_
 
 ```latex
+% marking 1st, 2nd, and 3rd best methods in table
 \colorlet{bestclr}{teal!60}
 \colorlet{secondclr}{teal!40}
 \colorlet{thirdclr}{teal!20}
-\newcommand{\firstplace}{\cellcolor{bestclr}\textbf}
+\newcommand{\firstplace}{\cellcolor{bestclr}\bfseries}
 \newcommand{\secondplace}{\cellcolor{secondclr}}
 \newcommand{\thirdplace}{\cellcolor{thirdclr}}
-\def\tabclrscheme{The first/second/third best results are highlighted in \colorbox{bestclr}{\textbf{bolded teal}}, \colorbox{secondclr}{light teal}, and \colorbox{thirdclr}{lighter teal}, respectively.}
+\def\tabclrscheme{The \colorbox{bestclr}{\textbf{first}}/\colorbox{secondclr}{second}/\colorbox{thirdclr}{third} best results are highlighted, respectively.}
 
 ```
 
-## Figure
+### Figure
 
 ```latex
 \centering\includegraphics[width=\textwidth]{figures/}
@@ -130,9 +156,9 @@ _P.S. `graphicx` package is needed._
 
 ```latex
 \begin{figure}[h]
-	\centering
+\centering
 	\begin{subfigure}{\linewidth}
-		\includegraphics[width=\linewidth]{figures/<>}
+		\centering\includegraphics[width=\linewidth]{figures/<>}
 		\caption{<>}
 	\end{subfigure}
 	\caption{<>}
@@ -142,7 +168,77 @@ _P.S. `graphicx` package is needed._
 
 _P.S. `graphicx` and `subcaption` package is needed._
 
-## Bibliography
+### Emoji
+
+> [Inserting emojis in LaTeX documents on Overleaf - Overleaf, Online LaTeX Editor](https://www.overleaf.com/learn/latex/Questions/Inserting_emojis_in_LaTeX_documents_on_Overleaf)
+
+```
+\usepackage{emoji}
+...
+\emoji{<code>}
+```
+
+Emoji code reference:
+
+> [The `emoji` package documentation](https://texdoc.org/serve/emoji/0)
+
+_P.S. To include emojis, `luatex` is needed to be used for typesetting._
+
+### Code block
+
+```latex
+\begin{lstlisting}[language=Python]
+
+\end{lstlisting}
+```
+
+_P.S. `listings` package is needed._
+
+```latex
+\begin{frame}[fragile]{}
+\begin{lstlisting}[language=Python]
+
+\end{lstlisting}
+\end{frame}
+```
+
+_P.S. When used within a beamer frame, the frame need to be set as `[fragile]` to use `lstlisting`:_
+
+Example code block styling:
+
+```latex
+% code block style
+\definecolor{codegreen}{RGB}{101,218,120}
+\definecolor{darkgreen}{RGB}{93,158,82}
+\definecolor{darkyellow}{RGB}{245,194,105}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{airforceblue},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\scriptsize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+    xleftmargin=10pt,
+    xrightmargin=10pt,
+}
+
+\lstset{style=mystyle}
+```
+
+### Bibliography
 
 ```latex
 \usepackage[style=ieee]{biblatex}
@@ -156,7 +252,7 @@ Then inside the `\begin{document} ... \end{document}`:
 \printbibliography
 ```
 
-## Reference
+### Reference
 
 ```latex
 \usepackage{hyperref}
@@ -177,6 +273,37 @@ Then inside the `\begin{document} ... \end{document}`:
 Then you can just `\autoref{}` sections, figures, and tables without having to manually type prefix like  `Fig.~\ref{}`.
 
 However, for equation, use `\eqref{}`.
+
+### Footnote
+
+> [Footnotes | Overleaf](https://www.overleaf.com/learn/latex/Footnotes#Changing_the_numbering_style)
+
+```latex
+\footnote<[id]>{...}
+\footnotemark<[id]>
+\footnotetext<[id]>{...}
+```
+
+Changing footnote mark:
+
+- `\arabic{_counter variable_}`: typeset `_counter variable_` in Arabic numerals.
+- `\roman{_counter variable_}`: typeset `_counter variable_` in lowercase Roman numerals.
+- `\Roman{_counter variable_}`: typeset `_counter variable_` in uppercase Roman numerals.
+- `\alph{_counter variable_}`: typeset `_counter variable_` in lowercase Alphabetic characters.
+- `\Alph{_counter variable_}`: typeset `_counter variable_` in uppercase Alphabetic characters.
+- `\fnsymbol{_counter variable_}`: typeset `_counter variable_` using a [set of 9 special symbols](https://www.overleaf.com/learn/latex/Counters%23Accessing_and_printing_counter_values#.5Cfnsymbol.7Bsomecounter.7D).
+
+```latex
+\renewcommand{\thefootnote}{<\style>{footnote}}
+```
+
+_P.S. This can be used inside the document to change style for various times._
+
+_P.S. In the min page environment, use `mpfootnote` variable instead of `footnoe`:_
+
+```latex
+\renewcommand{\thempfootnote}{<\style>{mpfootnote}}
+```
 
 ## Beamer
 
@@ -299,8 +426,8 @@ Following these principles can make the Tikz diagram human-readable, maintainabl
 ### Body
 
 ```latex
-\begin{document} [node distance=0cm]
-\begin{tikzpicture}
+\begin{document}
+\begin{tikzpicture} [node distance=0cm]
 
 \end{tikzpicture}
 \end{document}
@@ -309,10 +436,12 @@ Following these principles can make the Tikz diagram human-readable, maintainabl
 #### Scope
 
 ```latex
-\begin{scope} [local bounding box=<id>]
+\begin{scope} [local bounding box=<id>, xshift=<>cm, yshift=<>cm]
 	...
 \end{scope}
 ```
+
+_P.S. `xshift` and `yshift` shift the whole bounding box, making location adjustment much easier._
 
 ### Alignment
 
@@ -368,6 +497,22 @@ _P.S. Use `label=<direction>:<text>`_ to add label to a node. If multi-line is n
 \node (<id>) [<style>, fit={(<id>) (<coord>) <...>}] {};
 ```
 
+e.g.
+
+```latex
+\node [draw, dashed, fit={(vertex) (padded_vertex)}, label=above:Vertex Input] {};
+```
+
+#### Reusable stuff
+
+```latex
+\newcommand{\tikzdashbox}[1]{%
+    \tikz[baseline=(X.base)]{%
+        \node[draw, dashed, rounded corners, inner sep=5pt] (X) {#1};%
+    }%
+}
+```
+
 ## New command & for loop
 
 ```latex
@@ -382,11 +527,35 @@ _P.S. Use `label=<direction>:<text>`_ to add label to a node. If multi-line is n
 \begin{tikzpicture}
     \foreach \x in {0, 1, 2, 3} {
 	    \foreach \y in {0, 1, 2} {
-	        \mycircle{blue}{\x}{\y};
+            \mycircle{blue}{\x}{\y};
 	    }
 	}
 \end{tikzpicture}
 \end{document}
+```
+
+## Typesetting engine selection in VS Code plugin
+
+### `luatex`
+
+To use `luatex` in VS Code LaTeX plugin:
+
+> [luatex - LuaLaTeX not recognised as a VS Code tool - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/455648/lualatex-not-recognised-as-a-vs-code-tool)
+
+```
+# .vscode/settings.json
+"latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+```
+
+### `xelatex`
+
+_P.S. To use `xelatex` in VS Code LaTeX plugin:_
+
+> [xetex - How to use visual studio code LaTex Workshop with xelatex - TeX - LaTeX Stack Exchange](https://tex.stackexchange.com/questions/564758/how-to-use-visual-studio-code-latex-workshop-with-xelatex)
+
+```
+# .vscode/settings.json
+"latex-workshop.latex.recipe.default": "latexmk (xelatex)",
 ```
 
 ## `.gitignore`
@@ -415,6 +584,97 @@ build/
 *.sav
 *.fdb_latexmk
 *.fls
+*.brf
 
 *.docx
+
+# ignore pdf files except for those in the figures/ folder
+*.pdf
+!figures/**/*.pdf
+```
+
+## PDF postprocessing
+
+### Reducing PDF size
+
+Downsize PDF files without image quality loss using [Ghostscript](https://ghostscript.readthedocs.io/en/latest/Readme.html):
+
+```bash
+gs \
+  -sDEVICE=pdfwrite \
+  -dCompatibilityLevel=1.6 \
+  -dNOPAUSE \
+  -dQUIET \
+  -dBATCH \
+  -dDetectDuplicateImages=true \
+  -dCompressFonts=true \
+  -dSubsetFonts=true \
+  -dDownsampleColorImages=false \
+  -dDownsampleGrayImages=false \
+  -dDownsampleMonoImages=false \
+  -sOutputFile=compressed.pdf \
+  main.pdf
+```
+
+If image compression is necessary:
+
+```bash
+gs \
+  -sDEVICE=pdfwrite \
+  -dCompatibilityLevel=1.6 \
+  -dNOPAUSE \
+  -dQUIET \
+  -dBATCH \
+  -dDetectDuplicateImages=true \
+  -dCompressFonts=true \
+  -dSubsetFonts=true \
+  -dDownsampleColorImages=true \
+  -dColorImageResolution=300 \
+  -dDownsampleGrayImages=true \
+  -dGrayImageResolution=300 \
+  -dDownsampleMonoImages=true \
+  -dMonoImageResolution=300 \
+  -sOutputFile=compressed.pdf \
+  main.pdf
+```
+
+_P.S. `gs` is usually shipped with an Ubuntu Desktop system. On macOS, it is installed when you install [MacTeX](https://www.tug.org/mactex/)._
+
+### PDF page trimming
+
+```bash
+gs \
+  -sDEVICE=pdfwrite \
+  -dNOPAUSE \
+  -dQUIET \
+  -dBATCH \
+  -dFirstPage=1 \
+  -dLastPage=9 \
+  -sOutputFile=main.trimmed.pdf \
+  main.pdf
+```
+
+Example:
+
+- Keep the main text (to page 9)
+- Keep the appendix (from page 10)
+
+```bash
+gs \
+  -sDEVICE=pdfwrite \
+  -dNOPAUSE \
+  -dQUIET \
+  -dBATCH \
+  -dLastPage=9 \
+  -sOutputFile=main-paper.pdf \
+  main.pdf
+
+gs \
+  -sDEVICE=pdfwrite \
+  -dNOPAUSE \
+  -dQUIET \
+  -dBATCH \
+  -dFirstPage=10 \
+  -sOutputFile=main-appendix.pdf \
+  main.pdf
 ```

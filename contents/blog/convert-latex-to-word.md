@@ -4,9 +4,8 @@ tags:
   - Hinton/CS/LaTeX
 date: "2022-05-04"
 update: "2023-04-27"
-link:
-  medium: "https://medium.com/@liu-qilong/convert-latex-to-word-94f863f4dbdc"
-  x: "https://x.com/liu_qi_long/status/1846451169734152382"
+link_medium: "https://medium.com/@liu-qilong/convert-latex-to-word-94f863f4dbdc"
+link_x: "https://x.com/liu_qi_long/status/1846451169734152382"
 ---
 
 LaTeX is a great tool for academic writing. However, not all collaborators may be familiar with it, and at times, you may need to convert your document into a Word file for reviewing and editing purposes. In my opinion, the best tool for this task is [Pandoc](https://pandoc.org) - an open-source command-line tool for free.
@@ -67,6 +66,7 @@ pandoc draft.tex -o word/draft.docx --reference-doc=word/template.docx --bibliog
 
 Pandoc usually fails to follow the images resizing instructions in LaTeX, resulting in large images occupying entire pages. For editing purposes, it may be more reader friendly to remove all images [^3]. Although Pandoc does not provide a "remove all images" option, a simple workaround can solve this problem: 
 
+> [!tip]
 > Rename the figure folder so that the images cannot be found and Pandoc will leave it blank.
 
 [^3]: In my case, the generated Word file is only used for editing and proofreading by my supervisor and teammates.

@@ -4,9 +4,8 @@ tags:
   - Hinton/CS
 date: "2023-11-02"
 update: "2023-12-06"
-link:
-  medium: "https://medium.com/@liu-qilong/a-complete-guide-to-setup-wsl-windows-subsystem-for-linux-4547e88b6cdb"
-  x: "https://x.com/liu_qi_long/status/1846450474117169238"
+link_medium: "https://medium.com/@liu-qilong/a-complete-guide-to-setup-wsl-windows-subsystem-for-linux-4547e88b6cdb"
+link_x: "https://x.com/liu_qi_long/status/1846450474117169238"
 ---
 
 # A complete guide to setup WSL (Windows Subsystem for Linux)
@@ -461,7 +460,7 @@ Then you are in trouble: your Windows machine's IP address is different from the
 Port forwarding is gonna to save you out of this dilemma. In Windows Terminal (Admin), first expose a port of the Windows machine for `ssh` access.
 
 ```
-netsh advfirewall firewall add rule name=”Open Port <port num> for WSL” dir=in action=allow protocol=TCP localport=<port num>
+netsh advfirewall firewall add rule name="Open Port <port num> for WSL" dir=in action=allow protocol=TCP localport=<port num>
 ```
 
 And then launch a port proxy to forward this port to the WSL internally:

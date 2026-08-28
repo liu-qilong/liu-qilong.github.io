@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import IconStack from '../icon-stack'
+import { getIconLinks } from '../../utils/link-data'
 
 export default function BlogBlock ({post, show_abstract=false, divclass="flex flex-col md:flex-row items-center", titleclass="text-sm md:text-base mb-1", abstract_class="text-xs md:text-sm text-slate-700 line-clamp-5", dateclass="text-xs text-slate-700", imgsize=120}) {
     const coverpath = post.coverpath
@@ -18,14 +19,7 @@ export default function BlogBlock ({post, show_abstract=false, divclass="flex fl
     let post_link = "/blog/" + post.id
 
     // generate icon links list for icon stack
-    let icon_links = []
-
-    if (post.link != null) {
-        const link_keys = Object.keys(post.link)
-        icon_links = link_keys.map( ( key ) => {
-            return [ key, post['link'][key]]
-        })
-    }
+    const icon_links = getIconLinks(post)
 
     return (
         <div>

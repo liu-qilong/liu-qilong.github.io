@@ -4,9 +4,8 @@ tags:
   - Hinton/CS
 date: "2023-06-08"
 update: "2023-06-11"
-link:
-  medium: "https://medium.com/@liu-qilong/setup-windows-machine-as-ssh-host-75627200fb46"
-  x: "https://x.com/liu_qi_long/status/1846821529197433043"
+link_medium: "https://medium.com/@liu-qilong/setup-windows-machine-as-ssh-host-75627200fb46"
+link_x: "https://x.com/liu_qi_long/status/1846821529197433043"
 ---
 
 # Setup Windows machine as SSH host

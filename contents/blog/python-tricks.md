@@ -8,6 +8,127 @@ update:
 
 # Python tricks
 
+## Core features
+
+### Decoration function
+
+```python
+def decorator_func(original_func):
+    def wrapper_func(*args, **kwargs):
+        # do something before
+        result = original_func(*args, **kwargs)
+        # do something after
+        return result
+    return wrapper_func
+
+@decorator_func
+def target_func(...):
+    # ...
+```
+
+## Loop
+
+### Loop through a dictionary with `it` `key` `value`
+
+```python
+for it, (key, value) in dict:
+	# ...
+```
+
+### Loop through combinatons of lists
+
+```python
+from itertools import product
+
+for i, j in product(ls_1, ls_2):
+  # ...
+```
+
+## Scripting
+
+### Command line arguments
+
+Example:
+
+```python
+import argparse
+
+parser = argparse.ArgumentParser(description='Description of your script')
+parser.add_argument('--mesh_dir', type=str, required=True, help='Path to the mesh directory')
+parser.add_argument('--output', action='store_true', help='Whether to save the output')
+
+args = parser.parse_args()
+args.mesh_dir  # Access the mesh directory path
+args.output  # Access the output flag (default: False)
+```
+
+### Add folder to Python path
+
+Example:
+
+```python
+# Add project root to Python path so `from src.*` imports work
+# when running this script from any directory
+import os
+import sys
+_PROJECT_ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
+sys.path.insert(0, _PROJECT_ROOT)
+sys.path.insert(0, os.path.join(_PROJECT_ROOT, 'pkg', 'animer'))
+```
+
+### Run script as module
+
+Example:
+
+```bash
+python -m src.animer_grounding.run --mesh_dir /home/knpob/Documents/Hinton/data/shape-corr/SMAL_r/off/ --out_dir output/smal_r --device cuda:1
+```
+
+_The current directory is added to `sys.path`, making package-level imports resolve properly._
+
+## Files
+
+### Dotfiles
+
+> [theskumar/python-dotenv: Reads key-value pairs from a .env file and can set them as environment variables. It helps in developin](https://github.com/theskumar/python-dotenv)
+
+Install dependency:
+
+```bash
+pip install python-dotenv
+```
+
+Create a `.env` file:
+
+```python
+<key1>='<value1>'
+<key2>='<value2>'
+```
+
+Load it from Python:
+
+```python
+import os
+from dotenv import load_dotenv
+
+load_dotenv('.env')
+value1 = os.getenv("key1")
+value2 = os.getenv("key2")
+```
+
+Don’t forget to ignore `.env` in `.gitignore`:
+
+```
+.env
+```
+
+### Find all files with certain extension under a folder
+
+```python
+from glob import glob
+mesh_ls = sorted(glob(str('<path>/*.<ext>')))
+```
+
 ## Widgets
 
 ### Progress bar in Python
@@ -54,7 +175,20 @@ See also:
 
 > [Conda frequent commands](/blog/conda-frequent-commands)
 
-### Export conda `environment.yml`
+### Conda environment management
+
+- Create a new environment: `conda create -n <env_name> python=<version>`
+- Remove an environment: `conda remove -n <env_name> --all`
+- Activate environment `conda activate <env_name>`
+- Deactivate environment `conda deactivate`
+
+#### One-off script running in a conda environment
+
+```bash
+conda run -n <env_name> python <script.py>
+```
+
+#### Export conda `environment.yml`
 
 > [Exporting the environment.yml file | conda 25.3.2.dev62 documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#exporting-the-environment-yml-file)
 
@@ -74,41 +208,72 @@ Or just add packages to an existed environment:
 conda env update -f environment.yml
 ```
 
-### `.env` file
+### Proxy
 
-> [theskumar/python-dotenv: Reads key-value pairs from a .env file and can set them as environment variables. It helps in developin](https://github.com/theskumar/python-dotenv)
+![[ubuntu-dev-env#Python with proxy]]
 
-Install dependency:
+## Matplotlib
+
+### SciencePlots
+
+> [GitHub - garrettj403/SciencePlots: Matplotlib styles for scientific plotting · GitHub](https://github.com/garrettj403/SciencePlots)
 
 ```bash
-pip install python-dotenv
+pip install SciencePlots
 ```
-
-Create .env file:
 
 ```python
-<key1>='<value1>'
-<key2>='<value2>'
+import matplotlib.pyplot as plt
+import scienceplots
+plt.style.use('ieee')
 ```
 
-Load it from Python:
+### Fontsize
 
 ```python
-import os
-from dotenv import load_dotenv
-
-load_dotenv('.env')
-value1 = os.getenv("key1")
-value2 = os.getenv("key2")
+plt.rcParams['font.size'] = 16
 ```
 
-Don’t forget to ignore the .env in .gitignore:
+### Axis formatter
 
+```python
+from matplotlib.ticker import FuncFormatter
+# ...
+ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f'{int(x/1000)}k'))
 ```
-.env
+
+### Legend
+
+```python
+ax.legend(frameon=True, edgecolor='black', framealpha=0.5, fontsize=12, loc='best')
 ```
 
 ## Jupyter notebook
+
+### Register a `.venv` kernel
+
+Example:
+
+```bash
+./pkg/PRIMA/.venv/bin/python -m ipykernel install \
+  --user \
+  --name prima-venv \
+  --display-name "Python (PRIMA .venv)"
+```
+
+### Launching Jupyter Lab
+
+Ensure that `jupyterlab` has been installed:
+
+```bash
+pip install jupyterlab
+```
+
+Then:
+
+```bash
+jupyter lab --no-browser --port=8888
+```
 
 ### Add folder to Python path
 
@@ -143,6 +308,20 @@ A package can also be reloaded manually:
 ```python
 import importlib
 importlib.reload(<pkg>)
+```
+
+e.g.
+
+```python
+# import self-defined modules
+import importlib
+import src.mod as mod
+
+# reload the module everytime the cell is run
+importlib.reload(mod)
+
+# load what's actually needed
+from src.mod import cls, func
 ```
 
 > [Auto refresh imports (support %autoreload magic) · Issue #4555 · microsoft/vscode-jupyter](https://github.com/microsoft/vscode-jupyter/issues/4555)
@@ -206,10 +385,32 @@ touch .gitattributes
 echo '*.ipynb filter=strip-notebook-output' > .gitattributes
 ```
 
-* After that, commit to git as usual. The notebook output will be stripped out in git commits, but it will remain unchanged locally.
+Example:
+
+```bash
+cd notebook
+touch .gitattributes
+echo '*.ipynb filter=strip-notebook-output' > .gitattributes
+
+cd prototype
+touch .gitattributes
+echo '*.ipynb filter=strip-notebook-output' > .gitattributes
+
+cd ../..
+```
+
+* After that, commit to Git as usual. The notebook output will be stripped when the notebook is staged in Git, but the file will remain unchanged locally. _P.S. Make sure that `jupyterlab` is installed in the Python environment._
 
 This gist is based on @dirkjot's answer.
 > [How to clear Jupyter Notebook's output in all cells from the Linux terminal? - Stack Overflow](https://stackoverflow.com/questions/28908319/how-to-clear-jupyter-notebooks-output-in-all-cells-from-the-linux-terminal)
+
+_P.S. In VS Code, the `diff` of `.ipynb` file could be selected to ignore outputs/metadata changes in the drop down menu:_
+
+> [SOLVED - Have vscode-jupyter do proper diffing in Git · microsoft/vscode-jupyter · Discussion #10742 · GitHub](https://github.com/microsoft/vscode-jupyter/discussions/10742)
+
+### PyVista remote rendering
+
+![[ubuntu-dev-env#PyVista remote rendering]]
 
 ## Release to PyPI
 
@@ -299,3 +500,38 @@ Clear the `dist/` folder:
 ```bash
 rm -rf dist/
 ```
+
+## Hugging Face
+
+### Install and login
+
+```bash
+curl -LsSf https://hf.co/cli/install.sh | bash
+hf auth login
+```
+
+### Download Hugging Face models to local path
+
+> [Command Line Interface (CLI)](https://huggingface.co/docs/huggingface_hub/en/guides/cli#download-a-dataset-or-a-space)
+
+```bash
+hf download <user>/<repo> --local-dir <path>
+```
+
+### Download Hugging Face dataset to local path
+
+> [Downloading datasets](https://huggingface.co/docs/hub/en/datasets-downloading)
+> [Command Line Interface (CLI)](https://huggingface.co/docs/huggingface_hub/en/guides/cli#download-a-dataset-or-a-space)
+
+```bash
+hf download <user>/<repo> --repo-type dataset --local-dir <path>
+```
+
+### Upload local folder as Hugging Face dataset
+
+```bash
+hf upload [repo_id] [local_path] [path_in_repo]
+hf upload <repo> . . # upload the current directory at the root of the repo
+```
+
+Every `hf upload` creates a commit on HF with a timestamp, so you can always roll back to a previous version via the repo's commit history on the web UI.

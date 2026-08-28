@@ -4,8 +4,7 @@ tags:
   - Hinton/CS/Python
 date: "2023-03-08"
 update: "2023-04-27"
-link:
-  x: "https://x.com/liu_qi_long/status/1846821855820415479"
+link_x: "https://x.com/liu_qi_long/status/1846821855820415479"
 ---
 
 # Conda frequent commands
